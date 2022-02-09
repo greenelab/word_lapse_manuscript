@@ -5,7 +5,7 @@ keywords:
 - publishing
 - manubot
 lang: en-US
-date-meta: '2022-01-31'
+date-meta: '2022-02-09'
 author-meta:
 - John Doe
 - Jane Roe
@@ -19,8 +19,8 @@ header-includes: |-
   <meta name="citation_title" content="Manuscript Title" />
   <meta property="og:title" content="Manuscript Title" />
   <meta property="twitter:title" content="Manuscript Title" />
-  <meta name="dc.date" content="2022-01-31" />
-  <meta name="citation_publication_date" content="2022-01-31" />
+  <meta name="dc.date" content="2022-02-09" />
+  <meta name="citation_publication_date" content="2022-02-09" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -41,9 +41,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/word_lapse_manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/word_lapse_manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/word_lapse_manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/word_lapse_manuscript/v/9a22fab4497f80f501ea361d028f26888ad9d5a0/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/word_lapse_manuscript/v/9a22fab4497f80f501ea361d028f26888ad9d5a0/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/word_lapse_manuscript/v/9a22fab4497f80f501ea361d028f26888ad9d5a0/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/word_lapse_manuscript/v/227fdd8a47d870784375fd8f687ca3c51e5115e3/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/word_lapse_manuscript/v/227fdd8a47d870784375fd8f687ca3c51e5115e3/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/word_lapse_manuscript/v/227fdd8a47d870784375fd8f687ca3c51e5115e3/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -65,10 +65,10 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/word_lapse_manuscript/v/9a22fab4497f80f501ea361d028f26888ad9d5a0/))
+([permalink](https://greenelab.github.io/word_lapse_manuscript/v/227fdd8a47d870784375fd8f687ca3c51e5115e3/))
 was automatically generated
-from [greenelab/word_lapse_manuscript@9a22fab](https://github.com/greenelab/word_lapse_manuscript/tree/9a22fab4497f80f501ea361d028f26888ad9d5a0)
-on January 31, 2022.
+from [greenelab/word_lapse_manuscript@227fdd8](https://github.com/greenelab/word_lapse_manuscript/tree/227fdd8a47d870784375fd8f687ca3c51e5115e3)
+on February 9, 2022.
 </em></small>
 
 ## Authors
@@ -397,6 +397,88 @@ useful for *important information* - [manubot.org](https://manubot.org/)
 <i class="fas fa-ban fa-lg"></i> **Light Red Banner**<br>
 useful for *warnings* - [manubot.org](https://manubot.org/)
 ]{.banner .lightred}
+
+
+# Introduction
+
+1. Biomedical language is constantly changing
+	1. Scientists make new discoveries
+	2. Old technologies are being revamped
+	3. More reasons for language changes
+2. Diachronic studies aims to capture these types of changes through time
+   1. Insert papers for language changes in general
+      1. doi:10.1007/s00799-019-00271-6
+      2. doi:10.1142/9789811232701_0011
+      3. arxiv:1605.09096
+      4. arxiv:1806.03537
+      5. arxiv:1606.02821
+      6. doi:10.18653/v1/N18-1044 
+3. Gap in knowledge: 
+	1. work has focused majorly on non-biomedical text
+	2. biomedical related work is only on abstract and titles
+	3. Work has yet to focus on individual tokens and themes.
+4. Goal is to examine longitudinal trends for biomedical term changes.
+<div style="color:red">
+Don't forget in here your methodological contribution to estimate uncertainty with variable-size training datasets in each year by training multiple models and examining variability across them.
+</div>
+
+
+# Methods
+
+1. Pubtator Central
+   1. breif description about the dataset
+   2. talk about how it contains entities tagged
+2. Word2vec Model
+   1. training parameters
+   2. Use 10 models for each year
+   3. min cutoff is 10
+3. Orthogonal Procrustes - to align models onto year 2021
+   1. Allows for the models to be directly compared
+4. Determining semantic change
+	1. Cosine metric to determine difference between words
+	2. Scaf ratio method to model temporal changes
+	3. CUSUM to actually detect change throughout the years
+5. Umap visualization
+   1. Explain why aligned umap - preserves local and global structure
+   2. mention parameters for aligned umap
+
+
+# Results
+<div style="color:red">
+One potential results panel: comparing results with abstract and full text (since you say above full text is not so often used).
+</div>
+
+1. Figure 1 - Visual to show that alignment works along intra year variation (Procrustes Validation)
+  1. Umap panel for an individual year to show models are separated
+  <div style="color:red">
+  I would start with the simplest possible way that you can show things, and only bring in more complexity like UMAP when necessary. I'm guessing that you would be able to show this with just PCA or similar, unless I'm not thinking correctly.
+  </div>
+  2. Umap panel to show the same year after models have been aligned
+  3. Umap panel to show across years (inter-year varation)
+  	  1. might not have this as a figure given the aligned umap results, but we shall see 
+2. Figure 2 - CUSUM validation
+	<div style="color:red">
+	I think you might want another figure here that shows how you can use the variability in distance to address the challenges of variable training set size / model uncertainty. Let's see how things shake out as you're writing.
+	</div>
+  1. Table of found timepoint changes using this algorithm
+  2. Highlight pandemic as positive control
+  3. Nearest Neighbors upset plot ^^
+  4. Might look into lung cancer or other form of cancer results
+4. Figure 3 - Website walkthrough for the work done here
+  1. Website screenshots
+  <div style="color:red">
+  The figures that make up the website might be nice to show/explain individually - not as screenshots but as actual figures (remember the PLOS situation where using a screenshot was an issue we had to work through).
+  </div>
+  2. Basically a walkthrough of the website and how a user can operate the web resource (similar to preprint similarity search)
+
+
+
+# Discussion and Conclusion
+
+1. We provided a website resource to allow users to see toekn association changes
+2. Word2vec is unstable and we implemented an approach to account for that variation
+3. Constructs groundwork for future research into token changes
+4. Will implement biorxiv and other preprint resources as a next step.
 
 
 ## References {.page_break_before}
