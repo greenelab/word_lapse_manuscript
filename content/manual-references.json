@@ -18,5 +18,29 @@
       "family": "Himmelstein"
     }
   ]
-}
+},
+{
+    "author": [
+      {
+        "family": "Honnibal",
+        "given": "Matthew"
+      },
+      {
+        "family": "Montani",
+        "given": "Ines"
+      }
+    ],
+    "id": "spacy2",
+    "issued": {
+      "date-parts": [
+        [
+          2017
+        ]
+      ]
+    },
+    "note": "To appear",
+    "title": "<span class=\"nocase\">spaCy 2</span>: Natural language understanding with Bloom embeddings, convolutional neural networks and incremental parsing",
+    "title-short": "<span class=\"nocase\">spaCy 2</span>",
+    "type": "manuscript"
+  }
 ]
