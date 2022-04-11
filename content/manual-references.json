@@ -22,5 +22,36 @@
     "title": "<span class=\"nocase\">spaCy 2</span>: Natural language understanding with Bloom embeddings, convolutional neural networks and incremental parsing",
     "title-short": "<span class=\"nocase\">spaCy 2</span>",
     "type": "manuscript"
+  },
+  {
+    "author": [
+      {
+        "family": "Sainburg",
+        "given": "Tim"
+      },
+      {
+        "family": "McInnes",
+        "given": "Leland"
+      },
+      {
+        "family": "Gentner",
+        "given": "Timothy Q"
+      }
+    ],
+    "container-title": "Neural Computation",
+    "id": "sainburg2021parametric",
+    "issue": "11",
+    "issued": {
+      "date-parts": [
+        [
+          2021
+        ]
+      ]
+    },
+    "page": "2881-2907",
+    "publisher": "MIT Press One Rogers Street, Cambridge, MA 02142-1209, USA journals-info …",
+    "title": "Parametric umap embeddings for representation and semisupervised learning",
+    "type": "article-journal",
+    "volume": "33"
   }
 ]
