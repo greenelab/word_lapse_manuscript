@@ -49,9 +49,33 @@
       ]
     },
     "page": "2881-2907",
-    "publisher": "MIT Press One Rogers Street, Cambridge, MA 02142-1209, USA journals-info …",
+    "publisher": "MIT Press One Rogers Street, Cambridge, MA 02142-1209, USA journals-info…",
     "title": "Parametric umap embeddings for representation and semisupervised learning",
     "type": "article-journal",
     "volume": "33"
+  },
+  {
+    "author": [
+      {
+        "family": "Gustafsson",
+        "given": "Fredrik"
+      },
+      {
+        "family": "Gustafsson",
+        "given": "Fredrik"
+      }
+    ],
+    "id": "gustafsson",
+    "issued": {
+      "date-parts": [
+        [
+          2000
+        ]
+      ]
+    },
+    "publisher": "Citeseer",
+    "title": "Adaptive filtering and change detection",
+    "type": "book",
+    "volume": "1"
   }
 ]
