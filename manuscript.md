@@ -8,7 +8,7 @@ keywords:
 - time-series
 - changepoint-detection
 lang: en-US
-date-meta: '2022-03-30'
+date-meta: '2022-05-18'
 author-meta:
 - David Nicholson
 - Faisal Alquaddoomi
@@ -24,8 +24,8 @@ header-includes: |-
   <meta name="citation_title" content="Detecting semantic shifts in biomedical literature through an intra-year and inter-year approach" />
   <meta property="og:title" content="Detecting semantic shifts in biomedical literature through an intra-year and inter-year approach" />
   <meta property="twitter:title" content="Detecting semantic shifts in biomedical literature through an intra-year and inter-year approach" />
-  <meta name="dc.date" content="2022-03-30" />
-  <meta name="citation_publication_date" content="2022-03-30" />
+  <meta name="dc.date" content="2022-05-18" />
+  <meta name="citation_publication_date" content="2022-05-18" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -52,9 +52,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/word_lapse_manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/word_lapse_manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/word_lapse_manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/word_lapse_manuscript/v/d7dec8bb15b27e58c207fe497d08254a5aa0b903/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/word_lapse_manuscript/v/d7dec8bb15b27e58c207fe497d08254a5aa0b903/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/word_lapse_manuscript/v/d7dec8bb15b27e58c207fe497d08254a5aa0b903/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/word_lapse_manuscript/v/cef07c818c8eb383f5c6be286fc28de1035ed762/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/word_lapse_manuscript/v/cef07c818c8eb383f5c6be286fc28de1035ed762/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/word_lapse_manuscript/v/cef07c818c8eb383f5c6be286fc28de1035ed762/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -76,10 +76,10 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/word_lapse_manuscript/v/d7dec8bb15b27e58c207fe497d08254a5aa0b903/))
+([permalink](https://greenelab.github.io/word_lapse_manuscript/v/cef07c818c8eb383f5c6be286fc28de1035ed762/))
 was automatically generated
-from [greenelab/word_lapse_manuscript@d7dec8b](https://github.com/greenelab/word_lapse_manuscript/tree/d7dec8bb15b27e58c207fe497d08254a5aa0b903)
-on March 30, 2022.
+from [greenelab/word_lapse_manuscript@cef07c8](https://github.com/greenelab/word_lapse_manuscript/tree/cef07c818c8eb383f5c6be286fc28de1035ed762)
+on May 18, 2022.
 </em></small>
 
 ## Authors
@@ -158,22 +158,72 @@ Don't forget in here your methodological contribution to estimate uncertainty wi
 
 # Methods
 
-1. Pubtator Central
-   1. breif description about the dataset
-   2. talk about how it contains entities tagged
-2. Word2vec Model
-   1. training parameters
-   2. Use 10 models for each year
-   3. min cutoff is 10
-3. Orthogonal Procrustes - to align models onto year 2021
-   1. Allows for the models to be directly compared
-4. Determining semantic change
-	1. Cosine metric to determine difference between words
-	2. Scaf ratio method to model temporal changes
-	3. CUSUM to actually detect change throughout the years
-5. Umap visualization
-   1. Explain why aligned umap - preserves local and global structure
-   2. mention parameters for aligned umap
+## Biomedical Corpora Examined
+
+### Pubtator Central
+
+Pubtator Central is an open-access resource containing annotated abstracts and full-text annotated with entity recognition systems for biomedical concepts [@doi:10.1093/nar/gkz389].
+The methods used are TaggerOne [@doi:10.1093/bioinformatics/btw343] to tag diseases, chemicals, and cell line entities, GNormPlus [@doi:10.1155/2015/918710] to tag 
+genes, SR4GN [@doi:10.1371/journal.pone.0038460] to tag species, and tmVar [@doi:10.1093/bioinformatics/btx541] to tag genetic mutations.
+We initially downloaded this resource on December 07th, 2021, and processed over 30 million documents.
+This resource contains documents that date back to the pre-1800s to the year 2021; however, due to the low sample size in early years, we only used documents published from 2000 to 2021.
+The resource was subsequently updated with documents from 2021. 
+We also downloaded a later version on March 09th, 2022, and merged both versions using each document's doc_id field to produce the corpus used in this analysis.
+We divided documents by publication year and then preprocessed each using spacy's en_core_web_sm model [@spacy2].
+We replaced each tagged word or phrase with its corresponding entity type and entity id for every sentence that contained an annotation.
+Then, we used spacy to break sentences into individual tokens and normalized each token to its root form via lemmatization.
+After preprocessing, we used every sentence to train multiple natural language models designed to represent words based on their context.
+
+### Biomedical Preprints
+
+BioRxiv [@doi:10.1101/833400v1] and MedRxiv [@doi:10.1126/science.aay2933] are repositories that contain preprints for the life science community.
+MedRxiv mainly focuses on preprints that mention patient research, while bioRxiv focuses on general biology.
+We downloaded a snapshot of both resources on March 4th, 2022, using their respective Amazon S3 bucket [@https://www.biorxiv.org/tdm; @https://www.medrxiv.org/tdm].
+This snapshot contained 172,868 BioRxiv preprints and 37,517 MedRxiv preprints.
+These resources allow authors to post multiple versions of a single preprint.
+To prevent duplication bias, we filtered every preprint to its most recent version and sorted each preprint into its respective posted year.
+Unlike Pubtator Central, these filtered preprints do not contain any annotations.
+Therefore, we used TaggerOne [@doi:10.1093/bioinformatics/btw343] to tag every chemical and disease entity and GNormplus [@doi:10.1155/2015/918710] to tag every gene and species entity for our preprint set.
+Once tagged, we used spacy to preprocess every preprint as described in our Pubtator Central section.
+
+## Constructing Word Embeddings for Semantic Change Detection
+
+Word2vec [@arxiv:1301.3781] is a natural language processing model designed to model words based on their respective neighbors in the form of dense vectors.
+This suite of models comes in two forms, a skipgram model and a continuous bags of words (CBOW) model.
+The skipgram model generates these vectors by having a shallow neural network predict a word's neighbors given the word, while the CBOW model predicts the word given its neighbors.
+We used the CBOW model to construct word vectors for each year.
+Despite the power of these word2vec models, these models are known to differ both due to randomization within year and year-to-year variability across years [@arxiv:1804.09692; @doi:10.1007/978-3-030-03991-2_73; @doi:10.1162/tacl_a_00008; @doi:10.18653/v1/S18-2019].
+To control for run-to-run variability, we examined both intra-year and inter-year relationships.
+Each year, we trained ten different CBOW models using the following parameters: vector size of 300, 10 epochs, minimum frequency cutoff of 5, and a window size of 16 for abstracts.
+Every model has its own unique vector space following training, making it difficult to compare two models without a correction step.
+We used orthogonal Procrustes [@doi:10.1007/BF02289451] to align models.
+We aligned all trained CBOW models for the Pubtator Central dataset to the first model trained in 2021.
+Likewise, we aligned all CBOW models for the BioRxiv/MedRxiv dataset to the first model trained in 2021.
+We used UMAP [@arxiv:1802.03426] to visually examine the aligned models.
+We trained this model using the following parameters: cosine distance metric, random_state of 100, 25 for n_neighbors, a minimum distance of 0.99, and 50 n_epochs.
+
+## Detecting semantic changes across time
+
+Once word2vec models are aligned, the next step is to detect semantic change.  
+Semantic change events are often detected through time series analysis  [@doi:10.1145/2736277.2741627].
+We constructed a time series sequence for every token by calculating its distance within a given year (intra-year) and across each year (inter-year).
+We used the model pairs constructed from the same year to calculate an intra-year distance.
+Then, we calculated the cosine distance between each token and its corresponding counterpart for every generated pair. 
+Cosine distance is a metric bounded between zero and two, where a score of zero means two vectors are the same, and a score of two means both vectors are different.
+For the inter-year distance, we used the Cartesian product of every model between two years and calculated the distance between tokens in the same way as the intra-year distance.
+Following both calculations, we combined both metrics by taking the ratio of the average inter-year distance over the average intra-year distance.
+Through this approach, tokens with high intra-year instability will be penalized and vice-verse for more stable tokens.
+Along with token distance calculations, it has been shown that including token frequency improves results compared to using distance alone [@doi:10.1007/s00799-019-00271-6].
+We calculated token frequency as the ratio of token frequency in the more recent year over the frequency of the previous year. 
+Then, we combined both the frequency and distance ratios to make the final metric.
+
+Following time series construction, we performed change point detection, which is a process that uses statistical techniques to detect abnormalities within a given time series.
+We used the CUSUM algorithm [@gustafsson] to detect these abnormalities.
+This algorithm uses a rolling sum of the differences between two timepoints and checks whether the sum is greater than a threshold.
+A changepoint is considered to have occurred if the sum is greater than a threshold.
+We used the 99th percentile on every generated timepoint as the threshold.
+Then, we ran the CUSUM algorithm using a drift of 0 and default settings for all other parameters.
+
 
 
 # Results
