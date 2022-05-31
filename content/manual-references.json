@@ -1,5 +1,33 @@
 [
-{
+ {
+    "URL": "https://aclanthology.org/W11-2508",
+    "author": [
+      {
+        "family": "Gulordava",
+        "given": "Kristina"
+      },
+      {
+        "family": "Baroni",
+        "given": "Marco"
+      }
+    ],
+    "container-title": "Proceedings of the GEMS 2011 workshop on GEometrical models of natural language semantics",
+    "id": "gulordava-2011-distributional",
+    "issued": {
+      "date-parts": [
+        [
+          2011,
+          7
+        ]
+      ]
+    },
+    "page": "67-71",
+    "publisher": "Association for Computational Linguistics",
+    "publisher-place": "Edinburgh, UK",
+    "title": "A distributional similarity approach to the detection of semantic change in the Google Books ngram corpus.",
+    "type": "paper-conference"
+  },
+  {
     "author": [
       {
         "family": "Honnibal",
