@@ -8,7 +8,7 @@ keywords:
 - time-series
 - changepoint-detection
 lang: en-US
-date-meta: '2022-05-18'
+date-meta: '2022-05-31'
 author-meta:
 - David Nicholson
 - Faisal Alquaddoomi
@@ -24,8 +24,8 @@ header-includes: |-
   <meta name="citation_title" content="Detecting semantic shifts in biomedical literature through an intra-year and inter-year approach" />
   <meta property="og:title" content="Detecting semantic shifts in biomedical literature through an intra-year and inter-year approach" />
   <meta property="twitter:title" content="Detecting semantic shifts in biomedical literature through an intra-year and inter-year approach" />
-  <meta name="dc.date" content="2022-05-18" />
-  <meta name="citation_publication_date" content="2022-05-18" />
+  <meta name="dc.date" content="2022-05-31" />
+  <meta name="citation_publication_date" content="2022-05-31" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -52,9 +52,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/word_lapse_manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/word_lapse_manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/word_lapse_manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/word_lapse_manuscript/v/cef07c818c8eb383f5c6be286fc28de1035ed762/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/word_lapse_manuscript/v/cef07c818c8eb383f5c6be286fc28de1035ed762/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/word_lapse_manuscript/v/cef07c818c8eb383f5c6be286fc28de1035ed762/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/word_lapse_manuscript/v/9b53e4620c0ed1a6b42495a9cf2111d6bc10217f/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/word_lapse_manuscript/v/9b53e4620c0ed1a6b42495a9cf2111d6bc10217f/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/word_lapse_manuscript/v/9b53e4620c0ed1a6b42495a9cf2111d6bc10217f/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -76,10 +76,10 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/word_lapse_manuscript/v/cef07c818c8eb383f5c6be286fc28de1035ed762/))
+([permalink](https://greenelab.github.io/word_lapse_manuscript/v/9b53e4620c0ed1a6b42495a9cf2111d6bc10217f/))
 was automatically generated
-from [greenelab/word_lapse_manuscript@cef07c8](https://github.com/greenelab/word_lapse_manuscript/tree/cef07c818c8eb383f5c6be286fc28de1035ed762)
-on May 18, 2022.
+from [greenelab/word_lapse_manuscript@9b53e46](https://github.com/greenelab/word_lapse_manuscript/tree/9b53e4620c0ed1a6b42495a9cf2111d6bc10217f)
+on May 31, 2022.
 </em></small>
 
 ## Authors
@@ -134,26 +134,39 @@ on May 18, 2022.
 
 # Introduction
 
-1. Biomedical language is constantly changing
-	1. Scientists make new discoveries
-	2. Old technologies are being revamped
-	3. More reasons for language changes
-2. Diachronic studies aims to capture these types of changes through time
-   1. Insert papers for language changes in general
-      1. doi:10.1007/s00799-019-00271-6
-      2. doi:10.1142/9789811232701_0011
-      3. arxiv:1605.09096
-      4. arxiv:1806.03537
-      5. arxiv:1606.02821
-      6. doi:10.18653/v1/N18-1044 
-3. Gap in knowledge: 
-	1. work has focused majorly on non-biomedical text
-	2. biomedical related work is only on abstract and titles
-	3. Work has yet to focus on individual tokens and themes.
-4. Goal is to examine longitudinal trends for biomedical term changes.
-<div style="color:red">
-Don't forget in here your methodological contribution to estimate uncertainty with variable-size training datasets in each year by training multiple models and examining variability across them.
-</div>
+Language is constantly evolving, and the meaning that we ascribe to words changes over time. 
+For example, the word "nice" was used to mean foolish or innocent back in the 15th-17th century; then, it underwent a positive shift to its current meaning of "pleasant or delightful"[@doi:10.1093/acrefore/9780199384655.013.323]. 
+These shifts occur for many reasons.
+For example, writers may use new metaphors or substitute words for others with similar meanings in a process known as metonymy [@doi:10.1093/acrefore/9780199384655.013.323]. 
+Studying these shifts can provide a nuanced understanding of how language adapts to describe our world.
+
+Scientific fields of inquiry also change, sometimes rapidly, as researchers devise and test new hypotheses and applications.
+For example, the repurposing of the CRISPR-Cas9 system to a pervasive tool for genome editing has altered how we discuss molecular entities.
+Microbes use this as an immune system to defend against viruses.
+Scientists repurposed this system for genome editing [@doi:10.1126/science.1225829], leading to changes in the use of the term.
+Science is a field with substantial written communication [@doi:10.1021/ci00050a001], both via published papers [@doi:10.1073/pnas.98.2.381] and preprints [@doi:10.1101/833400; @doi:10.1126/science.aay2933].
+Examining scientific manuscripts with computational linguistics can reveal longitudinal trends in scientific research.
+
+Studying changes in the use of word meanings is called semantic shift detection.
+Approaches for semantic shift detection examine time series datasets that capture word usage patterns, both with respect to frequency and structure.
+Typically, these time series are generated for individual words by training a unique model on text binned by a selected time period [@arxiv:1605.09096; @arxiv:1606.0282; @doi:10.18653/v1/N18-1044].
+<!--Following time series generation, the next step is to align models to enable comparison [@arxiv:1411.3315].
+A common technique for alignment is Orthogonal Procrustes [@doi:10.1007/BF02289451], but other ways to perform alignment have been used [@arxiv:1702.08359; @arxiv:1703.00607].-->
+Methods are then applied to identify "changepoints" where a word's meaning has changed [@arxiv:0710.3742,@gustafsson].
+
+Semantic shifts have been examined in many sources. 
+Analysis has included newspapers [@doi:10.18653/v1/W17-2705; @arxiv:1711.05603;@doi:10.1017/S0003055417000570], books [@arxiv:1605.09096], reddit [@arxiv:1606.0282], and Twitter [@arxiv:1411.3315].
+Researchers have examined topics in information retrieval [@doi:10.1007/s11192-018-2843-2], and in biomedicine COVID-19 has been examined multiple times [@doi:10.1142/9789811232701_0011,@arxiv:2102.07836].
+The amount of open access biomedical literature has dramatically increased in the last two decades, laying the groundwork for the large-scale analysis of semantic shifts in biomedicine.
+
+We examine these semantic shifts in this rapidly growing body of open access text.
+We include both published papers and preprints in our analysis.
+We found that novel strategies integrating multiple models for each year sidestepped the challenge of instability in the machine learning models and allowed us to estimate intra- and inter-year variability.
+We identify semantic changepoints for each token.
+We examine key cases and provide the full set of research products, including changepoints and machine learning models, as openly licensed tools for the community.
+We also created a webserver that allows users to analyze tokens of interest on the fly, examining both the most similar terms within a year and temporal trends.
+
+
 
 
 # Methods
@@ -176,7 +189,7 @@ After preprocessing, we used every sentence to train multiple natural language m
 
 ### Biomedical Preprints
 
-BioRxiv [@doi:10.1101/833400v1] and MedRxiv [@doi:10.1126/science.aay2933] are repositories that contain preprints for the life science community.
+BioRxiv [@doi:10.1101/833400] and MedRxiv [@doi:10.1126/science.aay2933] are repositories that contain preprints for the life science community.
 MedRxiv mainly focuses on preprints that mention patient research, while bioRxiv focuses on general biology.
 We downloaded a snapshot of both resources on March 4th, 2022, using their respective Amazon S3 bucket [@https://www.biorxiv.org/tdm; @https://www.medrxiv.org/tdm].
 This snapshot contained 172,868 BioRxiv preprints and 37,517 MedRxiv preprints.
