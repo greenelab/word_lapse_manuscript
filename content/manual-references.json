@@ -1,25 +1,5 @@
 [
-{
-  "id": "url:https://github.com/manubot/rootstock",
-  "type": "webpage",
-  "URL": "https://github.com/manubot/rootstock",
-  "title": "manubot/rootstock GitHub repository",
-  "container-title": "GitHub",
-  "issued": {
-    "date-parts": [
-      [
-        2019
-      ]
-    ]
-  },
-  "author": [
-    {
-      "given": "Daniel",
-      "family": "Himmelstein"
-    }
-  ]
-},
-{
+ {
     "URL": "https://aclanthology.org/W11-2508",
     "author": [
       {
@@ -46,5 +26,84 @@
     "publisher-place": "Edinburgh, UK",
     "title": "A distributional similarity approach to the detection of semantic change in the Google Books ngram corpus.",
     "type": "paper-conference"
+  },
+  {
+    "author": [
+      {
+        "family": "Honnibal",
+        "given": "Matthew"
+      },
+      {
+        "family": "Montani",
+        "given": "Ines"
+      }
+    ],
+    "id": "spacy2",
+    "issued": {
+      "date-parts": [
+        [
+          2017
+        ]
+      ]
+    },
+    "note": "To appear",
+    "title": "<span class=\"nocase\">spaCy 2</span>: Natural language understanding with Bloom embeddings, convolutional neural networks and incremental parsing",
+    "title-short": "<span class=\"nocase\">spaCy 2</span>",
+    "type": "manuscript"
+  },
+  {
+    "author": [
+      {
+        "family": "Sainburg",
+        "given": "Tim"
+      },
+      {
+        "family": "McInnes",
+        "given": "Leland"
+      },
+      {
+        "family": "Gentner",
+        "given": "Timothy Q"
+      }
+    ],
+    "container-title": "Neural Computation",
+    "id": "sainburg2021parametric",
+    "issue": "11",
+    "issued": {
+      "date-parts": [
+        [
+          2021
+        ]
+      ]
+    },
+    "page": "2881-2907",
+    "publisher": "MIT Press One Rogers Street, Cambridge, MA 02142-1209, USA journals-info…",
+    "title": "Parametric umap embeddings for representation and semisupervised learning",
+    "type": "article-journal",
+    "volume": "33"
+  },
+  {
+    "author": [
+      {
+        "family": "Gustafsson",
+        "given": "Fredrik"
+      },
+      {
+        "family": "Gustafsson",
+        "given": "Fredrik"
+      }
+    ],
+    "id": "gustafsson",
+    "issued": {
+      "date-parts": [
+        [
+          2000
+        ]
+      ]
+    },
+    "publisher": "Citeseer",
+    "title": "Adaptive filtering and change detection",
+    "type": "book",
+    "volume": "1"
   }
 ]
