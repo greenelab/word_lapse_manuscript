@@ -77,9 +77,9 @@
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/word_lapse_manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/word_lapse_manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/word_lapse_manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/word_lapse_manuscript/v/6d0d77896945a8d60affae41d3d7b0cf08aeabeb/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/word_lapse_manuscript/v/6d0d77896945a8d60affae41d3d7b0cf08aeabeb/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/word_lapse_manuscript/v/6d0d77896945a8d60affae41d3d7b0cf08aeabeb/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/word_lapse_manuscript/v/4b9ca1e4e0d17c72559d54ab89b9c0e746cb6f1e/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/word_lapse_manuscript/v/4b9ca1e4e0d17c72559d54ab89b9c0e746cb6f1e/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/word_lapse_manuscript/v/4b9ca1e4e0d17c72559d54ab89b9c0e746cb6f1e/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -96,9 +96,9 @@
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://greenelab.github.io/word_lapse_manuscript/v/6d0d77896945a8d60affae41d3d7b0cf08aeabeb/">permalink</a>)
+(<a href="https://greenelab.github.io/word_lapse_manuscript/v/4b9ca1e4e0d17c72559d54ab89b9c0e746cb6f1e/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/greenelab/word_lapse_manuscript/tree/6d0d77896945a8d60affae41d3d7b0cf08aeabeb">greenelab/word_lapse_manuscript@6d0d778</a>
+from <a href="https://github.com/greenelab/word_lapse_manuscript/tree/4b9ca1e4e0d17c72559d54ab89b9c0e746cb6f1e">greenelab/word_lapse_manuscript@4b9ca1e</a>
 on June 22, 2022.
 </em></small></p>
 <h2 id="authors">Authors</h2>
@@ -573,12 +573,17 @@ The final visualization shows the union of the nearest 25 neighbors from each ye
 This visualization has a comparison function that allows users to examine differences between years.
 All functionalities are fully supported across the PMCOA and preprint corpora, and users can toggle between the two.</p>
 <h1 id="discussion-and-conclusion">Discussion and Conclusion</h1>
-<ol type="1">
-<li>We provided a website resource to allow users to see toekn association changes</li>
-<li>Word2vec is unstable and we implemented an approach to account for that variation</li>
-<li>Constructs groundwork for future research into token changes</li>
-<li>Will implement biorxiv and other preprint resources as a next step.</li>
-</ol>
+<p>Language is rapidly evolving, and the usage of words changes over time with words assimilating new meanings or associations <span class="citation" data-cites="16LaV5jTS">[<a href="#ref-16LaV5jTS" role="doc-biblioref">1</a>]</span>.
+Some efforts have been made to study semantic change using biomedical text <span class="citation" data-cites="wXphJ7n3 ynODVhC7 K1SZY72U">[<a href="#ref-wXphJ7n3" role="doc-biblioref">18</a>,<a href="#ref-ynODVhC7" role="doc-biblioref">19</a>,<a href="#ref-K1SZY72U" role="doc-biblioref">20</a>]</span>; however, no such work has examined the changes evident in both pre-publication peer-reviewed and preprinted biomedical text.
+We examined semantic change in both open-access biomedical corpora from Pubmed (PMCOA) and bioRxiv/MedRxiv for the 2000-2021 interval.
+Studies like this one have only become feasible recently with the rapid uptake of open access publishing.
+To be able to span two decades with very different data availability, we developed a novel statistic that incorporated multiple models using both inter- and intra-year distances.
+Without the correction, comparing between stable and unstable models is challenging as previously reported <span class="citation" data-cites="ImhJ75vq M1LzK6yf">[<a href="#ref-ImhJ75vq" role="doc-biblioref">32</a>,<a href="#ref-M1LzK6yf" role="doc-biblioref">43</a>]</span>.
+Our analysis revealed more than 41,000 different change points, including tokens such as ‘cas9’, ‘pandemic’, and ‘sars’.
+Many change points overlapping between PMCOA and preprints were related to COVID-19, indicating that the COVID-19 pandemic has been strong and immediate enough to induce rapid semantic change across both publishing paradigms.</p>
+<p>As the amount of preprinted text grows, future work may be able to determine the consistency and time-lag of semantic change between preprint and pre-publication peer-reviewed text - potentially predicting future change in pre-publication peer-reviewed text.
+We developed a web application to enable users to investigate individual tokens - automatic approaches that use orthogonal metrics to estimate change point validity would make analysis at scale more straightforward.
+Furthermore, including corpora such as the arXiv <span class="citation" data-cites="ZTyQYlDz">[<a href="#ref-ZTyQYlDz" role="doc-biblioref">44</a>]</span> or psyArXiv <span class="citation" data-cites="1D4Cz1GNr">[<a href="#ref-1D4Cz1GNr" role="doc-biblioref">45</a>]</span> repositories may reveal consistencies across a broader swath of fields or within-field analyses may reveal the earliest starting points of semantic changes that ultimately sweep through biomedicine.</p>
 <h2 id="data-availability-and-software">Data Availability and Software</h2>
 <p>An online version of this manuscript is available under a Creative Commons Attribution License at <a href="https://greenelab.github.io/word_lapse_manuscript/">https://greenelab.github.io/word_lapse_manuscript/</a>.
 The source for the research portions of this project is licensed under the BSD-2-Clause Plus Patent at <a href="https://github.com/greenelab/biovectors">https://github.com/greenelab/biovectors</a>.
@@ -724,6 +729,15 @@ Computational Semantics</em> (2018) <a href="https://doi.org/gh6qpc">https://doi
 </div>
 <div id="ref-vvMItrwz" class="csl-entry" role="doc-biblioentry">
 <div class="csl-left-margin">42. </div><div class="csl-right-inline"><strong>The species Severe acute respiratory syndrome-related coronavirus: classifying 2019-nCoV and naming it SARS-CoV-2</strong> <em>Nature Microbiology</em> (2020-03-02) <a href="https://doi.org/ggqj7m">https://doi.org/ggqj7m</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1038/s41564-020-0695-z">10.1038/s41564-020-0695-z</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/32123347">32123347</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7095448">PMC7095448</a></div></div>
+</div>
+<div id="ref-M1LzK6yf" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">43. </div><div class="csl-right-inline"><strong>Factors Influencing the Surprising Instability of Word Embeddings</strong> <div class="csl-block">Laura Wendlandt, Jonathan K Kummerfeld, Rada Mihalcea</div> <em>arXiv</em> (2018) <a href="https://doi.org/gqcn9m">https://doi.org/gqcn9m</a> <div class="csl-block">DOI: <a href="https://doi.org/10.48550/arxiv.1804.09692">10.48550/arxiv.1804.09692</a></div></div>
+</div>
+<div id="ref-ZTyQYlDz" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">44. </div><div class="csl-right-inline"><strong>arXiv.org: the Los Alamos National Laboratory e‐print server</strong> <div class="csl-block">Gerry McKiernan</div> <em>International Journal on Grey Literature</em> (2000-09-01) <a href="https://doi.org/fg8pw7">https://doi.org/fg8pw7</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1108/14666180010345564">10.1108/14666180010345564</a></div></div>
+</div>
+<div id="ref-1D4Cz1GNr" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">45. </div><div class="csl-right-inline"><strong>PsyArXiv</strong> <div class="csl-block">Margie Ruppel</div> <em>The Charleston Advisor</em> (2021-10-01) <a href="https://doi.org/gqbk4k">https://doi.org/gqbk4k</a> <div class="csl-block">DOI: <a href="https://doi.org/10.5260/chara.23.2.38">10.5260/chara.23.2.38</a></div></div>
 </div>
 </div>
 <h2 id="supplemental-tables">Supplemental Tables</h2>
