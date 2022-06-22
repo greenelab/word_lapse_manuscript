@@ -1,7 +1,7 @@
 # Output directory containing the formatted manuscript
 
 The [`gh-pages`](https://github.com/greenelab/word_lapse_manuscript/tree/gh-pages) branch hosts the contents of this directory at <https://greenelab.github.io/word_lapse_manuscript/>.
-The permalink for this webpage version is <https://greenelab.github.io/word_lapse_manuscript/v/6e8932ccd15aa32c85314438752d42ad3ddcdccd/>.
+The permalink for this webpage version is <https://greenelab.github.io/word_lapse_manuscript/v/6d0d77896945a8d60affae41d3d7b0cf08aeabeb/>.
 To redirect to the permalink for the latest manuscript version at anytime, use the link <https://greenelab.github.io/word_lapse_manuscript/v/freeze/>.
 
 ## Files
@@ -35,4 +35,4 @@ Verifying timestamps with the `ots verify` command requires running a local bitc
 ## Source
 
 The manuscripts in this directory were built from
-[`6e8932ccd15aa32c85314438752d42ad3ddcdccd`](https://github.com/greenelab/word_lapse_manuscript/commit/6e8932ccd15aa32c85314438752d42ad3ddcdccd).
+[`6d0d77896945a8d60affae41d3d7b0cf08aeabeb`](https://github.com/greenelab/word_lapse_manuscript/commit/6d0d77896945a8d60affae41d3d7b0cf08aeabeb).

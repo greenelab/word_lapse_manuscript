@@ -77,9 +77,9 @@
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/word_lapse_manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/word_lapse_manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/word_lapse_manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/word_lapse_manuscript/v/6e8932ccd15aa32c85314438752d42ad3ddcdccd/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/word_lapse_manuscript/v/6e8932ccd15aa32c85314438752d42ad3ddcdccd/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/word_lapse_manuscript/v/6e8932ccd15aa32c85314438752d42ad3ddcdccd/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/word_lapse_manuscript/v/6d0d77896945a8d60affae41d3d7b0cf08aeabeb/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/word_lapse_manuscript/v/6d0d77896945a8d60affae41d3d7b0cf08aeabeb/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/word_lapse_manuscript/v/6d0d77896945a8d60affae41d3d7b0cf08aeabeb/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -96,9 +96,9 @@
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://greenelab.github.io/word_lapse_manuscript/v/6e8932ccd15aa32c85314438752d42ad3ddcdccd/">permalink</a>)
+(<a href="https://greenelab.github.io/word_lapse_manuscript/v/6d0d77896945a8d60affae41d3d7b0cf08aeabeb/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/greenelab/word_lapse_manuscript/tree/6e8932ccd15aa32c85314438752d42ad3ddcdccd">greenelab/word_lapse_manuscript@6e8932c</a>
+from <a href="https://github.com/greenelab/word_lapse_manuscript/tree/6d0d77896945a8d60affae41d3d7b0cf08aeabeb">greenelab/word_lapse_manuscript@6d0d778</a>
 on June 22, 2022.
 </em></small></p>
 <h2 id="authors">Authors</h2>
@@ -237,35 +237,341 @@ A changepoint is considered to have occurred if the sum is greater than a thresh
 We used the 99th percentile on every generated timepoint as the threshold.
 Then, we ran the CUSUM algorithm using a drift of 0 and default settings for all other parameters.</p>
 <h1 id="results">Results</h1>
-<div style="color:red">
-<p>One potential results panel: comparing results with abstract and full text (since you say above full text is not so often used).</p>
+<h2 id="models-can-be-aligned-and-compared-within-and-between-years">Models can be aligned and compared within and between years</h2>
+<p>We examined how the usage of tokens in biomedical text changes over time.
+Our evaluation was derived from machine learning models designed to predict the actual token given a portion of its surrounding tokens.
+Each token was represented as a vector in a coordinate space constructed by these models.
+However, training these models is stochastic, which results in arbitrary coordinate spaces.
+Model alignment is an essential step in allowing word2vec models to be compared <span class="citation" data-cites="xQaNPZgV 1346YOPVE">[<a href="#ref-xQaNPZgV" role="doc-biblioref">38</a>,<a href="#ref-1346YOPVE" role="doc-biblioref">39</a>]</span>.
+Before alignment, each model has its own unique coordinate space (Figures <a href="#fig:word2vec_alignment">1</a>A), and each word is represented within that space (Figure <a href="#fig:word2vec_alignment">1</a>B).
+Alignment projects every model onto a shared coordinate space (Figure <a href="#fig:word2vec_alignment">1</a>C), enabling direct token comparison.
+We randomly selected 100 tokens to confirm that alignment worked as expected.
+In aligned models, tokens in the global spcae were more similar to themselves within year than between years, while identical tokens in unaligned models were completely distinct (Figure <a href="#fig:word2vec_alignment">1</a>D).
+Local distances were unaffected by alignment (Figure <a href="#fig:word2vec_alignment">1</a>D), as token-neighbor distances were unaffected by the alignment procedure.</p>
+<div id="fig:word2vec_alignment" class="fignos">
+<figure>
+<img src="https://raw.githubusercontent.com/danich1/biovectors/1c2f91cd05ed6714525f54a006f9a78bf7fe2d31/figure_generation/output/Figure_1.png" style="width:100.0%" alt="Figure 1: A. Without alignment, each word2vec model has its own coordinate space. This is a UMAP visualization of 5000 randomly sampled tokens from 5 distinct Word2Vec models trained on the text published in 2010. Each data point represents a token, and the color represents the respective Word2Vec model. B. The highlighted token ‘probiotics’ shows up in its respective clusters. Each data point represents a token, and the color represents the Word2Vec model. C. After the alignment step, the token ‘probiotic’ is closer in vector space. Each data point represents a token, and the color represents the different Word2Vec models. D. In the global coordinate space, token distances appear to be vastly different without alignment, but become closer upon alignment, while local distances, evaluated using neighbors, are unaffected. This boxplot shows the average distance of 100 randomly sampled tokens shared in every year from 2000 to 2021. The x-axis shows the various groups being compared (tokens against themselves via intra-year and inter-year distances and tokens against their corresponding neighbors. The y axis shows the averaged distance for every year." />
+<figcaption aria-hidden="true"><span>Figure 1:</span> A. Without alignment, each word2vec model has its own coordinate space.
+This is a UMAP visualization of 5000 randomly sampled tokens from 5 distinct Word2Vec models trained on the text published in 2010.
+Each data point represents a token, and the color represents the respective Word2Vec model.
+B. The highlighted token ‘probiotics’ shows up in its respective clusters.
+Each data point represents a token, and the color represents the Word2Vec model.
+C. After the alignment step, the token ‘probiotic’ is closer in vector space.
+Each data point represents a token, and the color represents the different Word2Vec models.
+D. In the global coordinate space, token distances appear to be vastly different without alignment, but become closer upon alignment, while local distances, evaluated using neighbors, are unaffected.
+This boxplot shows the average distance of 100 randomly sampled tokens shared in every year from 2000 to 2021.
+The x-axis shows the various groups being compared (tokens against themselves via intra-year and inter-year distances and tokens against their corresponding neighbors.
+The y axis shows the averaged distance for every year.</figcaption>
+</figure>
 </div>
-<ol type="1">
-<li>Figure 1 - Visual to show that alignment works along intra year variation (Procrustes Validation)</li>
-<li>Umap panel for an individual year to show models are separated
-<div style="color:red">
-I would start with the simplest possible way that you can show things, and only bring in more complexity like UMAP when necessary. I’m guessing that you would be able to show this with just PCA or similar, unless I’m not thinking correctly.
-</div></li>
-<li>Umap panel to show the same year after models have been aligned</li>
-<li>Umap panel to show across years (inter-year varation)
-<ol type="1">
-<li>might not have this as a figure given the aligned umap results, but we shall see</li>
-</ol></li>
-<li>Figure 2 - CUSUM validation
-<div style="color:red">
-I think you might want another figure here that shows how you can use the variability in distance to address the challenges of variable training set size / model uncertainty. Let’s see how things shake out as you’re writing.
-</div></li>
-<li>Table of found timepoint changes using this algorithm</li>
-<li>Highlight pandemic as positive control</li>
-<li>Nearest Neighbors upset plot ^^</li>
-<li>Might look into lung cancer or other form of cancer results</li>
-<li>Figure 3 - Website walkthrough for the work done here</li>
-<li>Website screenshots
-<div style="color:red">
-The figures that make up the website might be nice to show/explain individually - not as screenshots but as actual figures (remember the PLOS situation where using a screenshot was an issue we had to work through).
-</div></li>
-<li>Basically a walkthrough of the website and how a user can operate the web resource (similar to preprint similarity search)</li>
-</ol>
+<p>The landscape of biomedical publishing has changed rapidly during the period of our dataset.
+The texts for our analysis were open access manuscripts available through PubMed Central.
+The growth in the amount of available text and the uneven adoption of open access publishing during the interval studied was expected to induce changes in the underlying machine learning models, making comparisons more difficult.
+We found that the number of tokens available for model building, i.e., those in PMC OA, increased dramatically during this time (Figure <a href="#fig:novel_distance_validation">2</a>A).
+This was expected to create a pattern where models trained in earlier years were more variable than those from later years simply due to the limited sample size in early years.
+We aimed to correct for this change in the underlying models by developing a statistic that, instead of using pairwise comparisons of token distances between individual models, integrated multiple models for each year by comparing tokens’ intra- and inter-year variabilities.
+We defined the statistic as the ratio of the average distance between two years over the sum of the average distance within each year respectively.</p>
+<div id="fig:novel_distance_validation" class="fignos">
+<figure>
+<img src="https://raw.githubusercontent.com/danich1/biovectors/b48e44d1a06106d3a76b35980384bc0c0c2cfaf9/figure_generation/output/Figure_2.png" style="width:100.0%" alt="Figure 2: A. The number of tokens our models have trained on increases over time. This line plot shows the number of unique tokens seen by our various machine learning models. The x-axis depicts the year and the y-axis shows the token count. B. Earlier years compared to 2010 have greater distances than later years. This confidence interval plot shows the collective distances obtained by sampling 100 tokens that are present from every year using a single model approach. The x-axis shows a given year and the y-axis shows the distance metric. C. Later years have a lower intra-distance variability compared to the earlier years. This confidence interval plot shows the collective distances obtained by sampling 100 tokens that are present from every year using our multi-model approach. The x-axis shows a given year and the y-axis shows the distance metric." />
+<figcaption aria-hidden="true"><span>Figure 2:</span> A. The number of tokens our models have trained on increases over time.
+This line plot shows the number of unique tokens seen by our various machine learning models.
+The x-axis depicts the year and the y-axis shows the token count.
+B. Earlier years compared to 2010 have greater distances than later years.
+This confidence interval plot shows the collective distances obtained by sampling 100 tokens that are present from every year using a single model approach.
+The x-axis shows a given year and the y-axis shows the distance metric.
+C. Later years have a lower intra-distance variability compared to the earlier years.
+This confidence interval plot shows the collective distances obtained by sampling 100 tokens that are present from every year using our multi-model approach.
+The x-axis shows a given year and the y-axis shows the distance metric.</figcaption>
+</figure>
+</div>
+<p>We expected most tokens to undergo minor changes from year to year, while substantial changes likely suggested model drift as opposed to true linguistic change.
+We measured the extent to which tokens differed from themselves using the standard single-model approach and our integrated statistic.
+We filtered the token list to only contain tokens present in every year and compared their distance to the midpoint year, 2010, using the single-model and integrated-models strategies.
+We found that distances tended were markedly larger in the earliest years, where we expected models to be least stable, using the traditional approach (Figure <a href="#fig:novel_distance_validation">2</a>B).
+The integrated model approach did not display the same pattern in the earliest years (Figure <a href="#fig:novel_distance_validation">2</a>C).
+Both trends reinforce that training on smaller corpora will lead to high variation and that an integrated model strategy is needed <span class="citation" data-cites="ImhJ75vq">[<a href="#ref-ImhJ75vq" role="doc-biblioref">32</a>]</span>.
+Based on these results, we used the integrated-model strategy to calculate inter-year token distances for the remainder of this work.</p>
+<h2 id="terms-exhibit-detectable-changes-in-usage">Terms exhibit detectable changes in usage</h2>
+<div id="fig:preprint_published_changepoints" class="fignos">
+<figure>
+<img src="https://raw.githubusercontent.com/danich1/biovectors/576df207026d0573fbbb00b95c264aea0bd8174b/figure_generation/output/Figure_3.png" style="width:100.0%" alt="Figure 3: A. The number of change points increases over time in PMCOA. The x-axis shows the various time periods, while the y-axis depicts the number of detected change points. B. Regarding preprints, the greatest number of change points was during 2018-2019. The x-axis shows the various time periods, while the y-axis depicts the number of detected change points. C. The token ‘cas9’ was detected to have a change point at 2012-2013. The x-axis shows the time period since the first appearance of the token, and the y-axis shows the change metric. D. ‘sars’ has two detected change points within the PMCOA corpus. The x-axis shows the time period since the first appearance of the token, and the y-axis shows the change metric." />
+<figcaption aria-hidden="true"><span>Figure 3:</span> A. The number of change points increases over time in PMCOA.
+The x-axis shows the various time periods, while the y-axis depicts the number of detected change points.
+B. Regarding preprints, the greatest number of change points was during 2018-2019.
+The x-axis shows the various time periods, while the y-axis depicts the number of detected change points.
+C. The token ‘cas9’ was detected to have a change point at 2012-2013.
+The x-axis shows the time period since the first appearance of the token, and the y-axis shows the change metric.
+D. ‘sars’ has two detected change points within the PMCOA corpus.
+The x-axis shows the time period since the first appearance of the token, and the y-axis shows the change metric.</figcaption>
+</figure>
+</div>
+<p>We next sought to identify tokens that changed during the 2000-2021 interval for the text from PubMed Central’s Open Access Corpus (PMCOA) and the 2015-2022 interval for our preprint corpus.
+We performed change point detection using the CUSUM algorithm with distances calculated with the integrated-model approach to correct for systematic differences in the underlying corpora.
+We found 41281 terms with a detected change point from PMCOA and 2266 terms from preprints (Figures <a href="#fig:preprint_published_changepoints">3</a>A and <a href="#fig:preprint_published_changepoints">3</a>B), and the vast majority (38019 for PMCOA and 2260 for preprints) had just a single change-point.</p>
+<p>We explored individual change points.
+We detected one in PMCOA for ‘cas9’ from 2012 to 2013 (Figure <a href="#fig:preprint_published_changepoints">3</a>C).
+Before the change point, its closest neighbors were related genetic elements (e.g., ‘cas’1-3).
+After the change point, its closest neighbors became terms related to targeting, sgRNA, and gRNA, as well as other genome editing strategies, ’talen’ and ‘zfns’ (Table <a href="#tbl:cas9_neighbor_table">1</a>).
+For some terms, we detected multiple change points within the studied interval.
+We detected change points for ‘SARS’ from 2002 to 2003 and 2019 to 2020 (Figure <a href="#fig:preprint_published_changepoints">3</a>D), consistent with the emergences of SARS-CoV <span class="citation" data-cites="YuxGez24">[<a href="#ref-YuxGez24" role="doc-biblioref">40</a>]</span> and SARS-CoV-2 <span class="citation" data-cites="1ExALQ5eN vvMItrwz">[<a href="#ref-1ExALQ5eN" role="doc-biblioref">41</a>,<a href="#ref-vvMItrwz" role="doc-biblioref">42</a>]</span> as observed human pathogens.
+We found miscellaneous neighbors before each change point, with use consistent with the acronym for Severe Acute Respiratory Syndrome after each (Tables <a href="#tbl:sars_neighbor_table_one">2</a> and <a href="#tbl:sars_neighbor_table_two">3</a>).</p>
+<p>Out of all change points, we observed 200 tokens with at least one change point in each corpus.
+Only 25 of the 200 terms were detected to have simultaneous changes between the preprint and PMCOA corpora.
+We examined the overlap of detected change points between preprints and published articles.
+Many of these 25 were related to the COVID-19 pandemic (Supplementary Table <a href="#tbl:published_preprint_change_table">S1</a>).
+The complete set of detected change points is available for further analysis (see Data Availability and Software).</p>
+<div id="tbl:cas9_neighbor_table" class="tablenos">
+<table id="tbl:cas9_neighbor_table">
+<caption><span>Table 1:</span> The fifteen most similar neighbors to the token ‘cas9’ for the years 2012 and 2013. </caption>
+<thead>
+<tr class="header">
+<th>2012</th>
+<th>2013</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>cas2</td>
+<td>sgrna</td>
+</tr>
+<tr class="even">
+<td>crispr1</td>
+<td>talen</td>
+</tr>
+<tr class="odd">
+<td>cas3</td>
+<td>spcas9</td>
+</tr>
+<tr class="even">
+<td>cas1</td>
+<td>zfns</td>
+</tr>
+<tr class="odd">
+<td>cas10</td>
+<td>grna</td>
+</tr>
+<tr class="even">
+<td>crispr3</td>
+<td>zfn</td>
+</tr>
+<tr class="odd">
+<td>tracrrna</td>
+<td>dcas9</td>
+</tr>
+<tr class="even">
+<td>crispr</td>
+<td>nickase</td>
+</tr>
+<tr class="odd">
+<td>csn1</td>
+<td>pcocas9</td>
+</tr>
+<tr class="even">
+<td>crispr4</td>
+<td>crispr</td>
+</tr>
+<tr class="odd">
+<td>cas7</td>
+<td>sgrnas</td>
+</tr>
+<tr class="even">
+<td>cas6e</td>
+<td>meganuclease</td>
+</tr>
+<tr class="odd">
+<td>cas4</td>
+<td>tracrrna</td>
+</tr>
+<tr class="even">
+<td>cse1</td>
+<td>crispri</td>
+</tr>
+<tr class="odd">
+<td>cas6</td>
+<td>crrna</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="tbl:sars_neighbor_table_one" class="tablenos">
+<table id="tbl:sars_neighbor_table_one">
+<caption><span>Table 2:</span> The fifteen most similar neighbors to the token ‘sars’ for the years 2002 and 2003. </caption>
+<colgroup>
+<col style="width: 26%" />
+<col style="width: 73%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>2002</th>
+<th>2003</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>qsar</td>
+<td>species_227859</td>
+</tr>
+<tr class="even">
+<td>herbicidal</td>
+<td>mesh_c000657245</td>
+</tr>
+<tr class="odd">
+<td>antiplasmodial</td>
+<td>severe acute respiratory syndrome-related coronavirus (species_694009)</td>
+</tr>
+<tr class="even">
+<td>arylpiperazine</td>
+<td>unidentified human coronavirus (species_694448)</td>
+</tr>
+<tr class="odd">
+<td>a]pyridine</td>
+<td>SARS1 (gene_6301)</td>
+</tr>
+<tr class="even">
+<td>leishmanicidal</td>
+<td>ebola virus sp. (species_205488)</td>
+</tr>
+<tr class="odd">
+<td>naphthyridine</td>
+<td>pandemic</td>
+</tr>
+<tr class="even">
+<td>indolo[2,1</td>
+<td>coronavirus infections (mesh_d018352)</td>
+</tr>
+<tr class="odd">
+<td>b]quinazoline-6,12</td>
+<td>coronavirus</td>
+</tr>
+<tr class="even">
+<td>nematocidal</td>
+<td>ebola virus (species_1570291)</td>
+</tr>
+<tr class="odd">
+<td>f]isoxazolo[2,3</td>
+<td>severe acute respiratory syndrome (mesh_d045169)</td>
+</tr>
+<tr class="even">
+<td>5-(4</td>
+<td>paramyxovirus</td>
+</tr>
+<tr class="odd">
+<td>cholinephosphotransferase</td>
+<td>viruse</td>
+</tr>
+<tr class="even">
+<td>oxovanadium(iv</td>
+<td>drosten</td>
+</tr>
+<tr class="odd">
+<td>catecholase</td>
+<td>virologist</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="tbl:sars_neighbor_table_two" class="tablenos">
+<table id="tbl:sars_neighbor_table_two">
+<caption><span>Table 3:</span> The fifteen most similar neighbors to the token ‘sars’ for the years 2002 and 2003. </caption>
+<colgroup>
+<col style="width: 26%" />
+<col style="width: 73%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>2019</th>
+<th>2020</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>g.o.</td>
+<td>sar</td>
+</tr>
+<tr class="even">
+<td>nsp13</td>
+<td>mers</td>
+</tr>
+<tr class="odd">
+<td>40/367</td>
+<td>cov</td>
+</tr>
+<tr class="even">
+<td>lissodendoryx</td>
+<td>sars-1</td>
+</tr>
+<tr class="odd">
+<td>lutken</td>
+<td>severe acute respiratory syndrome-related coronavirus (species_694009)</td>
+</tr>
+<tr class="even">
+<td>sarr</td>
+<td>coronaviruse</td>
+</tr>
+<tr class="odd">
+<td>sar</td>
+<td>middle east respiratory syndrome-related coronavirus (species_1335626)</td>
+</tr>
+<tr class="even">
+<td>ophiura ophiura (species_72673)</td>
+<td>cov.</td>
+</tr>
+<tr class="odd">
+<td>verrill</td>
+<td>coronavirus infections (mesh_d018352)</td>
+</tr>
+<tr class="even">
+<td>hirondelle</td>
+<td>mers-</td>
+</tr>
+<tr class="odd">
+<td>kobelt</td>
+<td>covs</td>
+</tr>
+<tr class="even">
+<td>azorean</td>
+<td>severe acute respiratory syndrome coronavirus 2 (species_2697049)</td>
+</tr>
+<tr class="odd">
+<td>rusby</td>
+<td>severe acute respiratory syndrome (mesh_d045169)</td>
+</tr>
+<tr class="even">
+<td>d’orbigny</td>
+<td>sarscov</td>
+</tr>
+<tr class="odd">
+<td>psychropotes longicauda (species_55639)</td>
+<td>sarscov-2</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="the-word-lapse-application-is-an-online-resource-for-manual-examination-of-biomedical-tokens">The word-lapse application is an online resource for manual examination of biomedical tokens</h2>
+<div id="fig:website_walkthrough" class="fignos">
+<figure>
+<img src="images/Figure_4.png" style="width:100.0%" alt="Figure 4: A. The trajectory visualization of the token ‘pandemic’ through time. It starts at the first mention of the token and progresses through each subsequent year. Every data point shows the top five neighbors for the respective token. B. The usage frequency of the token ‘pandemic’ through time. The x-axis shows the year, and the y-axis shows the frequency for each token. C. A word cloud visualization for the top 25 neighbors for the token ‘pandemic’ each year. This visualization highlights each neighbor from a particular year and allows for the comparison between two years. Tokens in purple are shared within both years, while tokens in red or blue are unique to their respective year." />
+<figcaption aria-hidden="true"><span>Figure 4:</span> A. The trajectory visualization of the token ‘pandemic’ through time.
+It starts at the first mention of the token and progresses through each subsequent year.
+Every data point shows the top five neighbors for the respective token.
+B. The usage frequency of the token ‘pandemic’ through time.
+The x-axis shows the year, and the y-axis shows the frequency for each token.
+C. A word cloud visualization for the top 25 neighbors for the token ‘pandemic’ each year.
+This visualization highlights each neighbor from a particular year and allows for the comparison between two years.
+Tokens in purple are shared within both years, while tokens in red or blue are unique to their respective year.</figcaption>
+</figure>
+</div>
+<p>We constructed an online application that allows users to examine how tokens change through time.
+The application supports token input as text strings or as MeSH IDs, Entrez Gene IDs, and Taxonomy IDs.
+Users might elect to explore the term ‘pandemic’, for which we detected a change point between 2019 and 2020.
+Users can examine the token’s nearest neighbors through time (Figure <a href="#fig:website_walkthrough">4</a>A).
+Using the token ‘pandemic’ as an example, users can observe that ‘epidemic’ remains similar through time, but taxid:114727 (the H1N1 subtype of influenza) only entered the nearest neighbors with the swine flu pandemic in 2009 and that MeSH:C000657245 (COVID-19) appears in 2020.
+The application also shows a frequency chart depicting how often the particular token is used each year (Figure <a href="#fig:website_walkthrough">4</a>B), which can be displayed as a raw count or adjusted by the total size of the corpus.
+When change points are detected, they are indicated on this panel (Figure <a href="#fig:website_walkthrough">4</a>B).
+The final visualization shows the union of the nearest 25 neighbors from each year ordered by the number of years that neighbor was present (Figure <a href="#fig:website_walkthrough">4</a>C).
+This visualization has a comparison function that allows users to examine differences between years.
+All functionalities are fully supported across the PMCOA and preprint corpora, and users can toggle between the two.</p>
 <h1 id="discussion-and-conclusion">Discussion and Conclusion</h1>
 <ol type="1">
 <li>We provided a website resource to allow users to see toekn association changes</li>
@@ -273,6 +579,13 @@ The figures that make up the website might be nice to show/explain individually 
 <li>Constructs groundwork for future research into token changes</li>
 <li>Will implement biorxiv and other preprint resources as a next step.</li>
 </ol>
+<h2 id="data-availability-and-software">Data Availability and Software</h2>
+<p>An online version of this manuscript is available under a Creative Commons Attribution License at <a href="https://greenelab.github.io/word_lapse_manuscript/">https://greenelab.github.io/word_lapse_manuscript/</a>.
+The source for the research portions of this project is licensed under the BSD-2-Clause Plus Patent at <a href="https://github.com/greenelab/biovectors">https://github.com/greenelab/biovectors</a>.
+Our Word Lapse website can be found at <a href="https://greenelab.github.io/word-lapse">https://greenelab.github.io/word-lapse</a>, and the code for the website is available under a BSD-3 Clause at <a href="https://github.com/greenelab/word-lapse">https://github.com/greenelab/word-lapse</a>.
+Full-text access for the bioRxiv repository is available at <a href="https://www.biorxiv.org/tdm">https://www.biorxiv.org/tdm</a>.
+Full-text access for the medRxiv repository is available at <a href="https://www.medrxiv.org/tdm">https://www.medrxiv.org/tdm</a>.
+Access to Pubtator Central’s Open Access subset is available on NCBI’s FTP server at <a href="https://ftp.ncbi.nlm.nih.gov/pub/lu/PubTatorCentral/">https://ftp.ncbi.nlm.nih.gov/pub/lu/PubTatorCentral/</a>.</p>
 <h1 id="acknowledgments">Acknowledgments</h1>
 <p>This work was supported by the Gordon and Betty Moore Foundation under award GBMF4552 and the National Institutes of Health’s National Human Genome Research Institute under award R01 HG010067 to CSG.
 The funders had no role in the study design, data collection, and analysis, decision to publish, or preparation of the manuscript.</p>
@@ -397,6 +710,135 @@ Computational Semantics</em> (2018) <a href="https://doi.org/gh6qpc">https://doi
 <div id="ref-1BaA3rWCK" class="csl-entry" role="doc-biblioentry">
 <div class="csl-left-margin">37. </div><div class="csl-right-inline"><strong>Improving semantic change analysis by combining word embeddings and word frequencies</strong> <div class="csl-block">Adrian Englhardt, Jens Willkomm, Martin Schäler, Klemens Böhm</div> <em>International Journal on Digital Libraries</em> (2019-05-20) <a href="https://doi.org/gpxkkd">https://doi.org/gpxkkd</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1007/s00799-019-00271-6">10.1007/s00799-019-00271-6</a></div></div>
 </div>
+<div id="ref-xQaNPZgV" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">38. </div><div class="csl-right-inline"><strong>Diachronic Word Embeddings Reveal Statistical Laws of Semantic Change</strong> <div class="csl-block">William L Hamilton, Jure Leskovec, Dan Jurafsky</div> <em>arXiv</em> (2016) <a href="https://doi.org/gp8zpp">https://doi.org/gp8zpp</a> <div class="csl-block">DOI: <a href="https://doi.org/10.48550/arxiv.1605.09096">10.48550/arxiv.1605.09096</a></div></div>
+</div>
+<div id="ref-1346YOPVE" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">39. </div><div class="csl-right-inline"><strong>DUKweb, diachronic word representations from the UK Web Archive corpus</strong> <div class="csl-block">Adam Tsakalidis, Pierpaolo Basile, Marya Bazzi, Mihai Cucuringu, Barbara McGillivray</div> <em>Scientific Data</em> (2021-10-15) <a href="https://doi.org/gqbkx4">https://doi.org/gqbkx4</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1038/s41597-021-01047-x">10.1038/s41597-021-01047-x</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/34654827">34654827</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8520005">PMC8520005</a></div></div>
+</div>
+<div id="ref-YuxGez24" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">40. </div><div class="csl-right-inline"><strong>SARS: clinical virology and pathogenesis</strong> <div class="csl-block">John NICHOLLS, Xiao-Ping DONG, Gu JIANG, Malik PEIRIS</div> <em>Respirology</em> (2003-11) <a href="https://doi.org/cxjwrc">https://doi.org/cxjwrc</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1046/j.1440-1843.2003.00517.x">10.1046/j.1440-1843.2003.00517.x</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/15018126">15018126</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7169081">PMC7169081</a></div></div>
+</div>
+<div id="ref-1ExALQ5eN" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">41. </div><div class="csl-right-inline"><strong>Severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) and coronavirus disease-2019 (COVID-19): The epidemic and the challenges</strong> <div class="csl-block">Chih-Cheng Lai, Tzu-Ping Shih, Wen-Chien Ko, Hung-Jen Tang, Po-Ren Hsueh</div> <em>International Journal of Antimicrobial Agents</em> (2020-03) <a href="https://doi.org/ggpj9d">https://doi.org/ggpj9d</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1016/j.ijantimicag.2020.105924">10.1016/j.ijantimicag.2020.105924</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/32081636">32081636</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7127800">PMC7127800</a></div></div>
+</div>
+<div id="ref-vvMItrwz" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">42. </div><div class="csl-right-inline"><strong>The species Severe acute respiratory syndrome-related coronavirus: classifying 2019-nCoV and naming it SARS-CoV-2</strong> <em>Nature Microbiology</em> (2020-03-02) <a href="https://doi.org/ggqj7m">https://doi.org/ggqj7m</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1038/s41564-020-0695-z">10.1038/s41564-020-0695-z</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/32123347">32123347</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7095448">PMC7095448</a></div></div>
+</div>
+</div>
+<h2 id="supplemental-tables">Supplemental Tables</h2>
+<div id="tbl:published_preprint_change_table" class="tablenos">
+<table id="tbl:published_preprint_change_table" data-tag="S1">
+<caption><span>Table S1:</span> The intersection of changepoints found between published papers and preprints. </caption>
+<thead>
+<tr class="header">
+<th>Token</th>
+<th>Changepoint</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>lockdown</td>
+<td>2019-2020</td>
+</tr>
+<tr class="even">
+<td>2021</td>
+<td>2020-2021</td>
+</tr>
+<tr class="odd">
+<td>distancing</td>
+<td>2019-2020</td>
+</tr>
+<tr class="even">
+<td>2019</td>
+<td>2018-2019</td>
+</tr>
+<tr class="odd">
+<td>ace2</td>
+<td>2019-2020</td>
+</tr>
+<tr class="even">
+<td>pandemic</td>
+<td>2019-2020</td>
+</tr>
+<tr class="odd">
+<td>2020</td>
+<td>2019-2020</td>
+</tr>
+<tr class="even">
+<td>coronavirus</td>
+<td>2019-2020</td>
+</tr>
+<tr class="odd">
+<td>bcl2a1</td>
+<td>2018-2019</td>
+</tr>
+<tr class="even">
+<td>peak3</td>
+<td>2020-2021</td>
+</tr>
+<tr class="odd">
+<td>3.6.2</td>
+<td>2019-2020</td>
+</tr>
+<tr class="even">
+<td>quarantine</td>
+<td>2019-2020</td>
+</tr>
+<tr class="odd">
+<td>cobl</td>
+<td>2020-2021</td>
+</tr>
+<tr class="even">
+<td>injectrode</td>
+<td>2020-2021</td>
+</tr>
+<tr class="odd">
+<td>nrc3</td>
+<td>2020-2021</td>
+</tr>
+<tr class="even">
+<td>4.0.5</td>
+<td>2020-2021</td>
+</tr>
+<tr class="odd">
+<td>TMPRSS2 (gene_7113)</td>
+<td>2019-2020</td>
+</tr>
+<tr class="even">
+<td>n262</td>
+<td>2019-2020</td>
+</tr>
+<tr class="odd">
+<td>bin1</td>
+<td>2017-2018</td>
+</tr>
+<tr class="even">
+<td>n3c</td>
+<td>2020-2021</td>
+</tr>
+<tr class="odd">
+<td>tip1</td>
+<td>2020-2021</td>
+</tr>
+<tr class="even">
+<td>omicron</td>
+<td>2020-2021</td>
+</tr>
+<tr class="odd">
+<td>pangolin</td>
+<td>2019-2020</td>
+</tr>
+<tr class="even">
+<td>adrn</td>
+<td>2020-2021</td>
+</tr>
+<tr class="odd">
+<td>seir</td>
+<td>2019-2020</td>
+</tr>
+</tbody>
+</table>
 </div>
 <!-- default theme -->
 
