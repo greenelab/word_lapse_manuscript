@@ -54,9 +54,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/word_lapse_manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/word_lapse_manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/word_lapse_manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/word_lapse_manuscript/v/6d0d77896945a8d60affae41d3d7b0cf08aeabeb/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/word_lapse_manuscript/v/6d0d77896945a8d60affae41d3d7b0cf08aeabeb/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/word_lapse_manuscript/v/6d0d77896945a8d60affae41d3d7b0cf08aeabeb/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/word_lapse_manuscript/v/4b9ca1e4e0d17c72559d54ab89b9c0e746cb6f1e/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/word_lapse_manuscript/v/4b9ca1e4e0d17c72559d54ab89b9c0e746cb6f1e/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/word_lapse_manuscript/v/4b9ca1e4e0d17c72559d54ab89b9c0e746cb6f1e/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -78,9 +78,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/word_lapse_manuscript/v/6d0d77896945a8d60affae41d3d7b0cf08aeabeb/))
+([permalink](https://greenelab.github.io/word_lapse_manuscript/v/4b9ca1e4e0d17c72559d54ab89b9c0e746cb6f1e/))
 was automatically generated
-from [greenelab/word_lapse_manuscript@6d0d778](https://github.com/greenelab/word_lapse_manuscript/tree/6d0d77896945a8d60affae41d3d7b0cf08aeabeb)
+from [greenelab/word_lapse_manuscript@4b9ca1e](https://github.com/greenelab/word_lapse_manuscript/tree/4b9ca1e4e0d17c72559d54ab89b9c0e746cb6f1e)
 on June 22, 2022.
 </em></small>
 
@@ -425,10 +425,18 @@ All functionalities are fully supported across the PMCOA and preprint corpora, a
 
 # Discussion and Conclusion
 
-1. We provided a website resource to allow users to see toekn association changes
-2. Word2vec is unstable and we implemented an approach to account for that variation
-3. Constructs groundwork for future research into token changes
-4. Will implement biorxiv and other preprint resources as a next step.
+Language is rapidly evolving, and the usage of words changes over time with words assimilating new meanings or associations [@doi:10.1093/acrefore/9780199384655.013.323].
+Some efforts have been made to study semantic change using biomedical text [@doi:10.1142/9789811232701_0011;@arxiv:2102.07836; @doi:10.2196/22635]; however, no such work has examined the changes evident in both pre-publication peer-reviewed and preprinted biomedical text.
+We examined semantic change in both open-access biomedical corpora from Pubmed (PMCOA) and bioRxiv/MedRxiv for the 2000-2021 interval.
+Studies like this one have only become feasible recently with the rapid uptake of open access publishing.
+To be able to span two decades with very different data availability, we developed a novel statistic that incorporated multiple models using both inter- and intra-year distances.
+Without the correction, comparing between stable and unstable models is challenging as previously reported [@doi:10.1162/tacl_a_00008; @doi:10.48550/arXiv.1804.09692].
+Our analysis revealed more than 41,000 different change points, including tokens such as 'cas9', 'pandemic', and 'sars'.
+Many change points overlapping between PMCOA and preprints were related to COVID-19, indicating that the COVID-19 pandemic has been strong and immediate enough to induce rapid semantic change across both publishing paradigms.
+
+As the amount of preprinted text grows, future work may be able to determine the consistency and time-lag of semantic change between preprint and pre-publication peer-reviewed text - potentially predicting future change in pre-publication peer-reviewed text.
+We developed a web application to enable users to investigate individual tokens - automatic approaches that use orthogonal metrics to estimate change point validity would make analysis at scale more straightforward.
+Furthermore, including corpora such as the arXiv [@doi:10.1108/14666180010345564] or psyArXiv [@doi:10.5260/chara.23.2.38] repositories may reveal consistencies across a broader swath of fields or within-field analyses may reveal the earliest starting points of semantic changes that ultimately sweep through biomedicine.
 
 
 ## Data Availability and Software
