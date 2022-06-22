@@ -1,16 +1,16 @@
 ---
 title: Detecting semantic shifts in biomedical literature through an intra-year and inter-year approach
 keywords:
-- pubtator-central
+- pubtator central
 - preprints
-- natural-language-processing
-- machine-learning
-- time-series
-- changepoint-detection
+- natural language-processing
+- machine learning
+- time series
+- change point detection
 lang: en-US
-date-meta: '2022-05-31'
+date-meta: '2022-06-22'
 author-meta:
-- David Nicholson
+- David N. Nicholson
 - Faisal Alquaddoomi
 - Vincent Rubinetti
 - Casey S. Greene
@@ -24,37 +24,39 @@ header-includes: |-
   <meta name="citation_title" content="Detecting semantic shifts in biomedical literature through an intra-year and inter-year approach" />
   <meta property="og:title" content="Detecting semantic shifts in biomedical literature through an intra-year and inter-year approach" />
   <meta property="twitter:title" content="Detecting semantic shifts in biomedical literature through an intra-year and inter-year approach" />
-  <meta name="dc.date" content="2022-05-31" />
-  <meta name="citation_publication_date" content="2022-05-31" />
+  <meta name="dc.date" content="2022-06-22" />
+  <meta name="citation_publication_date" content="2022-06-22" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
   <meta name="dc.publisher" content="Manubot" />
   <meta name="citation_journal_title" content="Manubot" />
   <meta name="citation_technical_report_institution" content="Manubot" />
-  <meta name="citation_author" content="David Nicholson" />
-  <meta name="citation_author_institution" content="Genomics and Computational Biology" />
+  <meta name="citation_author" content="David N. Nicholson" />
+  <meta name="citation_author_institution" content="Genomics and Computational Biology Program, University of Pennsylvania" />
   <meta name="citation_author_orcid" content="0000-0003-0002-5761" />
   <meta name="twitter:creator" content="@dnicholson329" />
   <meta name="citation_author" content="Faisal Alquaddoomi" />
-  <meta name="citation_author_institution" content="Center for Health Artificial Intellegence (CHAI)" />
-  <meta name="citation_author_orcid" content="XXXX-XXXX-XXXX-XXXX" />
+  <meta name="citation_author_institution" content="Department of Biomedical Informatics, University of Colorado School of Medicine" />
+  <meta name="citation_author_institution" content="Center for Health Artificial Intellegence (CHAI), University of Colorado School of Medicine" />
+  <meta name="citation_author_orcid" content="0000-0003-4297-8747" />
   <meta name="citation_author" content="Vincent Rubinetti" />
-  <meta name="citation_author_institution" content="Center for Health Artificial Intellegence (CHAI)" />
-  <meta name="citation_author_orcid" content="XXXX-XXXX-XXXX-XXXX" />
+  <meta name="citation_author_institution" content="Department of Biomedical Informatics, University of Colorado School of Medicine" />
+  <meta name="citation_author_institution" content="Center for Health Artificial Intellegence (CHAI), University of Colorado School of Medicine" />
   <meta name="citation_author" content="Casey S. Greene" />
-  <meta name="citation_author_institution" content="Department of Something, University of Whatever" />
-  <meta name="citation_author_institution" content="Department of Whatever, University of Something" />
-  <meta name="citation_author_orcid" content="XXXX-XXXX-XXXX-XXXX" />
+  <meta name="citation_author_institution" content="Department of Biomedical Informatics, University of Colorado School of Medicine" />
+  <meta name="citation_author_institution" content="Center for Health Artificial Intellegence (CHAI), University of Colorado School of Medicine" />
+  <meta name="citation_author_orcid" content="0000-0001-8713-9213" />
+  <meta name="twitter:creator" content="@greenescientist" />
   <link rel="canonical" href="https://greenelab.github.io/word_lapse_manuscript/" />
   <meta property="og:url" content="https://greenelab.github.io/word_lapse_manuscript/" />
   <meta property="twitter:url" content="https://greenelab.github.io/word_lapse_manuscript/" />
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/word_lapse_manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/word_lapse_manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/word_lapse_manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/word_lapse_manuscript/v/9b53e4620c0ed1a6b42495a9cf2111d6bc10217f/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/word_lapse_manuscript/v/9b53e4620c0ed1a6b42495a9cf2111d6bc10217f/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/word_lapse_manuscript/v/9b53e4620c0ed1a6b42495a9cf2111d6bc10217f/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/word_lapse_manuscript/v/6e8932ccd15aa32c85314438752d42ad3ddcdccd/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/word_lapse_manuscript/v/6e8932ccd15aa32c85314438752d42ad3ddcdccd/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/word_lapse_manuscript/v/6e8932ccd15aa32c85314438752d42ad3ddcdccd/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -76,17 +78,17 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/word_lapse_manuscript/v/9b53e4620c0ed1a6b42495a9cf2111d6bc10217f/))
+([permalink](https://greenelab.github.io/word_lapse_manuscript/v/6e8932ccd15aa32c85314438752d42ad3ddcdccd/))
 was automatically generated
-from [greenelab/word_lapse_manuscript@9b53e46](https://github.com/greenelab/word_lapse_manuscript/tree/9b53e4620c0ed1a6b42495a9cf2111d6bc10217f)
-on May 31, 2022.
+from [greenelab/word_lapse_manuscript@6e8932c](https://github.com/greenelab/word_lapse_manuscript/tree/6e8932ccd15aa32c85314438752d42ad3ddcdccd)
+on June 22, 2022.
 </em></small>
 
 ## Authors
 
 
 
-+ **David Nicholson**<br>
++ **David N. Nicholson**<br>
     ![ORCID icon](images/orcid.svg){.inline_icon width=16 height=16}
     [0000-0003-0002-5761](https://orcid.org/0000-0003-0002-5761)
     · ![GitHub icon](images/github.svg){.inline_icon width=16 height=16}
@@ -94,50 +96,62 @@ on May 31, 2022.
     · ![Twitter icon](images/twitter.svg){.inline_icon width=16 height=16}
     [dnicholson329](https://twitter.com/dnicholson329)<br>
   <small>
-     Genomics and Computational Biology
-     · Funded by Grant XXXXXXXX
+     Genomics and Computational Biology Program, University of Pennsylvania
+     · Funded by The Gordon and Betty Moore Foundation, GBMF4552; The National Human Genome Research Institute, R01 HG010067
   </small>
 
 + **Faisal Alquaddoomi**<br>
     ![ORCID icon](images/orcid.svg){.inline_icon width=16 height=16}
-    [XXXX-XXXX-XXXX-XXXX](https://orcid.org/XXXX-XXXX-XXXX-XXXX)
+    [0000-0003-4297-8747](https://orcid.org/0000-0003-4297-8747)
     · ![GitHub icon](images/github.svg){.inline_icon width=16 height=16}
-    [janeroe](https://github.com/janeroe)<br>
+    [falquaddoomi](https://github.com/falquaddoomi)<br>
   <small>
-     Center for Health Artificial Intellegence (CHAI)
+     Department of Biomedical Informatics, University of Colorado School of Medicine; Center for Health Artificial Intellegence (CHAI), University of Colorado School of Medicine
+     · Funded by The Gordon and Betty Moore Foundation, GBMF4552; The National Human Genome Research Institute, R01 HG010067
   </small>
 
 + **Vincent Rubinetti**<br>
-    ![ORCID icon](images/orcid.svg){.inline_icon width=16 height=16}
-    [XXXX-XXXX-XXXX-XXXX](https://orcid.org/XXXX-XXXX-XXXX-XXXX)
     · ![GitHub icon](images/github.svg){.inline_icon width=16 height=16}
-    [janeroe](https://github.com/janeroe)<br>
+    [vincerubinetti](https://github.com/vincerubinetti)<br>
   <small>
-     Center for Health Artificial Intellegence (CHAI)
+     Department of Biomedical Informatics, University of Colorado School of Medicine; Center for Health Artificial Intellegence (CHAI), University of Colorado School of Medicine
+     · Funded by The Gordon and Betty Moore Foundation, GBMF4552; The National Human Genome Research Institute, R01 HG010067
   </small>
 
 + **Casey S. Greene**<br>
     ![ORCID icon](images/orcid.svg){.inline_icon width=16 height=16}
-    [XXXX-XXXX-XXXX-XXXX](https://orcid.org/XXXX-XXXX-XXXX-XXXX)
+    [0000-0001-8713-9213](https://orcid.org/0000-0001-8713-9213)
     · ![GitHub icon](images/github.svg){.inline_icon width=16 height=16}
-    [cgreene](https://github.com/cgreene)<br>
+    [cgreene](https://github.com/cgreene)
+    · ![Twitter icon](images/twitter.svg){.inline_icon width=16 height=16}
+    [greenescientist](https://twitter.com/greenescientist)<br>
   <small>
-     Department of Something, University of Whatever; Department of Whatever, University of Something
+     Department of Biomedical Informatics, University of Colorado School of Medicine; Center for Health Artificial Intellegence (CHAI), University of Colorado School of Medicine
+     · Funded by The Gordon and Betty Moore Foundation, GBMF4552; The National Human Genome Research Institute, R01 HG010067
   </small>
 
 
 
 ## Abstract {.page_break_before}
 
-
+While we often think of words as having a fixed meaning that we use to describe a changing world, words are also dynamic and changing.
+Scientific research can also be remarkably fast-moving, with new concepts or approaches rapidly gaining mind share.
+We examined scientific writing, both preprint and pre-publication peer-reviewed text, to identify terms that have changed and examine their use.
+One particular challenge that we faced was that the shift from closed to open access publishing meant that the size of available corpora changed by over an order of magnitude in the last two decades.
+We developed an approach to evaluate semantic shift by accounting for both intra- and inter-year variability using multiple integrated models.
+Using this strategy and examining year-by-year changes revealed thousands of change points in both corpora.
+We found change points for tokens including 'cas9', 'pandemic', and 'sars' among many others.
+The consistent change-points between pre-publication peer-reviewed and preprinted text were largely related to the COVID-19 pandemic.
+We developed a web app for exploration (https://greenelab.github.io/word-lapse/) that enables users to investigate individual terms.
+To our knowledge, this analysis is the first to examine semantic shift in biomedical preprints and pre-publication peer-reviewed text, and it lays the foundation for future work to examine how terms acquire new meaning and the extent to which that process is encouraged or discouraged by peer review.
 
 
 # Introduction
 
-Language is constantly evolving, and the meaning that we ascribe to words changes over time. 
-For example, the word "nice" was used to mean foolish or innocent back in the 15th-17th century; then, it underwent a positive shift to its current meaning of "pleasant or delightful"[@doi:10.1093/acrefore/9780199384655.013.323]. 
+Language is constantly evolving, and the meaning that we ascribe to words changes over time.
+For example, the word "nice" was used to mean foolish or innocent back in the 15th-17th century; then, it underwent a positive shift to its current meaning of "pleasant or delightful"[@doi:10.1093/acrefore/9780199384655.013.323].
 These shifts occur for many reasons.
-For example, writers may use new metaphors or substitute words for others with similar meanings in a process known as metonymy [@doi:10.1093/acrefore/9780199384655.013.323]. 
+For example, writers may use new metaphors or substitute words for others with similar meanings in a process known as metonymy [@doi:10.1093/acrefore/9780199384655.013.323].
 Studying these shifts can provide a nuanced understanding of how language adapts to describe our world.
 
 Scientific fields of inquiry also change, sometimes rapidly, as researchers devise and test new hypotheses and applications.
@@ -150,23 +164,19 @@ Examining scientific manuscripts with computational linguistics can reveal longi
 Studying changes in the use of word meanings is called semantic shift detection.
 Approaches for semantic shift detection examine time series datasets that capture word usage patterns, both with respect to frequency and structure.
 Typically, these time series are generated for individual words by training a unique model on text binned by a selected time period [@arxiv:1605.09096; @arxiv:1606.0282; @doi:10.18653/v1/N18-1044].
-<!--Following time series generation, the next step is to align models to enable comparison [@arxiv:1411.3315].
-A common technique for alignment is Orthogonal Procrustes [@doi:10.1007/BF02289451], but other ways to perform alignment have been used [@arxiv:1702.08359; @arxiv:1703.00607].-->
-Methods are then applied to identify "changepoints" where a word's meaning has changed [@arxiv:0710.3742,@gustafsson].
+Methods are then applied to identify "change points" where a word's meaning has changed [@arxiv:0710.3742,@gustafsson].
 
-Semantic shifts have been examined in many sources. 
-Analysis has included newspapers [@doi:10.18653/v1/W17-2705; @arxiv:1711.05603;@doi:10.1017/S0003055417000570], books [@arxiv:1605.09096], reddit [@arxiv:1606.0282], and Twitter [@arxiv:1411.3315].
-Researchers have examined topics in information retrieval [@doi:10.1007/s11192-018-2843-2], and in biomedicine COVID-19 has been examined multiple times [@doi:10.1142/9789811232701_0011,@arxiv:2102.07836].
+Semantic shifts have been examined in many sources.
+Analysis has included newspapers [@doi:10.18653/v1/W17-2705; @arxiv:1711.05603;@doi:10.1017/S0003055417000570], books [@arxiv:1605.09096], reddit [@doi:10.1016/j.jbi.2021.103824], and Twitter [@arxiv:1411.3315].
+Researchers have examined topics in information retrieval [@doi:10.1007/s11192-018-2843-2], and in biomedicine COVID-19 has been examined multiple times [@doi:10.1142/9789811232701_0011;@arxiv:2102.07836; @doi:10.2196/22635].
 The amount of open access biomedical literature has dramatically increased in the last two decades, laying the groundwork for the large-scale analysis of semantic shifts in biomedicine.
 
 We examine these semantic shifts in this rapidly growing body of open access text.
 We include both published papers and preprints in our analysis.
 We found that novel strategies integrating multiple models for each year sidestepped the challenge of instability in the machine learning models and allowed us to estimate intra- and inter-year variability.
-We identify semantic changepoints for each token.
-We examine key cases and provide the full set of research products, including changepoints and machine learning models, as openly licensed tools for the community.
+We identify semantic change points for each token.
+We examine key cases and provide the full set of research products, including change points and machine learning models, as openly licensed tools for the community.
 We also created a webserver that allows users to analyze tokens of interest on the fly, examining both the most similar terms within a year and temporal trends.
-
-
 
 
 # Methods
@@ -275,6 +285,18 @@ One potential results panel: comparing results with abstract and full text (sinc
 2. Word2vec is unstable and we implemented an approach to account for that variation
 3. Constructs groundwork for future research into token changes
 4. Will implement biorxiv and other preprint resources as a next step.
+
+
+# Acknowledgments
+
+This work was supported by the Gordon and Betty Moore Foundation under award GBMF4552 and the National Institutes of Health's National Human Genome Research Institute under award R01 HG010067 to CSG.
+The funders had no role in the study design, data collection, and analysis, decision to publish, or preparation of the manuscript.
+
+# Competing Interest
+
+DNN performed this work as a Ph.D. student at the University of Pennsylvania. 
+He is now employed by Digital Science.
+The authors report no other competing interests for this paper.
 
 
 ## References {.page_break_before}
