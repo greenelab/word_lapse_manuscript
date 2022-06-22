@@ -1,43 +1,55 @@
 ---
 title: "Detecting semantic shifts in biomedical literature through an intra-year and inter-year approach"
 keywords:
-  - pubtator-central
+  - pubtator central
   - preprints
-  - natural-language-processing
-  - machine-learning
-  - time-series
-  - changepoint-detection
+  - natural language-processing
+  - machine learning
+  - time series
+  - change point detection
 lang: en-US
 authors:
   - github: danich1
-    name: David Nicholson
+    name: David N. Nicholson
     initials: DNN
-    orcid: 0000-0003-0002-5761 
+    orcid: 0000-0003-0002-5761
     twitter: dnicholson329
     email: dnicholson329@gmail.com
     affiliations:
-      - Genomics and Computational Biology
+      - Genomics and Computational Biology Program, University of Pennsylvania
     funders:
-      - Grant XXXXXXXX
-  - github: janeroe
+      - The Gordon and Betty Moore Foundation, GBMF4552
+      - The National Human Genome Research Institute, R01 HG010067
+  - github: falquaddoomi
     name: Faisal Alquaddoomi
-    initials: JR
-    orcid: XXXX-XXXX-XXXX-XXXX
-    email: jane.roe@whatever.edu
+    initials: FA
+    orcid: 0000-0003-4297-8747
+    email: FAISAL.ALQUADDOOMI@CUANSCHUTZ.EDU
     affiliations:
-      - Center for Health Artificial Intellegence (CHAI)
-  - github: janeroe
+      - Department of Biomedical Informatics, University of Colorado School of Medicine
+      - Center for Health Artificial Intellegence (CHAI), University of Colorado School of Medicine
+    funders:
+      - The Gordon and Betty Moore Foundation, GBMF4552
+      - The National Human Genome Research Institute, R01 HG010067
+  - github: vincerubinetti
     name: Vincent Rubinetti
-    initials: JR
-    orcid: XXXX-XXXX-XXXX-XXXX
-    email: jane.roe@whatever.edu
+    initials: VR
+    email: VINCENT.RUBINETTI@CUANSCHUTZ.EDU
     affiliations:
-      - Center for Health Artificial Intellegence (CHAI)
+      - Department of Biomedical Informatics, University of Colorado School of Medicine
+      - Center for Health Artificial Intellegence (CHAI), University of Colorado School of Medicine
+    funders:
+      - The Gordon and Betty Moore Foundation, GBMF4552
+      - The National Human Genome Research Institute, R01 HG010067
   - github: cgreene
     name: Casey S. Greene
-    initials: JR
-    orcid: XXXX-XXXX-XXXX-XXXX
-    email: jane.roe@whatever.edu
+    initials: CSG
+    twitter: greenescientist
+    orcid: 0000-0001-8713-9213
+    email: casey.s.greene@cuanschutz.edu
     affiliations:
-      - Department of Something, University of Whatever
-      - Department of Whatever, University of Something
+      - Department of Biomedical Informatics, University of Colorado School of Medicine
+      - Center for Health Artificial Intellegence (CHAI), University of Colorado School of Medicine
+    funders:
+      - The Gordon and Betty Moore Foundation, GBMF4552
+      - The National Human Genome Research Institute, R01 HG010067
