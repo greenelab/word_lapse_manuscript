@@ -6,7 +6,7 @@ arylpiperazine
 azorean
 bcl
 biomedicine
-bioRxiv
+BioRxiv
 boxplot
 cas
 catecholase
