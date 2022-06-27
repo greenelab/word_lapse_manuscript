@@ -1,4 +1,4 @@
-# Automated scholarly manuscripts on GitHub
+# Changing word meanings in biomedical literature reveal pandemics and new technologies
 
 <!-- usage note: edit the H1 title above to personalize the manuscript -->
 
@@ -8,10 +8,11 @@
 
 ## Manuscript description
 
-<!-- usage note: edit this section. -->
+This is the manuscript repository for the [Word Lapse](https://greenelab.github.io/word-lapse/) project.
+The source code that generated the data for this project can be found within the [biovectors](https://github.com/greenelab/biovectors) repository.
+The source code for the frontend and backend of the website can be found [here](https://github.com/greenelab/word-lapse/).
 
-This repository is a template manuscript (a.k.a. rootstock).
-Actual manuscript instances will clone this repository (see [`SETUP.md`](SETUP.md)) and replace this paragraph with a description of their manuscript.
+Check out the manuscript using the links above!
 
 ## Manubot
 
