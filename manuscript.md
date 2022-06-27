@@ -54,9 +54,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/word_lapse_manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/word_lapse_manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/word_lapse_manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/word_lapse_manuscript/v/6bb7ae5804a67470e96448cfdc7b062a76f4b4ba/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/word_lapse_manuscript/v/6bb7ae5804a67470e96448cfdc7b062a76f4b4ba/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/word_lapse_manuscript/v/6bb7ae5804a67470e96448cfdc7b062a76f4b4ba/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/word_lapse_manuscript/v/89785ff141f6121666f1b58374062bf7ba5a17ab/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/word_lapse_manuscript/v/89785ff141f6121666f1b58374062bf7ba5a17ab/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/word_lapse_manuscript/v/89785ff141f6121666f1b58374062bf7ba5a17ab/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -78,9 +78,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/word_lapse_manuscript/v/6bb7ae5804a67470e96448cfdc7b062a76f4b4ba/))
+([permalink](https://greenelab.github.io/word_lapse_manuscript/v/89785ff141f6121666f1b58374062bf7ba5a17ab/))
 was automatically generated
-from [greenelab/word_lapse_manuscript@6bb7ae5](https://github.com/greenelab/word_lapse_manuscript/tree/6bb7ae5804a67470e96448cfdc7b062a76f4b4ba)
+from [greenelab/word_lapse_manuscript@89785ff](https://github.com/greenelab/word_lapse_manuscript/tree/89785ff141f6121666f1b58374062bf7ba5a17ab)
 on June 27, 2022.
 </em></small>
 
