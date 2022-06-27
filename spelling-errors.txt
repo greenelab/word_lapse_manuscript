@@ -1,7 +1,7 @@
 adrn
 Alquaddoomi
 antiplasmodial
-arXiv
+arxiv
 arylpiperazine
 azorean
 bcl
@@ -13,7 +13,7 @@ catecholase
 CBOW
 cgreene
 CHAI
-changepoint
+Changepoint
 changepoints
 cholinephosphotransferase
 cobl
@@ -44,7 +44,7 @@ falquaddoomi
 funders
 GBMF
 GN
-GNormplus
+GNormPlus
 greenescientist
 grna
 gustafsson
@@ -61,7 +61,7 @@ lissodendoryx
 lockdown
 longicauda
 lutken
-MedRxiv
+medRxiv
 meganuclease
 mers
 metonymy
@@ -100,7 +100,7 @@ sar
 sarr
 sarscov
 seir
-sgrna
+sgRNA
 sgrnas
 skipgram
 spacy
@@ -118,7 +118,7 @@ tmVar
 tracrrna
 UMAP
 variabilities
-Vec
+vec
 verrill
 vincerubinetti
 viruse

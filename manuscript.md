@@ -1,5 +1,5 @@
 ---
-title: Detecting semantic shifts in biomedical literature through an intra-year and inter-year approach
+title: Changing word meanings in biomedical literature reveals pandemics and new technologies
 keywords:
 - pubtator central
 - preprints
@@ -8,7 +8,7 @@ keywords:
 - time series
 - change point detection
 lang: en-US
-date-meta: '2022-06-22'
+date-meta: '2022-06-27'
 author-meta:
 - David N. Nicholson
 - Faisal Alquaddoomi
@@ -20,12 +20,12 @@ header-includes: |-
   Suggest improvements at https://github.com/manubot/manubot/blob/main/manubot/process/header-includes-template.html
   -->
   <meta name="dc.format" content="text/html" />
-  <meta name="dc.title" content="Detecting semantic shifts in biomedical literature through an intra-year and inter-year approach" />
-  <meta name="citation_title" content="Detecting semantic shifts in biomedical literature through an intra-year and inter-year approach" />
-  <meta property="og:title" content="Detecting semantic shifts in biomedical literature through an intra-year and inter-year approach" />
-  <meta property="twitter:title" content="Detecting semantic shifts in biomedical literature through an intra-year and inter-year approach" />
-  <meta name="dc.date" content="2022-06-22" />
-  <meta name="citation_publication_date" content="2022-06-22" />
+  <meta name="dc.title" content="Changing word meanings in biomedical literature reveals pandemics and new technologies" />
+  <meta name="citation_title" content="Changing word meanings in biomedical literature reveals pandemics and new technologies" />
+  <meta property="og:title" content="Changing word meanings in biomedical literature reveals pandemics and new technologies" />
+  <meta property="twitter:title" content="Changing word meanings in biomedical literature reveals pandemics and new technologies" />
+  <meta name="dc.date" content="2022-06-27" />
+  <meta name="citation_publication_date" content="2022-06-27" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -54,9 +54,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/word_lapse_manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/word_lapse_manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/word_lapse_manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/word_lapse_manuscript/v/4b9ca1e4e0d17c72559d54ab89b9c0e746cb6f1e/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/word_lapse_manuscript/v/4b9ca1e4e0d17c72559d54ab89b9c0e746cb6f1e/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/word_lapse_manuscript/v/4b9ca1e4e0d17c72559d54ab89b9c0e746cb6f1e/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/word_lapse_manuscript/v/28bb22490b953d5061cfa9ca3aae24c46315ae80/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/word_lapse_manuscript/v/28bb22490b953d5061cfa9ca3aae24c46315ae80/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/word_lapse_manuscript/v/28bb22490b953d5061cfa9ca3aae24c46315ae80/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -78,10 +78,10 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/word_lapse_manuscript/v/4b9ca1e4e0d17c72559d54ab89b9c0e746cb6f1e/))
+([permalink](https://greenelab.github.io/word_lapse_manuscript/v/28bb22490b953d5061cfa9ca3aae24c46315ae80/))
 was automatically generated
-from [greenelab/word_lapse_manuscript@4b9ca1e](https://github.com/greenelab/word_lapse_manuscript/tree/4b9ca1e4e0d17c72559d54ab89b9c0e746cb6f1e)
-on June 22, 2022.
+from [greenelab/word_lapse_manuscript@28bb224](https://github.com/greenelab/word_lapse_manuscript/tree/28bb22490b953d5061cfa9ca3aae24c46315ae80)
+on June 27, 2022.
 </em></small>
 
 ## Authors
