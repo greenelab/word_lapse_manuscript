@@ -13,13 +13,13 @@ catecholase
 CBOW
 cgreene
 CHAI
-changepoint
+Changepoint
 changepoints
 cholinephosphotransferase
 cobl
 coronavirus
 coronaviruse
-CoV
+cov
 COVID
 covs
 crispr
@@ -44,7 +44,7 @@ falquaddoomi
 funders
 GBMF
 GN
-GNormPlus
+GNormplus
 greenescientist
 grna
 gustafsson
@@ -100,7 +100,7 @@ sar
 sarr
 sarscov
 seir
-sgrna
+sgRNA
 sgrnas
 skipgram
 spacy

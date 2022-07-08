@@ -8,7 +8,7 @@ keywords:
 - time series
 - change point detection
 lang: en-US
-date-meta: '2022-06-27'
+date-meta: '2022-07-08'
 author-meta:
 - David N. Nicholson
 - Faisal Alquaddoomi
@@ -24,8 +24,8 @@ header-includes: |-
   <meta name="citation_title" content="Changing word meanings in biomedical literature reveal pandemics and new technologies" />
   <meta property="og:title" content="Changing word meanings in biomedical literature reveal pandemics and new technologies" />
   <meta property="twitter:title" content="Changing word meanings in biomedical literature reveal pandemics and new technologies" />
-  <meta name="dc.date" content="2022-06-27" />
-  <meta name="citation_publication_date" content="2022-06-27" />
+  <meta name="dc.date" content="2022-07-08" />
+  <meta name="citation_publication_date" content="2022-07-08" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -54,9 +54,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/word_lapse_manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/word_lapse_manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/word_lapse_manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/word_lapse_manuscript/v/89785ff141f6121666f1b58374062bf7ba5a17ab/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/word_lapse_manuscript/v/89785ff141f6121666f1b58374062bf7ba5a17ab/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/word_lapse_manuscript/v/89785ff141f6121666f1b58374062bf7ba5a17ab/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/word_lapse_manuscript/v/40d309ace7dd5b81a3fee79da849aa60d9ff859e/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/word_lapse_manuscript/v/40d309ace7dd5b81a3fee79da849aa60d9ff859e/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/word_lapse_manuscript/v/40d309ace7dd5b81a3fee79da849aa60d9ff859e/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -78,10 +78,10 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/word_lapse_manuscript/v/89785ff141f6121666f1b58374062bf7ba5a17ab/))
+([permalink](https://greenelab.github.io/word_lapse_manuscript/v/40d309ace7dd5b81a3fee79da849aa60d9ff859e/))
 was automatically generated
-from [greenelab/word_lapse_manuscript@89785ff](https://github.com/greenelab/word_lapse_manuscript/tree/89785ff141f6121666f1b58374062bf7ba5a17ab)
-on June 27, 2022.
+from [greenelab/word_lapse_manuscript@40d309a](https://github.com/greenelab/word_lapse_manuscript/tree/40d309ace7dd5b81a3fee79da849aa60d9ff859e)
+on July 8, 2022.
 </em></small>
 
 ## Authors
@@ -129,6 +129,21 @@ on June 27, 2022.
      Department of Biomedical Informatics, University of Colorado School of Medicine; Center for Health Artificial Intellegence (CHAI), University of Colorado School of Medicine
      · Funded by The Gordon and Betty Moore Foundation, GBMF4552; The National Human Genome Research Institute, R01 HG010067
   </small>
+
+
+
+  To whom correspondence should be addressed:
+  
+    
+  
+    
+  
+    
+  
+    
+      CSG: casey.s.greene@cuanschutz.edu
+    
+  
 
 
 
