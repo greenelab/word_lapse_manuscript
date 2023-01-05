@@ -38,14 +38,14 @@ header-includes: |-
   <meta name="twitter:creator" content="@dnicholson329" />
   <meta name="citation_author" content="Faisal Alquaddoomi" />
   <meta name="citation_author_institution" content="Department of Biomedical Informatics, University of Colorado School of Medicine" />
-  <meta name="citation_author_institution" content="Center for Health Artificial Intellegence (CHAI), University of Colorado School of Medicine" />
+  <meta name="citation_author_institution" content="Center for Health Artificial Intelligence (CHAI), University of Colorado School of Medicine" />
   <meta name="citation_author_orcid" content="0000-0003-4297-8747" />
   <meta name="citation_author" content="Vincent Rubinetti" />
   <meta name="citation_author_institution" content="Department of Biomedical Informatics, University of Colorado School of Medicine" />
-  <meta name="citation_author_institution" content="Center for Health Artificial Intellegence (CHAI), University of Colorado School of Medicine" />
+  <meta name="citation_author_institution" content="Center for Health Artificial Intelligence (CHAI), University of Colorado School of Medicine" />
   <meta name="citation_author" content="Casey S. Greene" />
   <meta name="citation_author_institution" content="Department of Biomedical Informatics, University of Colorado School of Medicine" />
-  <meta name="citation_author_institution" content="Center for Health Artificial Intellegence (CHAI), University of Colorado School of Medicine" />
+  <meta name="citation_author_institution" content="Center for Health Artificial Intelligence (CHAI), University of Colorado School of Medicine" />
   <meta name="citation_author_orcid" content="0000-0001-8713-9213" />
   <meta name="twitter:creator" content="@greenescientist" />
   <link rel="canonical" href="https://greenelab.github.io/word_lapse_manuscript/" />
@@ -54,9 +54,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/word_lapse_manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/word_lapse_manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/word_lapse_manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/word_lapse_manuscript/v/40d309ace7dd5b81a3fee79da849aa60d9ff859e/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/word_lapse_manuscript/v/40d309ace7dd5b81a3fee79da849aa60d9ff859e/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/word_lapse_manuscript/v/40d309ace7dd5b81a3fee79da849aa60d9ff859e/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/word_lapse_manuscript/v/d58864ca0bebacd6aa16f20bd4aeb151b5334dbe/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/word_lapse_manuscript/v/d58864ca0bebacd6aa16f20bd4aeb151b5334dbe/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/word_lapse_manuscript/v/d58864ca0bebacd6aa16f20bd4aeb151b5334dbe/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -78,9 +78,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/word_lapse_manuscript/v/40d309ace7dd5b81a3fee79da849aa60d9ff859e/))
+([permalink](https://greenelab.github.io/word_lapse_manuscript/v/d58864ca0bebacd6aa16f20bd4aeb151b5334dbe/))
 was automatically generated
-from [greenelab/word_lapse_manuscript@40d309a](https://github.com/greenelab/word_lapse_manuscript/tree/40d309ace7dd5b81a3fee79da849aa60d9ff859e)
+from [greenelab/word_lapse_manuscript@d58864c](https://github.com/greenelab/word_lapse_manuscript/tree/d58864ca0bebacd6aa16f20bd4aeb151b5334dbe)
 on January 5, 2023.
 </em></small>
 
@@ -106,7 +106,7 @@ on January 5, 2023.
     · ![GitHub icon](images/github.svg){.inline_icon width=16 height=16}
     [falquaddoomi](https://github.com/falquaddoomi)<br>
   <small>
-     Department of Biomedical Informatics, University of Colorado School of Medicine; Center for Health Artificial Intellegence (CHAI), University of Colorado School of Medicine
+     Department of Biomedical Informatics, University of Colorado School of Medicine; Center for Health Artificial Intelligence (CHAI), University of Colorado School of Medicine
      · Funded by The Gordon and Betty Moore Foundation, GBMF4552; The National Human Genome Research Institute, R01 HG010067
   </small>
 
@@ -114,7 +114,7 @@ on January 5, 2023.
     · ![GitHub icon](images/github.svg){.inline_icon width=16 height=16}
     [vincerubinetti](https://github.com/vincerubinetti)<br>
   <small>
-     Department of Biomedical Informatics, University of Colorado School of Medicine; Center for Health Artificial Intellegence (CHAI), University of Colorado School of Medicine
+     Department of Biomedical Informatics, University of Colorado School of Medicine; Center for Health Artificial Intelligence (CHAI), University of Colorado School of Medicine
      · Funded by The Gordon and Betty Moore Foundation, GBMF4552; The National Human Genome Research Institute, R01 HG010067
   </small>
 
@@ -126,7 +126,7 @@ on January 5, 2023.
     · ![Twitter icon](images/twitter.svg){.inline_icon width=16 height=16}
     [greenescientist](https://twitter.com/greenescientist)<br>
   <small>
-     Department of Biomedical Informatics, University of Colorado School of Medicine; Center for Health Artificial Intellegence (CHAI), University of Colorado School of Medicine
+     Department of Biomedical Informatics, University of Colorado School of Medicine; Center for Health Artificial Intelligence (CHAI), University of Colorado School of Medicine
      · Funded by The Gordon and Betty Moore Foundation, GBMF4552; The National Human Genome Research Institute, R01 HG010067
   </small>
 

@@ -13,7 +13,7 @@ catecholase
 CBOW
 cgreene
 CHAI
-Changepoint
+changepoint
 changepoints
 cholinephosphotransferase
 cobl
@@ -51,7 +51,6 @@ gustafsson
 hirondelle
 indolo
 injectrode
-Intellegence
 intra
 isoxazolo
 kobelt
@@ -100,7 +99,7 @@ sar
 sarr
 sarscov
 seir
-sgRNA
+sgrna
 sgrnas
 skipgram
 spacy
@@ -118,7 +117,7 @@ tmVar
 tracrrna
 UMAP
 variabilities
-Vec
+vec
 verrill
 vincerubinetti
 viruse
