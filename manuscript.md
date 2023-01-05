@@ -8,7 +8,7 @@ keywords:
 - time series
 - change point detection
 lang: en-US
-date-meta: '2022-07-08'
+date-meta: '2023-01-05'
 author-meta:
 - David N. Nicholson
 - Faisal Alquaddoomi
@@ -24,8 +24,8 @@ header-includes: |-
   <meta name="citation_title" content="Changing word meanings in biomedical literature reveal pandemics and new technologies" />
   <meta property="og:title" content="Changing word meanings in biomedical literature reveal pandemics and new technologies" />
   <meta property="twitter:title" content="Changing word meanings in biomedical literature reveal pandemics and new technologies" />
-  <meta name="dc.date" content="2022-07-08" />
-  <meta name="citation_publication_date" content="2022-07-08" />
+  <meta name="dc.date" content="2023-01-05" />
+  <meta name="citation_publication_date" content="2023-01-05" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -81,7 +81,7 @@ This manuscript
 ([permalink](https://greenelab.github.io/word_lapse_manuscript/v/40d309ace7dd5b81a3fee79da849aa60d9ff859e/))
 was automatically generated
 from [greenelab/word_lapse_manuscript@40d309a](https://github.com/greenelab/word_lapse_manuscript/tree/40d309ace7dd5b81a3fee79da849aa60d9ff859e)
-on July 8, 2022.
+on January 5, 2023.
 </em></small>
 
 ## Authors

@@ -61,7 +61,7 @@ lissodendoryx
 lockdown
 longicauda
 lutken
-medRxiv
+MedRxiv
 meganuclease
 mers
 metonymy
@@ -118,7 +118,7 @@ tmVar
 tracrrna
 UMAP
 variabilities
-vec
+Vec
 verrill
 vincerubinetti
 viruse

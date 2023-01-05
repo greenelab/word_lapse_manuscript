@@ -508,7 +508,8 @@
     "type": "article-journal",
     "page": "103824",
     "source": "Crossref",
-    "title": "Detection of Emerging Drugs Involved in Overdose via Diachronic Word Embeddings of Substances Discussed on Social Media",
+    "title": "Detection of emerging drugs involved in overdose via diachronic word embeddings of substances discussed on social media",
+    "volume": "119",
     "author": [
       {
         "given": "Austin P.",
@@ -519,8 +520,8 @@
         "family": "Jones"
       },
       {
-        "given": "Duen",
-        "family": "Horng Chau"
+        "given": "Duen Horng",
+        "family": "Chau"
       },
       {
         "given": "R.",
@@ -537,7 +538,7 @@
       "date-parts": [
         [
           2021,
-          5
+          7
         ]
       ]
     },
@@ -628,7 +629,75 @@
     "title": "The species Severe acute respiratory syndrome-related coronavirus: classifying 2019-nCoV and naming it SARS-CoV-2",
     "volume": "5",
     "author": [
-      {}
+      {},
+      {
+        "given": "Alexander E.",
+        "family": "Gorbalenya"
+      },
+      {
+        "given": "Susan C.",
+        "family": "Baker"
+      },
+      {
+        "given": "Ralph S.",
+        "family": "Baric"
+      },
+      {
+        "given": "Raoul J.",
+        "family": "de Groot"
+      },
+      {
+        "given": "Christian",
+        "family": "Drosten"
+      },
+      {
+        "given": "Anastasia A.",
+        "family": "Gulyaeva"
+      },
+      {
+        "given": "Bart L.",
+        "family": "Haagmans"
+      },
+      {
+        "given": "Chris",
+        "family": "Lauber"
+      },
+      {
+        "given": "Andrey M.",
+        "family": "Leontovich"
+      },
+      {
+        "given": "Benjamin W.",
+        "family": "Neuman"
+      },
+      {
+        "given": "Dmitry",
+        "family": "Penzar"
+      },
+      {
+        "given": "Stanley",
+        "family": "Perlman"
+      },
+      {
+        "given": "Leo L. M.",
+        "family": "Poon"
+      },
+      {
+        "given": "Dmitry V.",
+        "family": "Samborskiy"
+      },
+      {
+        "given": "Igor A.",
+        "family": "Sidorov"
+      },
+      {
+        "given": "Isabel",
+        "family": "Sola"
+      },
+      {
+        "given": "John",
+        "family": "Ziebuhr"
+      }
     ],
     "container-title": "Nature Microbiology",
     "language": "en",
@@ -1614,9 +1683,9 @@
     "accessed": {
       "date-parts": [
         [
-          "2022",
-          7,
-          8
+          "2023",
+          1,
+          5
         ]
       ]
     },
@@ -1631,9 +1700,9 @@
     "accessed": {
       "date-parts": [
         [
-          "2022",
-          7,
-          8
+          "2023",
+          1,
+          5
         ]
       ]
     },
