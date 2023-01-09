@@ -1,12 +1,12 @@
 adrn
 Alquaddoomi
 antiplasmodial
-arXiv
+arxiv
 arylpiperazine
 azorean
 bcl
 biomedicine
-bioRxiv
+BioRxiv
 boxplot
 cas
 catecholase
@@ -19,7 +19,7 @@ cholinephosphotransferase
 cobl
 coronavirus
 coronaviruse
-cov
+CoV
 COVID
 covs
 crispr
@@ -44,7 +44,7 @@ falquaddoomi
 funders
 GBMF
 GN
-GNormplus
+GNormPlus
 greenescientist
 grna
 gustafsson
@@ -79,7 +79,7 @@ PMCOA
 pre
 preprint
 preprinted
-preprints
+Preprints
 preprocess
 preprocessed
 preprocessing
@@ -117,7 +117,7 @@ tmVar
 tracrrna
 UMAP
 variabilities
-vec
+Vec
 verrill
 vincerubinetti
 viruse

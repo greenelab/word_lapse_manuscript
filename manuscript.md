@@ -8,7 +8,7 @@ keywords:
 - time series
 - change point detection
 lang: en-US
-date-meta: '2023-01-05'
+date-meta: '2023-01-09'
 author-meta:
 - David N. Nicholson
 - Faisal Alquaddoomi
@@ -24,8 +24,8 @@ header-includes: |-
   <meta name="citation_title" content="Changing word meanings in biomedical literature reveal pandemics and new technologies" />
   <meta property="og:title" content="Changing word meanings in biomedical literature reveal pandemics and new technologies" />
   <meta property="twitter:title" content="Changing word meanings in biomedical literature reveal pandemics and new technologies" />
-  <meta name="dc.date" content="2023-01-05" />
-  <meta name="citation_publication_date" content="2023-01-05" />
+  <meta name="dc.date" content="2023-01-09" />
+  <meta name="citation_publication_date" content="2023-01-09" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -54,9 +54,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/word_lapse_manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/word_lapse_manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/word_lapse_manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/word_lapse_manuscript/v/d58864ca0bebacd6aa16f20bd4aeb151b5334dbe/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/word_lapse_manuscript/v/d58864ca0bebacd6aa16f20bd4aeb151b5334dbe/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/word_lapse_manuscript/v/d58864ca0bebacd6aa16f20bd4aeb151b5334dbe/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/word_lapse_manuscript/v/fe0702b6936eb13d8a543c4567d114e6a26b7d9c/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/word_lapse_manuscript/v/fe0702b6936eb13d8a543c4567d114e6a26b7d9c/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/word_lapse_manuscript/v/fe0702b6936eb13d8a543c4567d114e6a26b7d9c/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -78,10 +78,10 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/word_lapse_manuscript/v/d58864ca0bebacd6aa16f20bd4aeb151b5334dbe/))
+([permalink](https://greenelab.github.io/word_lapse_manuscript/v/fe0702b6936eb13d8a543c4567d114e6a26b7d9c/))
 was automatically generated
-from [greenelab/word_lapse_manuscript@d58864c](https://github.com/greenelab/word_lapse_manuscript/tree/d58864ca0bebacd6aa16f20bd4aeb151b5334dbe)
-on January 5, 2023.
+from [greenelab/word_lapse_manuscript@fe0702b](https://github.com/greenelab/word_lapse_manuscript/tree/fe0702b6936eb13d8a543c4567d114e6a26b7d9c)
+on January 9, 2023.
 </em></small>
 
 ## Authors
@@ -454,7 +454,7 @@ We developed a web application to enable users to investigate individual tokens 
 Furthermore, including corpora such as the arXiv [@doi:10.1108/14666180010345564] or psyArXiv [@doi:10.5260/chara.23.2.38] repositories may reveal consistencies across a broader swath of fields or within-field analyses may reveal the earliest starting points of semantic changes that ultimately sweep through biomedicine.
 
 
-## Data Availability and Software
+# Data Availability and Software
 
 An online version of this manuscript is available under a Creative Commons Attribution License at [https://greenelab.github.io/word_lapse_manuscript/](https://greenelab.github.io/word_lapse_manuscript/).
 The source for the research portions of this project is licensed under the BSD-2-Clause Plus Patent at [https://github.com/greenelab/biovectors](https://github.com/greenelab/biovectors).
