@@ -1,7 +1,7 @@
 adrn
 Alquaddoomi
 antiplasmodial
-arXiv
+arxiv
 arylpiperazine
 azorean
 bcl
@@ -43,7 +43,7 @@ falquaddoomi
 funders
 GBMF
 GN
-GNormplus
+GNormPlus
 greenescientist
 gRNA
 gustafsson
@@ -74,6 +74,7 @@ oxovanadium
 pangolin
 paramyxovirus
 pcocas
+Philadelpia
 PMCOA
 pre
 preprint
@@ -116,7 +117,7 @@ tmVar
 tracrrna
 UMAP
 variabilities
-Vec
+vec
 verrill
 vincerubinetti
 viruse
