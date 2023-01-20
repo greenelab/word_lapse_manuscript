@@ -54,9 +54,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/word_lapse_manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/word_lapse_manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/word_lapse_manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/word_lapse_manuscript/v/a086e3773847afe97e38f83ce1df01617c1b6e15/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/word_lapse_manuscript/v/a086e3773847afe97e38f83ce1df01617c1b6e15/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/word_lapse_manuscript/v/a086e3773847afe97e38f83ce1df01617c1b6e15/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/word_lapse_manuscript/v/f3a165dc88b568fffdff4caf30c1ef8ef42e5a25/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/word_lapse_manuscript/v/f3a165dc88b568fffdff4caf30c1ef8ef42e5a25/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/word_lapse_manuscript/v/f3a165dc88b568fffdff4caf30c1ef8ef42e5a25/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -78,9 +78,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/word_lapse_manuscript/v/a086e3773847afe97e38f83ce1df01617c1b6e15/))
+([permalink](https://greenelab.github.io/word_lapse_manuscript/v/f3a165dc88b568fffdff4caf30c1ef8ef42e5a25/))
 was automatically generated
-from [greenelab/word_lapse_manuscript@a086e37](https://github.com/greenelab/word_lapse_manuscript/tree/a086e3773847afe97e38f83ce1df01617c1b6e15)
+from [greenelab/word_lapse_manuscript@f3a165d](https://github.com/greenelab/word_lapse_manuscript/tree/f3a165dc88b568fffdff4caf30c1ef8ef42e5a25)
 on January 20, 2023.
 </em></small>
 
@@ -454,7 +454,7 @@ We developed a web application to enable users to investigate individual tokens 
 Furthermore, including corpora such as the arXiv [@doi:10.1108/14666180010345564] or psyArXiv [@doi:10.5260/chara.23.2.38] repositories may reveal consistencies across a broader swath of fields or within-field analyses may reveal the earliest starting points of semantic changes that ultimately sweep through biomedicine.
 
 
-# Data Availability and Software
+# Availability of Data and Materials
 
 An online version of this manuscript is available under a Creative Commons Attribution License at [https://greenelab.github.io/word_lapse_manuscript/](https://greenelab.github.io/word_lapse_manuscript/).
 The source for the research portions of this project is licensed under the BSD-2-Clause Plus Patent at [https://github.com/greenelab/biovectors](https://github.com/greenelab/biovectors).
