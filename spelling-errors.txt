@@ -8,7 +8,7 @@ bcl
 biomedicine
 BioRxiv
 boxplot
-cas
+Cas
 catecholase
 CBOW
 cgreene
@@ -19,10 +19,10 @@ cholinephosphotransferase
 cobl
 coronavirus
 coronaviruse
-cov
+CoV
 COVID
 covs
-crispr
+CRISPR
 crispri
 crrna
 cse
@@ -45,7 +45,7 @@ GBMF
 GN
 GNormPlus
 greenescientist
-grna
+gRNA
 gustafsson
 hirondelle
 indolo
@@ -117,7 +117,7 @@ tmVar
 tracrrna
 UMAP
 variabilities
-vec
+Vec
 verrill
 vincerubinetti
 viruse
