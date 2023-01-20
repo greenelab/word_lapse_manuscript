@@ -8,7 +8,7 @@ keywords:
 - time series
 - change point detection
 lang: en-US
-date-meta: '2023-01-09'
+date-meta: '2023-01-20'
 author-meta:
 - David N. Nicholson
 - Faisal Alquaddoomi
@@ -24,8 +24,8 @@ header-includes: |-
   <meta name="citation_title" content="Changing word meanings in biomedical literature reveal pandemics and new technologies" />
   <meta property="og:title" content="Changing word meanings in biomedical literature reveal pandemics and new technologies" />
   <meta property="twitter:title" content="Changing word meanings in biomedical literature reveal pandemics and new technologies" />
-  <meta name="dc.date" content="2023-01-09" />
-  <meta name="citation_publication_date" content="2023-01-09" />
+  <meta name="dc.date" content="2023-01-20" />
+  <meta name="citation_publication_date" content="2023-01-20" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -54,9 +54,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/word_lapse_manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/word_lapse_manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/word_lapse_manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/word_lapse_manuscript/v/fe0702b6936eb13d8a543c4567d114e6a26b7d9c/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/word_lapse_manuscript/v/fe0702b6936eb13d8a543c4567d114e6a26b7d9c/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/word_lapse_manuscript/v/fe0702b6936eb13d8a543c4567d114e6a26b7d9c/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/word_lapse_manuscript/v/198f1299437eef54900792a589ff6285d8fa9914/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/word_lapse_manuscript/v/198f1299437eef54900792a589ff6285d8fa9914/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/word_lapse_manuscript/v/198f1299437eef54900792a589ff6285d8fa9914/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -78,10 +78,10 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/word_lapse_manuscript/v/fe0702b6936eb13d8a543c4567d114e6a26b7d9c/))
+([permalink](https://greenelab.github.io/word_lapse_manuscript/v/198f1299437eef54900792a589ff6285d8fa9914/))
 was automatically generated
-from [greenelab/word_lapse_manuscript@fe0702b](https://github.com/greenelab/word_lapse_manuscript/tree/fe0702b6936eb13d8a543c4567d114e6a26b7d9c)
-on January 9, 2023.
+from [greenelab/word_lapse_manuscript@198f129](https://github.com/greenelab/word_lapse_manuscript/tree/198f1299437eef54900792a589ff6285d8fa9914)
+on January 20, 2023.
 </em></small>
 
 ## Authors
@@ -466,16 +466,10 @@ Access to Pubtator Central's Open Access subset is available on NCBI's FTP serve
 
 
 
-# Acknowledgments
+# Funding Declaration
 
 This work was supported by the Gordon and Betty Moore Foundation under award GBMF4552 and the National Institutes of Health's National Human Genome Research Institute under award R01 HG010067 to CSG.
 The funders had no role in the study design, data collection, and analysis, decision to publish, or preparation of the manuscript.
-
-# Competing Interest
-
-DNN performed this work as a Ph.D. student at the University of Pennsylvania. 
-He is now employed by Digital Science.
-The authors report no other competing interests for this paper.
 
 
 ## References {.page_break_before}
