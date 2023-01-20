@@ -54,9 +54,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/word_lapse_manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/word_lapse_manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/word_lapse_manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/word_lapse_manuscript/v/f3a165dc88b568fffdff4caf30c1ef8ef42e5a25/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/word_lapse_manuscript/v/f3a165dc88b568fffdff4caf30c1ef8ef42e5a25/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/word_lapse_manuscript/v/f3a165dc88b568fffdff4caf30c1ef8ef42e5a25/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/word_lapse_manuscript/v/de1a422ab678605b8fb13cc675c792fa74b1ac4a/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/word_lapse_manuscript/v/de1a422ab678605b8fb13cc675c792fa74b1ac4a/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/word_lapse_manuscript/v/de1a422ab678605b8fb13cc675c792fa74b1ac4a/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -78,9 +78,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/word_lapse_manuscript/v/f3a165dc88b568fffdff4caf30c1ef8ef42e5a25/))
+([permalink](https://greenelab.github.io/word_lapse_manuscript/v/de1a422ab678605b8fb13cc675c792fa74b1ac4a/))
 was automatically generated
-from [greenelab/word_lapse_manuscript@f3a165d](https://github.com/greenelab/word_lapse_manuscript/tree/f3a165dc88b568fffdff4caf30c1ef8ef42e5a25)
+from [greenelab/word_lapse_manuscript@de1a422](https://github.com/greenelab/word_lapse_manuscript/tree/de1a422ab678605b8fb13cc675c792fa74b1ac4a)
 on January 20, 2023.
 </em></small>
 
@@ -159,6 +159,8 @@ We found change points for tokens including 'cas9', 'pandemic', and 'sars' among
 The consistent change-points between pre-publication peer-reviewed and preprinted text were largely related to the COVID-19 pandemic.
 We developed a web app for exploration (https://greenelab.github.io/word-lapse/) that enables users to investigate individual terms.
 To our knowledge, this analysis is the first to examine semantic shift in biomedical preprints and pre-publication peer-reviewed text, and it lays the foundation for future work to examine how terms acquire new meaning and the extent to which that process is encouraged or discouraged by peer review.
+
+**Keywords**: Linguistic shift, pandemic, software, novelty
 
 
 # Introduction

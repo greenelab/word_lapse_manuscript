@@ -1,7 +1,7 @@
 adrn
 Alquaddoomi
 antiplasmodial
-arXiv
+arxiv
 arylpiperazine
 azorean
 bcl
@@ -19,7 +19,7 @@ cholinephosphotransferase
 cobl
 coronavirus
 coronaviruse
-CoV
+cov
 COVID
 covs
 crispr
@@ -43,7 +43,7 @@ falquaddoomi
 funders
 GBMF
 GN
-GNormplus
+GNormPlus
 greenescientist
 grna
 gustafsson
@@ -99,7 +99,7 @@ sar
 sarr
 sarscov
 seir
-sgrna
+sgRNA
 sgrnas
 skipgram
 spacy
