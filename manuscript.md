@@ -14,18 +14,22 @@ author-meta:
 - Faisal Alquaddoomi
 - Vincent Rubinetti
 - Casey S. Greene
-header-includes: |-
+header-includes: |
   <!--
   Manubot generated metadata rendered from header-includes-template.html.
   Suggest improvements at https://github.com/manubot/manubot/blob/main/manubot/process/header-includes-template.html
   -->
   <meta name="dc.format" content="text/html" />
+  <meta property="og:type" content="article" />
   <meta name="dc.title" content="Changing word meanings in biomedical literature reveal pandemics and new technologies" />
   <meta name="citation_title" content="Changing word meanings in biomedical literature reveal pandemics and new technologies" />
   <meta property="og:title" content="Changing word meanings in biomedical literature reveal pandemics and new technologies" />
   <meta property="twitter:title" content="Changing word meanings in biomedical literature reveal pandemics and new technologies" />
   <meta name="dc.date" content="2023-04-05" />
   <meta name="citation_publication_date" content="2023-04-05" />
+  <meta property="article:published_time" content="2023-04-05" />
+  <meta name="dc.modified" content="2023-04-05T14:32:05+00:00" />
+  <meta property="article:modified_time" content="2023-04-05T14:32:05+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -54,9 +58,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/word_lapse_manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/word_lapse_manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/word_lapse_manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/word_lapse_manuscript/v/e5265ff05c861f9058838080208298fac6be3692/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/word_lapse_manuscript/v/e5265ff05c861f9058838080208298fac6be3692/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/word_lapse_manuscript/v/e5265ff05c861f9058838080208298fac6be3692/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/word_lapse_manuscript/v/46067118a85d60e14386fbca676d10d511d5fb4c/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/word_lapse_manuscript/v/46067118a85d60e14386fbca676d10d511d5fb4c/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/word_lapse_manuscript/v/46067118a85d60e14386fbca676d10d511d5fb4c/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -78,73 +82,76 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/word_lapse_manuscript/v/e5265ff05c861f9058838080208298fac6be3692/))
+([permalink](https://greenelab.github.io/word_lapse_manuscript/v/46067118a85d60e14386fbca676d10d511d5fb4c/))
 was automatically generated
-from [greenelab/word_lapse_manuscript@e5265ff](https://github.com/greenelab/word_lapse_manuscript/tree/e5265ff05c861f9058838080208298fac6be3692)
+from [greenelab/word_lapse_manuscript@4606711](https://github.com/greenelab/word_lapse_manuscript/tree/46067118a85d60e14386fbca676d10d511d5fb4c)
 on April 5, 2023.
 </em></small>
+
+
 
 ## Authors
 
 
 
-+ **David N. Nicholson**<br>
++ **David N. Nicholson**
+  <br>
     ![ORCID icon](images/orcid.svg){.inline_icon width=16 height=16}
     [0000-0003-0002-5761](https://orcid.org/0000-0003-0002-5761)
     · ![GitHub icon](images/github.svg){.inline_icon width=16 height=16}
     [danich1](https://github.com/danich1)
     · ![Twitter icon](images/twitter.svg){.inline_icon width=16 height=16}
-    [dnicholson329](https://twitter.com/dnicholson329)<br>
+    [dnicholson329](https://twitter.com/dnicholson329)
+    <br>
   <small>
      Genomics and Computational Biology Program, University of Pennsylvania, Philadelpia, PA, USA
      · Funded by The Gordon and Betty Moore Foundation, GBMF4552; The National Human Genome Research Institute, R01 HG010067
   </small>
 
-+ **Faisal Alquaddoomi**<br>
++ **Faisal Alquaddoomi**
+  <br>
     ![ORCID icon](images/orcid.svg){.inline_icon width=16 height=16}
     [0000-0003-4297-8747](https://orcid.org/0000-0003-4297-8747)
     · ![GitHub icon](images/github.svg){.inline_icon width=16 height=16}
-    [falquaddoomi](https://github.com/falquaddoomi)<br>
+    [falquaddoomi](https://github.com/falquaddoomi)
+    <br>
   <small>
      Department of Biomedical Informatics, University of Colorado School of Medicine, Aurora, CO, USA; Center for Health Artificial Intelligence (CHAI), University of Colorado School of Medicine, Aurora, CO, USA
      · Funded by The Gordon and Betty Moore Foundation, GBMF4552; The National Human Genome Research Institute, R01 HG010067
   </small>
 
-+ **Vincent Rubinetti**<br>
++ **Vincent Rubinetti**
+  <br>
     · ![GitHub icon](images/github.svg){.inline_icon width=16 height=16}
-    [vincerubinetti](https://github.com/vincerubinetti)<br>
+    [vincerubinetti](https://github.com/vincerubinetti)
+    <br>
   <small>
      Department of Biomedical Informatics, University of Colorado School of Medicine, Aurora, CO, USA; Center for Health Artificial Intelligence (CHAI), University of Colorado School of Medicine, Aurora, CO, USA
      · Funded by The Gordon and Betty Moore Foundation, GBMF4552; The National Human Genome Research Institute, R01 HG010067
   </small>
 
-+ **Casey S. Greene**<br>
++ **Casey S. Greene**
+  ^[✉](#correspondence)^<br>
     ![ORCID icon](images/orcid.svg){.inline_icon width=16 height=16}
     [0000-0001-8713-9213](https://orcid.org/0000-0001-8713-9213)
     · ![GitHub icon](images/github.svg){.inline_icon width=16 height=16}
     [cgreene](https://github.com/cgreene)
     · ![Twitter icon](images/twitter.svg){.inline_icon width=16 height=16}
-    [greenescientist](https://twitter.com/greenescientist)<br>
+    [greenescientist](https://twitter.com/greenescientist)
+    <br>
   <small>
      Department of Biomedical Informatics, University of Colorado School of Medicine, Aurora, CO, USA; Center for Health Artificial Intelligence (CHAI), University of Colorado School of Medicine, Aurora, CO, USA
      · Funded by The Gordon and Betty Moore Foundation, GBMF4552; The National Human Genome Research Institute, R01 HG010067
   </small>
 
 
+::: {#correspondence}
+✉ — Correspondence possible via [GitHub Issues](https://github.com/greenelab/word_lapse_manuscript/issues)
+or email to
+Casey S. Greene \<casey.s.greene@cuanschutz.edu\>.
 
-  To whom correspondence should be addressed:
-  
-    
-  
-    
-  
-    
-  
-    
-      CSG: casey.s.greene@cuanschutz.edu
-    
-  
 
+:::
 
 
 ## Abstract {.page_break_before}
@@ -541,3 +548,4 @@ The funders had no role in the study design, data collection, and analysis, deci
 |seir       |2019-2020  |
 
 Table: The intersection of changepoints found between published papers and preprints. {#tbl:published_preprint_change_table tag="S1"}
+

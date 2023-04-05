@@ -7,14 +7,14 @@ autodetect
 azorean
 bcl
 biomedicine
-BioRxiv
+bioRxiv
 boxplot
 cas
 catecholase
 CBOW
 cgreene
 CHAI
-changepoint
+Changepoint
 changepoints
 cholinephosphotransferase
 cobl
@@ -59,7 +59,7 @@ lissodendoryx
 lockdown
 longicauda
 lutken
-medRxiv
+MedRxiv
 meganuclease
 mers
 metonymy
@@ -116,7 +116,7 @@ tmVar
 tracrrna
 UMAP
 variabilities
-vec
+Vec
 verrill
 vincerubinetti
 viruse
