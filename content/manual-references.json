@@ -105,5 +105,28 @@
     "title": "Adaptive filtering and change detection",
     "type": "book",
     "volume": "1"
+  },
+  {
+    "author": [
+      {
+        "family": "Xu",
+        "given": "Yang"
+      },
+      {
+        "family": "Kemp",
+        "given": "Charles"
+      }
+    ],
+    "container-title": "CogSci",
+    "id": "xu2015computational",
+    "issued": {
+      "date-parts": [
+        [
+          2015
+        ]
+      ]
+    },
+    "title": "A computational evaluation of two laws of semantic change.",
+    "type": "paper-conference"
   }
 ]
