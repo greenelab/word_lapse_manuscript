@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1700 720" width="1700" height="720">
+
+<g transform="translate(50, 10)">
+<!-- Homepage section -->
+<image href="figure-pieces/word-lapse-trajectory.png" height="430" width="430" x="-50" y="0"/>
+<image href="https://openclipart.org/download/202801/long-arrow-right.svg" height="100" width="100" x="360" y="180" />
+<text x="40" y="450">Token Trajectory Through Time (A)</text>
+
+<!-- Most Similar Papers section -->
+<image href="figure-pieces/word-lapse-frequency.png" height="400" width="400" x="460" y="0"/>
+<image href="https://openclipart.org/download/202801/long-arrow-right.svg" height="100" width="100" x="870" y="180" />
+<text x="550" y="350">Token Usage Frequency Over Time (B)</text>
+
+<!-- Journal Centroids section -->
+<image href="figure-pieces/word-lapse-neighbors.png" height="400" width="400" x="1000" y="0"/>
+<text x="1100" y="400">Token Neighbors Through Time (C)</text>
+
+</g>
+</svg>
