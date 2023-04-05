@@ -1,7 +1,7 @@
 adrn
 Alquaddoomi
 antiplasmodial
-arXiv
+arxiv
 arylpiperazine
 autodetect
 azorean
@@ -20,7 +20,7 @@ cholinephosphotransferase
 cobl
 coronavirus
 coronaviruse
-CoV
+cov
 COVID
 covs
 crispr
@@ -43,9 +43,9 @@ falquaddoomi
 funders
 GBMF
 GN
-GNormPlus
+GNormplus
 greenescientist
-gRNA
+grna
 gustafsson
 hirondelle
 indolo
@@ -59,7 +59,7 @@ lissodendoryx
 lockdown
 longicauda
 lutken
-MedRxiv
+medRxiv
 meganuclease
 mers
 metonymy
@@ -85,7 +85,6 @@ preprocessed
 preprocessing
 probiotic
 probiotics
-psyArXiv
 psychropotes
 publically
 Pubtator

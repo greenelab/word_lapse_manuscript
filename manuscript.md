@@ -54,9 +54,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/word_lapse_manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/word_lapse_manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/word_lapse_manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/word_lapse_manuscript/v/79360d0b325ca823b2ee920c12ac5980f5483387/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/word_lapse_manuscript/v/79360d0b325ca823b2ee920c12ac5980f5483387/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/word_lapse_manuscript/v/79360d0b325ca823b2ee920c12ac5980f5483387/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/word_lapse_manuscript/v/e5265ff05c861f9058838080208298fac6be3692/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/word_lapse_manuscript/v/e5265ff05c861f9058838080208298fac6be3692/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/word_lapse_manuscript/v/e5265ff05c861f9058838080208298fac6be3692/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -78,9 +78,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/word_lapse_manuscript/v/79360d0b325ca823b2ee920c12ac5980f5483387/))
+([permalink](https://greenelab.github.io/word_lapse_manuscript/v/e5265ff05c861f9058838080208298fac6be3692/))
 was automatically generated
-from [greenelab/word_lapse_manuscript@79360d0](https://github.com/greenelab/word_lapse_manuscript/tree/79360d0b325ca823b2ee920c12ac5980f5483387)
+from [greenelab/word_lapse_manuscript@e5265ff](https://github.com/greenelab/word_lapse_manuscript/tree/e5265ff05c861f9058838080208298fac6be3692)
 on April 5, 2023.
 </em></small>
 
@@ -459,20 +459,32 @@ This visualization has a comparison function allowing users to examine years' di
 All functionalities are fully supported across the PMCOA and preprint corpora, and users can toggle between the two.
 
 
-# Discussion and Conclusion
+# Discussion
 
-Language is rapidly evolving, and the usage of words changes over time with words assimilating new meanings or associations [@doi:10.1093/acrefore/9780199384655.013.323].
+Language is rapidly evolving, and the usage of words changes over time, with words assimilating new meanings or associations [@doi:10.1093/acrefore/9780199384655.013.323].
 Some efforts have been made to study semantic change using biomedical text [@doi:10.1142/9789811232701_0011;@arxiv:2102.07836; @doi:10.2196/22635]; however, no such work has examined the changes evident in both pre-publication peer-reviewed and preprinted biomedical text.
-We examined semantic change in both open-access biomedical corpora from Pubmed (PMCOA) and bioRxiv/MedRxiv for the 2000-2021 interval.
-Studies like this one have only become feasible recently with the rapid uptake of open access publishing.
-To be able to span two decades with very different data availability, we developed a novel statistic that incorporated multiple models using both inter- and intra-year distances.
-Without the correction, comparing between stable and unstable models is challenging as previously reported [@doi:10.1162/tacl_a_00008; @doi:10.48550/arXiv.1804.09692].
-Our analysis revealed more than 41,000 different change points, including tokens such as 'cas9', 'pandemic', and 'sars'.
-Many change points overlapping between PMCOA and preprints were related to COVID-19, indicating that the COVID-19 pandemic has been strong and immediate enough to induce rapid semantic change across both publishing paradigms.
 
-As the amount of preprinted text grows, future work may be able to determine the consistency and time-lag of semantic change between preprint and pre-publication peer-reviewed text - potentially predicting future change in pre-publication peer-reviewed text.
-We developed a web application to enable users to investigate individual tokens - automatic approaches that use orthogonal metrics to estimate change point validity would make analysis at scale more straightforward.
-Furthermore, including corpora such as the arXiv [@doi:10.1108/14666180010345564] or psyArXiv [@doi:10.5260/chara.23.2.38] repositories may reveal consistencies across a broader swath of fields or within-field analyses may reveal the earliest starting points of semantic changes that ultimately sweep through biomedicine.
+We examined semantic changes within open-access biomedical corpora, Pubmed (PMCOA), and bioRxiv/MedRxiv, for the 2000-2022 interval.
+We developed a novel statistic incorporating multiple Word2Vec models to examine semantic changes over two decades.
+Before calculating our novel statistic, we used orthogonal processes that align each model (Figure {@fig:word2vec_alignment}).
+We found that word vectors are closer together after alignment; however, the best approach to align models still remains open for future investigation [@doi:10.1007/978-3-030-32233-5_58].
+As previously reported [@doi:10.1162/tacl_a_00008; @doi:10.48550/arXiv.1804.09692], we did find that without a correction step for the variability within and across years, comparing stable and unstable models is challenging.
+Our correction approach showed that the average distances in the earlier years have less variability using multiple models than a single model (Figure {@fig:novel_distance_validation}).
+
+After correcting year variability, our analysis revealed more than 41,000 changepoints, including tokens such as 'cas9', 'pandemic', and 'sars' (Figure {@fig:preprint_published_changepoints}).
+Many changepoints overlapping between PMCOA and preprints were related to COVID-19 (Table {@tbl:published_preprint_change_table}), indicating that the COVID-19 pandemic has been strong and immediate enough to induce rapid semantic change across both publishing paradigms [@doi:10.1371/journal.pbio.3000959; @doi:10.1371/journal.pone.0240123].
+We developed a web application that allows users to manually examine individual tokens, making examining other examples within our 41,000 changepoints easier.
+However, approaches that can automatically validate these changepoints is an essential area that remains open for future investigation.
+
+
+# Conclusion
+
+We uncovered semantic changes within biomedical literature using a novel approach that accounts for inter- and intra-year variability.
+Our approach found 41,000 changepoints that include well-known examples such as 'cas9', 'pandemic', and 'sars'.
+We constructed a web application that allows users to manually examine these individual changepoints.
+As an extension to this project, future work may be able to determine the consistency and time-lag of semantic change between preprint and pre-publication peer-reviewed text - potentially predicting future change in pre-publication peer-reviewed text.
+Furthermore, including other preprint repositories may reveal consistencies across a broader swath of fields, or within-field analyses may reveal the earliest starting points of semantic changes that ultimately sweep through biomedicine.
+Overall, this work is one starting point regarding semantic change within biomedical literature, and we are excited to see how this landscape will change as time progresses.
 
 
 # Availability of Data and Materials
