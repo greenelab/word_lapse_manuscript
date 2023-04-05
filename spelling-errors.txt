@@ -1,8 +1,9 @@
 adrn
 Alquaddoomi
 antiplasmodial
-arxiv
+arXiv
 arylpiperazine
+autodetect
 azorean
 bcl
 biomedicine
@@ -19,7 +20,7 @@ cholinephosphotransferase
 cobl
 coronavirus
 coronaviruse
-cov
+CoV
 COVID
 covs
 crispr
@@ -42,9 +43,9 @@ falquaddoomi
 funders
 GBMF
 GN
-GNormplus
+GNormPlus
 greenescientist
-grna
+gRNA
 gustafsson
 hirondelle
 indolo
@@ -78,7 +79,7 @@ PMCOA
 pre
 preprint
 preprinted
-Preprints
+preprints
 preprocess
 preprocessed
 preprocessing
@@ -104,7 +105,6 @@ sgrnas
 skipgram
 spacy
 spacy’s
-spcae
 spcas
 subtype
 TaggerOne
@@ -117,7 +117,7 @@ tmVar
 tracrrna
 UMAP
 variabilities
-Vec
+vec
 verrill
 vincerubinetti
 viruse

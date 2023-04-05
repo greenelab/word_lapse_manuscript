@@ -54,9 +54,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/word_lapse_manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/word_lapse_manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/word_lapse_manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/word_lapse_manuscript/v/a5a11cfb56a45526823c4a549a949c8a7d66caf4/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/word_lapse_manuscript/v/a5a11cfb56a45526823c4a549a949c8a7d66caf4/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/word_lapse_manuscript/v/a5a11cfb56a45526823c4a549a949c8a7d66caf4/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/word_lapse_manuscript/v/79360d0b325ca823b2ee920c12ac5980f5483387/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/word_lapse_manuscript/v/79360d0b325ca823b2ee920c12ac5980f5483387/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/word_lapse_manuscript/v/79360d0b325ca823b2ee920c12ac5980f5483387/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -78,9 +78,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/word_lapse_manuscript/v/a5a11cfb56a45526823c4a549a949c8a7d66caf4/))
+([permalink](https://greenelab.github.io/word_lapse_manuscript/v/79360d0b325ca823b2ee920c12ac5980f5483387/))
 was automatically generated
-from [greenelab/word_lapse_manuscript@a5a11cf](https://github.com/greenelab/word_lapse_manuscript/tree/a5a11cfb56a45526823c4a549a949c8a7d66caf4)
+from [greenelab/word_lapse_manuscript@79360d0](https://github.com/greenelab/word_lapse_manuscript/tree/79360d0b325ca823b2ee920c12ac5980f5483387)
 on April 5, 2023.
 </em></small>
 
@@ -216,7 +216,7 @@ Pubtator Central is an open-access resource containing annotated abstracts and f
 The methods used are TaggerOne [@doi:10.1093/bioinformatics/btw343] to tag diseases, chemicals, and cell line entities, GNormPlus [@doi:10.1155/2015/918710] to tag 
 genes, SR4GN [@doi:10.1371/journal.pone.0038460] to tag species, and tmVar [@doi:10.1093/bioinformatics/btx541] to tag genetic mutations.
 We initially downloaded this resource on December 07th, 2021, and processed over 30 million documents.
-This resource contains documents that date back to the pre-1800s to the year 2021; however, due to the low sample size in early years, we only used documents published from 2000 to 2021.
+This resource contains documents from the pre-1800s to 2021; however, due to the low sample size in the early years, we only used documents published from 2000 to 2021.
 The resource was subsequently updated with documents from 2021. 
 We also downloaded a later version on March 09th, 2022, and merged both versions using each document's doc_id field to produce the corpus used in this analysis.
 We divided documents by publication year and then preprocessed each using spacy's en_core_web_sm model [@spacy2].
@@ -231,22 +231,32 @@ MedRxiv mainly focuses on preprints that mention patient research, while bioRxiv
 We downloaded a snapshot of both resources on March 4th, 2022, using their respective Amazon S3 bucket [@https://www.biorxiv.org/tdm; @https://www.medrxiv.org/tdm].
 This snapshot contained 172,868 BioRxiv preprints and 37,517 MedRxiv preprints.
 These resources allow authors to post multiple versions of a single preprint.
-To prevent duplication bias, we filtered every preprint to its most recent version and sorted each preprint into its respective posted year.
+We filtered every preprint to its most recent version to prevent duplication bias and sorted each preprint into its respective posted year.
 Unlike Pubtator Central, these filtered preprints do not contain any annotations.
 Therefore, we used TaggerOne [@doi:10.1093/bioinformatics/btw343] to tag every chemical and disease entity and GNormplus [@doi:10.1155/2015/918710] to tag every gene and species entity for our preprint set.
 Once tagged, we used spacy to preprocess every preprint as described in our Pubtator Central section.
 
 ## Constructing Word Embeddings for Semantic Change Detection
 
+![
+A. The first step of our data pipeline is where PMCOA papers and BioRxiv/MedRxiv preprints are binned by their respective posting year.
+Following the binning process, we train ten word2vec models for each year's manuscripts.
+B. Upon training each individual word2vec model, we align every model onto an anchor model.
+C. We capture token differences using an intra-year and inter-year approach.
+Each arrow indicates comparing all tokens from one model with their respective selves in a different model.
+D. The last step combines the above calculations into a single metric to allow for a time series to be constructed.
+Once constructed, we use a statistical technique to autodetect the presence of a changepoint.
+](images/methods-pipeline/word-lapse-pipeline.png){#fig:pipeline_overview width="100%}
+
 Word2vec [@arxiv:1301.3781] is a natural language processing model designed to model words based on their respective neighbors in the form of dense vectors.
 This suite of models comes in two forms, a skipgram model and a continuous bags of words (CBOW) model.
 The skipgram model generates these vectors by having a shallow neural network predict a word's neighbors given the word, while the CBOW model predicts the word given its neighbors.
 We used the CBOW model to construct word vectors for each year.
-Despite the power of these word2vec models, these models are known to differ both due to randomization within year and year-to-year variability across years [@arxiv:1804.09692; @doi:10.1007/978-3-030-03991-2_73; @doi:10.1162/tacl_a_00008; @doi:10.18653/v1/S18-2019].
+Despite the power of these word2vec models, these models are known to differ due to randomization within a year and year-to-year variability across years [@arxiv:1804.09692; @doi:10.1007/978-3-030-03991-2_73; @doi:10.1162/tacl_a_00008; @doi:10.18653/v1/S18-2019].
 To control for run-to-run variability, we examined both intra-year and inter-year relationships.
-Each year, we trained ten different CBOW models using the following parameters: vector size of 300, 10 epochs, minimum frequency cutoff of 5, and a window size of 16 for abstracts.
+Each year, we trained ten different CBOW models using the following parameters: vector size of 300, 10 epochs, minimum frequency cutoff of 5, and a window size of 16 for abstracts (Figure {@fig:pipeline_overview}A).
 Every model has its own unique vector space following training, making it difficult to compare two models without a correction step.
-We used orthogonal Procrustes [@doi:10.1007/BF02289451] to align models.
+We used orthogonal Procrustes [@doi:10.1007/BF02289451] to align models (Figure {@fig:pipeline_overview}B).
 We aligned all trained CBOW models for the Pubtator Central dataset to the first model trained in 2021.
 Likewise, we aligned all CBOW models for the BioRxiv/MedRxiv dataset to the first model trained in 2021.
 We used UMAP [@arxiv:1802.03426] to visually examine the aligned models.
@@ -256,21 +266,21 @@ We trained this model using the following parameters: cosine distance metric, ra
 
 Once word2vec models are aligned, the next step is to detect semantic change.  
 Semantic change events are often detected through time series analysis  [@doi:10.1145/2736277.2741627].
-We constructed a time series sequence for every token by calculating its distance within a given year (intra-year) and across each year (inter-year).
+We constructed a time series sequence for every token by calculating its distance within a given year (intra-year) and across each year (inter-year) (Figure {@fig:pipeline_overview}C).
 We used the model pairs constructed from the same year to calculate an intra-year distance.
 Then, we calculated the cosine distance between each token and its corresponding counterpart for every generated pair. 
 Cosine distance is a metric bounded between zero and two, where a score of zero means two vectors are the same, and a score of two means both vectors are different.
 For the inter-year distance, we used the Cartesian product of every model between two years and calculated the distance between tokens in the same way as the intra-year distance.
 Following both calculations, we combined both metrics by taking the ratio of the average inter-year distance over the average intra-year distance.
-Through this approach, tokens with high intra-year instability will be penalized and vice-verse for more stable tokens.
+This approach will penalize tokens with high intra-year instability and vice-versa for more stable tokens.
 Along with token distance calculations, it has been shown that including token frequency improves results compared to using distance alone [@doi:10.1007/s00799-019-00271-6].
 We calculated token frequency as the ratio of token frequency in the more recent year over the frequency of the previous year. 
-Then, we combined both the frequency and distance ratios to make the final metric.
+Then, we combined the frequency with distance ratios to make the final metric (Figure {@fig:pipeline_overview}D).
 
-Following time series construction, we performed change point detection, which is a process that uses statistical techniques to detect abnormalities within a given time series.
+Following time series construction, we performed changepoint detection, which is a process that uses statistical techniques to detect abnormalities within a given time series (Figure {@fig:pipeline_overview}D).
 We used the CUSUM algorithm [@gustafsson] to detect these abnormalities.
 This algorithm uses a rolling sum of the differences between two timepoints and checks whether the sum is greater than a threshold.
-A changepoint is considered to have occurred if the sum is greater than a threshold.
+A changepoint is considered to have occurred if the sum exceeds a threshold.
 We used the 99th percentile on every generated timepoint as the threshold.
 Then, we ran the CUSUM algorithm using a drift of 0 and default settings for all other parameters.
 
@@ -284,31 +294,30 @@ We examined how the usage of tokens in biomedical text changes over time.
 Our evaluation was derived from machine learning models designed to predict the actual token given a portion of its surrounding tokens.
 Each token was represented as a vector in a coordinate space constructed by these models.
 However, training these models is stochastic, which results in arbitrary coordinate spaces.
-Model alignment is an essential step in allowing word2vec models to be compared [@doi:10.48550/arXiv.1605.09096; @doi:10.1038/s41597-021-01047-x].
-Before alignment, each model has its own unique coordinate space (Figures {@fig:word2vec_alignment}A), and each word is represented within that space (Figure {@fig:word2vec_alignment}B).
+Model alignment is essential in allowing word2vec models to be compared [@doi:10.48550/arXiv.1605.09096; @doi:10.1038/s41597-021-01047-x].
+Before alignment, each model has its own unique coordinate space (Figure {@fig:word2vec_alignment}A), and each word is represented within that space (Figure {@fig:word2vec_alignment}B).
 Alignment projects every model onto a shared coordinate space (Figure {@fig:word2vec_alignment}C), enabling direct token comparison.
 We randomly selected 100 tokens to confirm that alignment worked as expected.
-In aligned models, tokens in the global spcae were more similar to themselves within year than between years, while identical tokens in unaligned models were completely distinct (Figure {@fig:word2vec_alignment}D).
+In aligned models, tokens in the global space were more similar to themselves within the year than between years, while identical tokens in unaligned models were completely distinct (Figure {@fig:word2vec_alignment}D).
 Local distances were unaffected by alignment (Figure {@fig:word2vec_alignment}D), as token-neighbor distances were unaffected by the alignment procedure.
 
 ![
 A. Without alignment, each word2vec model has its own coordinate space.
 This is a UMAP visualization of 5000 randomly sampled tokens from 5 distinct Word2Vec models trained on the text published in 2010.
 Each data point represents a token, and the color represents the respective Word2Vec model.
-B. The highlighted token 'probiotics' shows up in its respective clusters.
-Each data point represents a token, and the color represents the Word2Vec model.
-C. After the alignment step, the token 'probiotic' is closer in vector space.
-Each data point represents a token, and the color represents the different Word2Vec models.
-D. In the global coordinate space, token distances appear to be vastly different without alignment, but become closer upon alignment, while local distances, evaluated using neighbors, are unaffected.
+B. We greyed out all tokens except for the token 'probiotics' to highlight that each token appears in its own respective cluster without alignment.
+C. After the alignment step, the token 'probiotic' is closer in vector space signifying that tokens can be easily compared.
+D. In the global coordinate space, token distances appear to be vastly different when alignment is not applied.
+After alignment, token distances become closer; tokens maintain similar distances with their neighbors regardless of alignment.
 This boxplot shows the average distance of 100 randomly sampled tokens shared in every year from 2000 to 2021.
 The x-axis shows the various groups being compared (tokens against themselves via intra-year and inter-year distances and tokens against their corresponding neighbors.
-The y axis shows the averaged distance for every year.
-](https://raw.githubusercontent.com/danich1/biovectors/1c2f91cd05ed6714525f54a006f9a78bf7fe2d31/figure_generation/output/Figure_1.png){#fig:word2vec_alignment width="100%"}
+The y-axis shows the average distance for every year.
+](https://raw.githubusercontent.com/danich1/biovectors/48913404aa889a381213ed44bd52e5927c66c51a/figure_generation/output/Figure_1.png){#fig:word2vec_alignment width="100%"}
 
 
 The landscape of biomedical publishing has changed rapidly during the period of our dataset.
-The texts for our analysis were open access manuscripts available through PubMed Central.
-The growth in the amount of available text and the uneven adoption of open access publishing during the interval studied was expected to induce changes in the underlying machine learning models, making comparisons more difficult.
+The texts for our analysis were open-access manuscripts available through PubMed Central.
+The growth in the amount of available text and the uneven adoption of open-access publishing during the interval studied was expected to induce changes in the underlying machine learning models, making comparisons more difficult.
 We found that the number of tokens available for model building, i.e., those in PMC OA, increased dramatically during this time (Figure {@fig:novel_distance_validation}A).
 This was expected to create a pattern where models trained in earlier years were more variable than those from later years simply due to the limited sample size in early years.
 We aimed to correct for this change in the underlying models by developing a statistic that, instead of using pairwise comparisons of token distances between individual models, integrated multiple models for each year by comparing tokens' intra- and inter-year variabilities.
@@ -316,20 +325,20 @@ We defined the statistic as the ratio of the average distance between two years 
 
 ![
 A. The number of tokens our models have trained on increases over time.
-This line plot shows the number of unique tokens seen by our various machine learning models.
-The x-axis depicts the year and the y-axis shows the token count.
+This line plot shows the number of unique tokens our various machine-learning models see.
+The x-axis depicts the year, and the y-axis shows the token count.
 B. Earlier years compared to 2010 have greater distances than later years.
-This confidence interval plot shows the collective distances obtained by sampling 100 tokens that are present from every year using a single model approach.
-The x-axis shows a given year and the y-axis shows the distance metric.
+This confidence interval plot shows the collective distances obtained by sampling 100 tokens present from every year using a single model approach.
+The x-axis shows a given year, and the y-axis shows the distance metric.
 C. Later years have a lower intra-distance variability compared to the earlier years.
-This confidence interval plot shows the collective distances obtained by sampling 100 tokens that are present from every year using our multi-model approach.
-The x-axis shows a given year and the y-axis shows the distance metric.
-](https://raw.githubusercontent.com/danich1/biovectors/b48e44d1a06106d3a76b35980384bc0c0c2cfaf9/figure_generation/output/Figure_2.png){#fig:novel_distance_validation width="100%"}
+This confidence interval plot shows the collective distances obtained by sampling 100 tokens present from every year using our multi-model approach.
+The x-axis shows a given year, and the y-axis shows the distance metric.
+](https://raw.githubusercontent.com/danich1/biovectors/48913404aa889a381213ed44bd52e5927c66c51a/figure_generation/output/Figure_2.png){#fig:novel_distance_validation width="100%"}
 
-We expected most tokens to undergo minor changes from year to year, while substantial changes likely suggested model drift as opposed to true linguistic change.
+We expected most tokens to undergo minor changes from year to year, while substantial changes likely suggested model drift instead of true linguistic change.
 We measured the extent to which tokens differed from themselves using the standard single-model approach and our integrated statistic.
 We filtered the token list to only contain tokens present in every year and compared their distance to the midpoint year, 2010, using the single-model and integrated-models strategies.
-We found that distances tended were markedly larger in the earliest years, where we expected models to be least stable, using the traditional approach (Figure {@fig:novel_distance_validation}B).
+We found that distances tended to be markedly larger in the earliest years, where we expected models to be least stable, using the traditional approach (Figure {@fig:novel_distance_validation}B).
 The integrated model approach did not display the same pattern in the earliest years (Figure {@fig:novel_distance_validation}C).
 Both trends reinforce that training on smaller corpora will lead to high variation and that an integrated model strategy is needed [@doi:10.1162/tacl_a_00008].
 Based on these results, we used the integrated-model strategy to calculate inter-year token distances for the remainder of this work.
@@ -338,14 +347,14 @@ Based on these results, we used the integrated-model strategy to calculate inter
 
 ![
 A. The number of change points increases over time in PMCOA.
-The x-axis shows the various time periods, while the y-axis depicts the number of detected change points.
+The x-axis shows the various time periods, while the y-axis depicts the number of detected changepoints.
 B. Regarding preprints, the greatest number of change points was during 2018-2019.
 The x-axis shows the various time periods, while the y-axis depicts the number of detected change points.
-C. The token 'cas9' was detected to have a change point at 2012-2013.
+C. The token 'cas9' was detected to have a changepoint between 2012 and 2013.
 The x-axis shows the time period since the first appearance of the token, and the y-axis shows the change metric.
-D. 'sars' has two detected change points within the PMCOA corpus.
+D. 'sars' has two detected changepoints within the PMCOA corpus.
 The x-axis shows the time period since the first appearance of the token, and the y-axis shows the change metric.
-](https://raw.githubusercontent.com/danich1/biovectors/576df207026d0573fbbb00b95c264aea0bd8174b/figure_generation/output/Figure_3.png){#fig:preprint_published_changepoints width="100%"}
+](https://raw.githubusercontent.com/danich1/biovectors/48913404aa889a381213ed44bd52e5927c66c51a/figure_generation/output/Figure_3.png){#fig:preprint_published_changepoints width="100%"}
 
 We next sought to identify tokens that changed during the 2000-2021 interval for the text from PubMed Central's Open Access Corpus (PMCOA) and the 2015-2022 interval for our preprint corpus.
 We performed change point detection using the CUSUM algorithm with distances calculated with the integrated-model approach to correct for systematic differences in the underlying corpora.
@@ -422,10 +431,10 @@ Table: The fifteen most similar neighbors to the token 'sars' for the years 2002
 |rusby                    |severe acute respiratory syndrome (mesh_d045169)                      |
 |d'orbigny                |sarscov                                                               |
 |psychropotes longicauda (species_55639)|sarscov-2                                                             |
-Table: The fifteen most similar neighbors to the token 'sars' for the years 2002 and 2003. {#tbl:sars_neighbor_table_two}
+Table: The fifteen most similar neighbors to the token 'sars' for the years 2019 and 2020. {#tbl:sars_neighbor_table_two}
 
 
-## The word-lapse application is an online resource for manual examination of biomedical tokens
+## The word-lapse application is an online resource for the manual examination of biomedical tokens
 
 ![
 A. The trajectory visualization of the token 'pandemic' through time.
@@ -442,11 +451,11 @@ We constructed an online application that allows users to examine how tokens cha
 The application supports token input as text strings or as MeSH IDs, Entrez Gene IDs, and Taxonomy IDs.
 Users might elect to explore the term 'pandemic', for which we detected a change point between 2019 and 2020.
 Users can examine the token's nearest neighbors through time (Figure {@fig:website_walkthrough}A).
-Using the token 'pandemic' as an example, users can observe that 'epidemic' remains similar through time, but taxid:114727 (the H1N1 subtype of influenza) only entered the nearest neighbors with the swine flu pandemic in 2009 and that MeSH:C000657245 (COVID-19) appears in 2020.
+Using the token 'pandemic' as an example, users can observe that 'epidemic' remains similar through time, but taxid:114727 (the H1N1 subtype of influenza) only entered the nearest neighbors with the swine flu pandemic in 2009 and that MeSH:C000657245 (COVID-19) appeared in 2020.
 The application also shows a frequency chart depicting how often the particular token is used each year (Figure {@fig:website_walkthrough}B), which can be displayed as a raw count or adjusted by the total size of the corpus.
 When change points are detected, they are indicated on this panel (Figure {@fig:website_walkthrough}B).
 The final visualization shows the union of the nearest 25 neighbors from each year ordered by the number of years that neighbor was present (Figure {@fig:website_walkthrough}C).
-This visualization has a comparison function that allows users to examine differences between years.
+This visualization has a comparison function allowing users to examine years' differences.
 All functionalities are fully supported across the PMCOA and preprint corpora, and users can toggle between the two.
 
 
