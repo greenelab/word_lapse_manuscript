@@ -8,7 +8,7 @@
   <meta name="author" content="Faisal Alquaddoomi" />
   <meta name="author" content="Vincent Rubinetti" />
   <meta name="author" content="Casey S. Greene" />
-  <meta name="dcterms.date" content="2023-01-20" />
+  <meta name="dcterms.date" content="2023-04-05" />
   <meta name="keywords" content="pubtator central, preprints, natural language-processing, machine learning, time series, change point detection" />
   <title>Changing word meanings in biomedical literature reveal pandemics and new technologies</title>
   <style>
@@ -47,8 +47,8 @@
   <meta name="citation_title" content="Changing word meanings in biomedical literature reveal pandemics and new technologies" />
   <meta property="og:title" content="Changing word meanings in biomedical literature reveal pandemics and new technologies" />
   <meta property="twitter:title" content="Changing word meanings in biomedical literature reveal pandemics and new technologies" />
-  <meta name="dc.date" content="2023-01-20" />
-  <meta name="citation_publication_date" content="2023-01-20" />
+  <meta name="dc.date" content="2023-04-05" />
+  <meta name="citation_publication_date" content="2023-04-05" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -77,9 +77,9 @@
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/word_lapse_manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/word_lapse_manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/word_lapse_manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/word_lapse_manuscript/v/de1a422ab678605b8fb13cc675c792fa74b1ac4a/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/word_lapse_manuscript/v/de1a422ab678605b8fb13cc675c792fa74b1ac4a/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/word_lapse_manuscript/v/de1a422ab678605b8fb13cc675c792fa74b1ac4a/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/word_lapse_manuscript/v/a5a11cfb56a45526823c4a549a949c8a7d66caf4/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/word_lapse_manuscript/v/a5a11cfb56a45526823c4a549a949c8a7d66caf4/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/word_lapse_manuscript/v/a5a11cfb56a45526823c4a549a949c8a7d66caf4/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -96,10 +96,10 @@
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://greenelab.github.io/word_lapse_manuscript/v/de1a422ab678605b8fb13cc675c792fa74b1ac4a/">permalink</a>)
+(<a href="https://greenelab.github.io/word_lapse_manuscript/v/a5a11cfb56a45526823c4a549a949c8a7d66caf4/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/greenelab/word_lapse_manuscript/tree/de1a422ab678605b8fb13cc675c792fa74b1ac4a">greenelab/word_lapse_manuscript@de1a422</a>
-on January 20, 2023.
+from <a href="https://github.com/greenelab/word_lapse_manuscript/tree/a5a11cfb56a45526823c4a549a949c8a7d66caf4">greenelab/word_lapse_manuscript@a5a11cf</a>
+on April 5, 2023.
 </em></small></p>
 <h2 id="authors">Authors</h2>
 <ul>
@@ -157,72 +157,82 @@ We developed a web app for exploration (https://greenelab.github.io/word-lapse/)
 To our knowledge, this analysis is the first to examine semantic shift in biomedical preprints and pre-publication peer-reviewed text, and it lays the foundation for future work to examine how terms acquire new meaning and the extent to which that process is encouraged or discouraged by peer review.</p>
 <p><strong>Keywords</strong>: Linguistic shift, pandemic, software, novelty</p>
 <h1 id="introduction">Introduction</h1>
-<p>Language is constantly evolving, and the meaning that we ascribe to words changes over time.
-For example, the word “nice” was used to mean foolish or innocent back in the 15th-17th century; then, it underwent a positive shift to its current meaning of “pleasant or delightful”<span class="citation" data-cites="16LaV5jTS">[<a href="#ref-16LaV5jTS" role="doc-biblioref">1</a>]</span>.
+<p>Language constantly evolves, and the meaning we ascribe to words changes over time.
+The word “nice” was used to mean foolish or innocent back in the 15th-17th century; then, it underwent a positive shift to its current meaning of “pleasant or delightful”<span class="citation" data-cites="16LaV5jTS">[<a href="#ref-16LaV5jTS" role="doc-biblioref">1</a>]</span>.
 These shifts occur for many reasons.
 For example, writers may use new metaphors or substitute words for others with similar meanings in a process known as metonymy <span class="citation" data-cites="16LaV5jTS">[<a href="#ref-16LaV5jTS" role="doc-biblioref">1</a>]</span>.
 Studying these shifts can provide a nuanced understanding of how language adapts to describe our world.</p>
 <p>Scientific fields of inquiry also change, sometimes rapidly, as researchers devise and test new hypotheses and applications.
-For example, the repurposing of the CRISPR-Cas9 system to a pervasive tool for genome editing has altered how we discuss molecular entities.
+For example, repurposing the CRISPR-Cas9 system to a pervasive tool for genome editing has altered how we discuss molecular entities.
 Microbes use this as an immune system to defend against viruses.
 Scientists repurposed this system for genome editing <span class="citation" data-cites="15T32hvm6">[<a href="#ref-15T32hvm6" role="doc-biblioref">2</a>]</span>, leading to changes in the use of the term.
 Science is a field with substantial written communication <span class="citation" data-cites="TQgSqYqx">[<a href="#ref-TQgSqYqx" role="doc-biblioref">3</a>]</span>, both via published papers <span class="citation" data-cites="u294RvPz">[<a href="#ref-u294RvPz" role="doc-biblioref">4</a>]</span> and preprints <span class="citation" data-cites="i9BKPuqb 1BL18WAmW">[<a href="#ref-i9BKPuqb" role="doc-biblioref">5</a>,<a href="#ref-1BL18WAmW" role="doc-biblioref">6</a>]</span>.
 Examining scientific manuscripts with computational linguistics can reveal longitudinal trends in scientific research.</p>
-<p>Studying changes in the use of word meanings is called semantic shift detection.
-Approaches for semantic shift detection examine time series datasets that capture word usage patterns, both with respect to frequency and structure.
-Typically, these time series are generated for individual words by training a unique model on text binned by a selected time period <span class="citation" data-cites="j6Vt5Hlm HFrLqOEz 18czzWopC">[<a href="#ref-j6Vt5Hlm" role="doc-biblioref">7</a>,<a href="#ref-HFrLqOEz" role="doc-biblioref">8</a>,<a href="#ref-18czzWopC" role="doc-biblioref">9</a>]</span>.
-Methods are then applied to identify “change points” where a word’s meaning has changed <span class="citation" data-cites="21OOkxjt">[<a href="#ref-pAmipxbM" role="doc-biblioref">11</a>]</span>.</p>
-<p>Semantic shifts have been examined in many sources.
-Analysis has included newspapers <span class="citation" data-cites="lVEHA3Zy KSkyAPSb qEhBr3RQ">[<a href="#ref-lVEHA3Zy" role="doc-biblioref">12</a>,<a href="#ref-KSkyAPSb" role="doc-biblioref">13</a>,<a href="#ref-qEhBr3RQ" role="doc-biblioref">14</a>]</span>, books <span class="citation" data-cites="j6Vt5Hlm">[<a href="#ref-j6Vt5Hlm" role="doc-biblioref">7</a>]</span>, reddit <span class="citation" data-cites="FQTxXyuO">[<a href="#ref-FQTxXyuO" role="doc-biblioref">15</a>]</span>, and Twitter <span class="citation" data-cites="7gkQDvnc">[<a href="#ref-7gkQDvnc" role="doc-biblioref">16</a>]</span>.
-Researchers have examined topics in information retrieval <span class="citation" data-cites="TEUTroLA">[<a href="#ref-TEUTroLA" role="doc-biblioref">17</a>]</span>, and in biomedicine COVID-19 has been examined multiple times <span class="citation" data-cites="wXphJ7n3 ynODVhC7 K1SZY72U">[<a href="#ref-wXphJ7n3" role="doc-biblioref">18</a>,<a href="#ref-ynODVhC7" role="doc-biblioref">19</a>,<a href="#ref-K1SZY72U" role="doc-biblioref">20</a>]</span>.
-The amount of open access biomedical literature has dramatically increased in the last two decades, laying the groundwork for the large-scale analysis of semantic shifts in biomedicine.</p>
-<p>We examine these semantic shifts in this rapidly growing body of open access text.
-We include both published papers and preprints in our analysis.
-We found that novel strategies integrating multiple models for each year sidestepped the challenge of instability in the machine learning models and allowed us to estimate intra- and inter-year variability.
-We identify semantic change points for each token.
-We examine key cases and provide the full set of research products, including change points and machine learning models, as openly licensed tools for the community.
-We also created a webserver that allows users to analyze tokens of interest on the fly, examining both the most similar terms within a year and temporal trends.</p>
+<p>The task of examining if words change their meanings is called semantic shift detection.
+This process involves capturing word usage patterns such as frequency and structure over a set period of time <span class="citation" data-cites="1G7ISzN0y">[<a href="#ref-1G7ISzN0y" role="doc-biblioref">7</a>]</span>.
+Once these patterns have been captured, the last step is generating a time series showing possible shift events, commonly called changepoints <span class="citation" data-cites="1G7ISzN0y 21OOkxjt">[<a href="#ref-pAmipxbM" role="doc-biblioref">9</a>]</span>.
+Scientists have used this approach to discover many changepoints within publically available English corpora <span class="citation" data-cites="TB6Pquc2 1HbV3SM8b AvZu64aY 18czzWopC NzrjegSD">[<a href="#ref-TB6Pquc2" role="doc-biblioref">10</a>,<a href="#ref-1HbV3SM8b" role="doc-biblioref">11</a>,<a href="#ref-AvZu64aY" role="doc-biblioref">12</a>,<a href="#ref-18czzWopC" role="doc-biblioref">13</a>,<a href="#ref-NzrjegSD" role="doc-biblioref">14</a>]</span>.
+These discoveries included semantic changes like the meaning of awful shifting from majestic to horrible <span class="citation" data-cites="j6Vt5Hlm">[<a href="#ref-j6Vt5Hlm" role="doc-biblioref">15</a>]</span>.
+Along with individual discoveries, scientists have identified global patterns that semantic shifts can follow <span class="citation" data-cites="j6Vt5Hlm NMvzsQHy">[<a href="#ref-j6Vt5Hlm" role="doc-biblioref">15</a>,<a href="#ref-NMvzsQHy" role="doc-biblioref">16</a>]</span>.
+One pattern discovered is that words with similar meanings, i.e., synonyms, tend to change over time and undergo similar changes <span class="citation" data-cites="NMvzsQHy">[<a href="#ref-NMvzsQHy" role="doc-biblioref">16</a>]</span>.
+The other patterns are that words undergo semantic shifts inversely proportional to their frequency, and words with multiple meanings will have higher rates of change <span class="citation" data-cites="j6Vt5Hlm">[<a href="#ref-j6Vt5Hlm" role="doc-biblioref">15</a>]</span>.
+The majority of these discoveries have been within regular English text.
+There has been an effort to investigate if any of these patterns are upheld within biomedical literature <span class="citation" data-cites="TreSyhQr">[<a href="#ref-TreSyhQr" role="doc-biblioref">17</a>]</span>.
+The researchers only found strong evidence of words that change meaning inversely scales to their usage frequency <span class="citation" data-cites="1HSjSLkBG">[<a href="#ref-1HSjSLkBG" role="doc-biblioref">18</a>]</span>.
+Despite the conflicting evidence for these change patterns, biomedical words and concepts change over time.</p>
+<p>Most recent work to detect semantic shifts has been outside of biomedical corpora.
+Common mediums include newspapers <span class="citation" data-cites="lVEHA3Zy KSkyAPSb qEhBr3RQ">[<a href="#ref-lVEHA3Zy" role="doc-biblioref">19</a>,<a href="#ref-KSkyAPSb" role="doc-biblioref">20</a>,<a href="#ref-qEhBr3RQ" role="doc-biblioref">21</a>]</span>, books <span class="citation" data-cites="j6Vt5Hlm">[<a href="#ref-j6Vt5Hlm" role="doc-biblioref">15</a>]</span>, reddit <span class="citation" data-cites="FQTxXyuO">[<a href="#ref-FQTxXyuO" role="doc-biblioref">22</a>]</span>, and Twitter <span class="citation" data-cites="7gkQDvnc">[<a href="#ref-7gkQDvnc" role="doc-biblioref">23</a>]</span>.
+Researchers have examined topics in information retrieval <span class="citation" data-cites="TEUTroLA">[<a href="#ref-TEUTroLA" role="doc-biblioref">24</a>]</span>, and in biomedicine COVID-19 has been examined multiple times <span class="citation" data-cites="wXphJ7n3 ynODVhC7 K1SZY72U">[<a href="#ref-wXphJ7n3" role="doc-biblioref">25</a>,<a href="#ref-ynODVhC7" role="doc-biblioref">26</a>,<a href="#ref-K1SZY72U" role="doc-biblioref">27</a>]</span>.
+Also, researchers have examined how drugs and disease pairs changed in their usage over time <span class="citation" data-cites="1HSjSLkBG">[<a href="#ref-1HSjSLkBG" role="doc-biblioref">18</a>]</span>.
+Despite these discoveries, the amount of open-access biomedical literature has dramatically increased in the last two decades, laying the groundwork for the large-scale analysis of semantic shifts in biomedicine.
+There remains a gap in uncovering semantic change on a global scale within published and preprint works
+and this work takes a deeper dive.</p>
+<p>To fill this gap, we sought to uncover instances of semantic shifts within the rapidly growing body of open-access texts, published papers, and preprints.
+We took a novel approach that integrates multiple models to account for the challenge of instability in the machine learning models trained across various years.
+Using this approach, we identified semantic changepoints for each token and examine key changepoint cases.
+We provided the full set of research products, including changepoints and machine learning models, as openly licensed tools for the community.
+Lastly, we created a web server that allows users to analyze tokens of interest on the fly with respect to the most similar terms within a year and temporal trends.</p>
 <h1 id="methods">Methods</h1>
 <h2 id="biomedical-corpora-examined">Biomedical Corpora Examined</h2>
 <h3 id="pubtator-central">Pubtator Central</h3>
-<p>Pubtator Central is an open-access resource containing annotated abstracts and full-text annotated with entity recognition systems for biomedical concepts <span class="citation" data-cites="18ZyyTcTe">[<a href="#ref-18ZyyTcTe" role="doc-biblioref">21</a>]</span>.
-The methods used are TaggerOne <span class="citation" data-cites="11YUuHulp">[<a href="#ref-11YUuHulp" role="doc-biblioref">22</a>]</span> to tag diseases, chemicals, and cell line entities, GNormPlus <span class="citation" data-cites="aOPX10e0">[<a href="#ref-aOPX10e0" role="doc-biblioref">23</a>]</span> to tag
-genes, SR4GN <span class="citation" data-cites="NXIFrudx">[<a href="#ref-NXIFrudx" role="doc-biblioref">24</a>]</span> to tag species, and tmVar <span class="citation" data-cites="17LQKv7vO">[<a href="#ref-17LQKv7vO" role="doc-biblioref">25</a>]</span> to tag genetic mutations.
+<p>Pubtator Central is an open-access resource containing annotated abstracts and full-text annotated with entity recognition systems for biomedical concepts <span class="citation" data-cites="18ZyyTcTe">[<a href="#ref-18ZyyTcTe" role="doc-biblioref">28</a>]</span>.
+The methods used are TaggerOne <span class="citation" data-cites="11YUuHulp">[<a href="#ref-11YUuHulp" role="doc-biblioref">29</a>]</span> to tag diseases, chemicals, and cell line entities, GNormPlus <span class="citation" data-cites="aOPX10e0">[<a href="#ref-aOPX10e0" role="doc-biblioref">30</a>]</span> to tag
+genes, SR4GN <span class="citation" data-cites="NXIFrudx">[<a href="#ref-NXIFrudx" role="doc-biblioref">31</a>]</span> to tag species, and tmVar <span class="citation" data-cites="17LQKv7vO">[<a href="#ref-17LQKv7vO" role="doc-biblioref">32</a>]</span> to tag genetic mutations.
 We initially downloaded this resource on December 07th, 2021, and processed over 30 million documents.
 This resource contains documents that date back to the pre-1800s to the year 2021; however, due to the low sample size in early years, we only used documents published from 2000 to 2021.
 The resource was subsequently updated with documents from 2021.
 We also downloaded a later version on March 09th, 2022, and merged both versions using each document’s doc_id field to produce the corpus used in this analysis.
-We divided documents by publication year and then preprocessed each using spacy’s en_core_web_sm model <span class="citation" data-cites="q2fFAZTG">[<a href="#ref-q2fFAZTG" role="doc-biblioref">26</a>]</span>.
+We divided documents by publication year and then preprocessed each using spacy’s en_core_web_sm model <span class="citation" data-cites="q2fFAZTG">[<a href="#ref-q2fFAZTG" role="doc-biblioref">33</a>]</span>.
 We replaced each tagged word or phrase with its corresponding entity type and entity id for every sentence that contained an annotation.
 Then, we used spacy to break sentences into individual tokens and normalized each token to its root form via lemmatization.
 After preprocessing, we used every sentence to train multiple natural language models designed to represent words based on their context.</p>
 <h3 id="biomedical-preprints">Biomedical Preprints</h3>
 <p>BioRxiv <span class="citation" data-cites="i9BKPuqb">[<a href="#ref-i9BKPuqb" role="doc-biblioref">5</a>]</span> and MedRxiv <span class="citation" data-cites="1BL18WAmW">[<a href="#ref-1BL18WAmW" role="doc-biblioref">6</a>]</span> are repositories that contain preprints for the life science community.
 MedRxiv mainly focuses on preprints that mention patient research, while bioRxiv focuses on general biology.
-We downloaded a snapshot of both resources on March 4th, 2022, using their respective Amazon S3 bucket <span class="citation" data-cites="9gVmEi52 v3H8juk7">[<a href="#ref-9gVmEi52" role="doc-biblioref">27</a>,<a href="#ref-v3H8juk7" role="doc-biblioref">28</a>]</span>.
+We downloaded a snapshot of both resources on March 4th, 2022, using their respective Amazon S3 bucket <span class="citation" data-cites="9gVmEi52 v3H8juk7">[<a href="#ref-9gVmEi52" role="doc-biblioref">34</a>,<a href="#ref-v3H8juk7" role="doc-biblioref">35</a>]</span>.
 This snapshot contained 172,868 BioRxiv preprints and 37,517 MedRxiv preprints.
 These resources allow authors to post multiple versions of a single preprint.
 To prevent duplication bias, we filtered every preprint to its most recent version and sorted each preprint into its respective posted year.
 Unlike Pubtator Central, these filtered preprints do not contain any annotations.
-Therefore, we used TaggerOne <span class="citation" data-cites="11YUuHulp">[<a href="#ref-11YUuHulp" role="doc-biblioref">22</a>]</span> to tag every chemical and disease entity and GNormplus <span class="citation" data-cites="aOPX10e0">[<a href="#ref-aOPX10e0" role="doc-biblioref">23</a>]</span> to tag every gene and species entity for our preprint set.
+Therefore, we used TaggerOne <span class="citation" data-cites="11YUuHulp">[<a href="#ref-11YUuHulp" role="doc-biblioref">29</a>]</span> to tag every chemical and disease entity and GNormplus <span class="citation" data-cites="aOPX10e0">[<a href="#ref-aOPX10e0" role="doc-biblioref">30</a>]</span> to tag every gene and species entity for our preprint set.
 Once tagged, we used spacy to preprocess every preprint as described in our Pubtator Central section.</p>
 <h2 id="constructing-word-embeddings-for-semantic-change-detection">Constructing Word Embeddings for Semantic Change Detection</h2>
-<p>Word2vec <span class="citation" data-cites="1GhHIDxuW">[<a href="#ref-1GhHIDxuW" role="doc-biblioref">29</a>]</span> is a natural language processing model designed to model words based on their respective neighbors in the form of dense vectors.
+<p>Word2vec <span class="citation" data-cites="1GhHIDxuW">[<a href="#ref-1GhHIDxuW" role="doc-biblioref">36</a>]</span> is a natural language processing model designed to model words based on their respective neighbors in the form of dense vectors.
 This suite of models comes in two forms, a skipgram model and a continuous bags of words (CBOW) model.
 The skipgram model generates these vectors by having a shallow neural network predict a word’s neighbors given the word, while the CBOW model predicts the word given its neighbors.
 We used the CBOW model to construct word vectors for each year.
-Despite the power of these word2vec models, these models are known to differ both due to randomization within year and year-to-year variability across years <span class="citation" data-cites="18rNo4lJI 8G9bCV2k ImhJ75vq bXXIQj3W">[<a href="#ref-18rNo4lJI" role="doc-biblioref">30</a>,<a href="#ref-8G9bCV2k" role="doc-biblioref">31</a>,<a href="#ref-ImhJ75vq" role="doc-biblioref">32</a>,<a href="#ref-bXXIQj3W" role="doc-biblioref">33</a>]</span>.
+Despite the power of these word2vec models, these models are known to differ both due to randomization within year and year-to-year variability across years <span class="citation" data-cites="18rNo4lJI 8G9bCV2k ImhJ75vq bXXIQj3W">[<a href="#ref-18rNo4lJI" role="doc-biblioref">37</a>,<a href="#ref-8G9bCV2k" role="doc-biblioref">38</a>,<a href="#ref-ImhJ75vq" role="doc-biblioref">39</a>,<a href="#ref-bXXIQj3W" role="doc-biblioref">40</a>]</span>.
 To control for run-to-run variability, we examined both intra-year and inter-year relationships.
 Each year, we trained ten different CBOW models using the following parameters: vector size of 300, 10 epochs, minimum frequency cutoff of 5, and a window size of 16 for abstracts.
 Every model has its own unique vector space following training, making it difficult to compare two models without a correction step.
-We used orthogonal Procrustes <span class="citation" data-cites="NjbU71da">[<a href="#ref-NjbU71da" role="doc-biblioref">34</a>]</span> to align models.
+We used orthogonal Procrustes <span class="citation" data-cites="NjbU71da">[<a href="#ref-NjbU71da" role="doc-biblioref">41</a>]</span> to align models.
 We aligned all trained CBOW models for the Pubtator Central dataset to the first model trained in 2021.
 Likewise, we aligned all CBOW models for the BioRxiv/MedRxiv dataset to the first model trained in 2021.
-We used UMAP <span class="citation" data-cites="157h5hA34">[<a href="#ref-157h5hA34" role="doc-biblioref">35</a>]</span> to visually examine the aligned models.
+We used UMAP <span class="citation" data-cites="157h5hA34">[<a href="#ref-157h5hA34" role="doc-biblioref">42</a>]</span> to visually examine the aligned models.
 We trained this model using the following parameters: cosine distance metric, random_state of 100, 25 for n_neighbors, a minimum distance of 0.99, and 50 n_epochs.</p>
 <h2 id="detecting-semantic-changes-across-time">Detecting semantic changes across time</h2>
 <p>Once word2vec models are aligned, the next step is to detect semantic change.<br />
-Semantic change events are often detected through time series analysis <span class="citation" data-cites="TB6Pquc2">[<a href="#ref-TB6Pquc2" role="doc-biblioref">36</a>]</span>.
+Semantic change events are often detected through time series analysis <span class="citation" data-cites="TB6Pquc2">[<a href="#ref-TB6Pquc2" role="doc-biblioref">10</a>]</span>.
 We constructed a time series sequence for every token by calculating its distance within a given year (intra-year) and across each year (inter-year).
 We used the model pairs constructed from the same year to calculate an intra-year distance.
 Then, we calculated the cosine distance between each token and its corresponding counterpart for every generated pair.
@@ -230,11 +240,11 @@ Cosine distance is a metric bounded between zero and two, where a score of zero 
 For the inter-year distance, we used the Cartesian product of every model between two years and calculated the distance between tokens in the same way as the intra-year distance.
 Following both calculations, we combined both metrics by taking the ratio of the average inter-year distance over the average intra-year distance.
 Through this approach, tokens with high intra-year instability will be penalized and vice-verse for more stable tokens.
-Along with token distance calculations, it has been shown that including token frequency improves results compared to using distance alone <span class="citation" data-cites="1BaA3rWCK">[<a href="#ref-1BaA3rWCK" role="doc-biblioref">37</a>]</span>.
+Along with token distance calculations, it has been shown that including token frequency improves results compared to using distance alone <span class="citation" data-cites="1BaA3rWCK">[<a href="#ref-1BaA3rWCK" role="doc-biblioref">43</a>]</span>.
 We calculated token frequency as the ratio of token frequency in the more recent year over the frequency of the previous year.
 Then, we combined both the frequency and distance ratios to make the final metric.</p>
 <p>Following time series construction, we performed change point detection, which is a process that uses statistical techniques to detect abnormalities within a given time series.
-We used the CUSUM algorithm <span class="citation" data-cites="pAmipxbM">[<a href="#ref-pAmipxbM" role="doc-biblioref">11</a>]</span> to detect these abnormalities.
+We used the CUSUM algorithm <span class="citation" data-cites="pAmipxbM">[<a href="#ref-pAmipxbM" role="doc-biblioref">9</a>]</span> to detect these abnormalities.
 This algorithm uses a rolling sum of the differences between two timepoints and checks whether the sum is greater than a threshold.
 A changepoint is considered to have occurred if the sum is greater than a threshold.
 We used the 99th percentile on every generated timepoint as the threshold.
@@ -245,7 +255,7 @@ Then, we ran the CUSUM algorithm using a drift of 0 and default settings for all
 Our evaluation was derived from machine learning models designed to predict the actual token given a portion of its surrounding tokens.
 Each token was represented as a vector in a coordinate space constructed by these models.
 However, training these models is stochastic, which results in arbitrary coordinate spaces.
-Model alignment is an essential step in allowing word2vec models to be compared <span class="citation" data-cites="xQaNPZgV 1346YOPVE">[<a href="#ref-xQaNPZgV" role="doc-biblioref">38</a>,<a href="#ref-1346YOPVE" role="doc-biblioref">39</a>]</span>.
+Model alignment is an essential step in allowing word2vec models to be compared <span class="citation" data-cites="xQaNPZgV 1346YOPVE">[<a href="#ref-xQaNPZgV" role="doc-biblioref">44</a>,<a href="#ref-1346YOPVE" role="doc-biblioref">45</a>]</span>.
 Before alignment, each model has its own unique coordinate space (Figures <a href="#fig:word2vec_alignment">1</a>A), and each word is represented within that space (Figure <a href="#fig:word2vec_alignment">1</a>B).
 Alignment projects every model onto a shared coordinate space (Figure <a href="#fig:word2vec_alignment">1</a>C), enabling direct token comparison.
 We randomly selected 100 tokens to confirm that alignment worked as expected.
@@ -293,7 +303,7 @@ We measured the extent to which tokens differed from themselves using the standa
 We filtered the token list to only contain tokens present in every year and compared their distance to the midpoint year, 2010, using the single-model and integrated-models strategies.
 We found that distances tended were markedly larger in the earliest years, where we expected models to be least stable, using the traditional approach (Figure <a href="#fig:novel_distance_validation">2</a>B).
 The integrated model approach did not display the same pattern in the earliest years (Figure <a href="#fig:novel_distance_validation">2</a>C).
-Both trends reinforce that training on smaller corpora will lead to high variation and that an integrated model strategy is needed <span class="citation" data-cites="ImhJ75vq">[<a href="#ref-ImhJ75vq" role="doc-biblioref">32</a>]</span>.
+Both trends reinforce that training on smaller corpora will lead to high variation and that an integrated model strategy is needed <span class="citation" data-cites="ImhJ75vq">[<a href="#ref-ImhJ75vq" role="doc-biblioref">39</a>]</span>.
 Based on these results, we used the integrated-model strategy to calculate inter-year token distances for the remainder of this work.</p>
 <h2 id="terms-exhibit-detectable-changes-in-usage">Terms exhibit detectable changes in usage</h2>
 <div id="fig:preprint_published_changepoints" class="fignos">
@@ -317,7 +327,7 @@ We detected one in PMCOA for ‘cas9’ from 2012 to 2013 (Figure <a href="#fig:
 Before the change point, its closest neighbors were related genetic elements (e.g., ‘cas’1-3).
 After the change point, its closest neighbors became terms related to targeting, sgRNA, and gRNA, as well as other genome editing strategies, ’talen’ and ‘zfns’ (Table <a href="#tbl:cas9_neighbor_table">1</a>).
 For some terms, we detected multiple change points within the studied interval.
-We detected change points for ‘SARS’ from 2002 to 2003 and 2019 to 2020 (Figure <a href="#fig:preprint_published_changepoints">3</a>D), consistent with the emergences of SARS-CoV <span class="citation" data-cites="YuxGez24">[<a href="#ref-YuxGez24" role="doc-biblioref">40</a>]</span> and SARS-CoV-2 <span class="citation" data-cites="1ExALQ5eN vvMItrwz">[<a href="#ref-1ExALQ5eN" role="doc-biblioref">41</a>,<a href="#ref-vvMItrwz" role="doc-biblioref">42</a>]</span> as observed human pathogens.
+We detected change points for ‘SARS’ from 2002 to 2003 and 2019 to 2020 (Figure <a href="#fig:preprint_published_changepoints">3</a>D), consistent with the emergences of SARS-CoV <span class="citation" data-cites="YuxGez24">[<a href="#ref-YuxGez24" role="doc-biblioref">46</a>]</span> and SARS-CoV-2 <span class="citation" data-cites="1ExALQ5eN vvMItrwz">[<a href="#ref-1ExALQ5eN" role="doc-biblioref">47</a>,<a href="#ref-vvMItrwz" role="doc-biblioref">48</a>]</span> as observed human pathogens.
 We found miscellaneous neighbors before each change point, with use consistent with the acronym for Severe Acute Respiratory Syndrome after each (Tables <a href="#tbl:sars_neighbor_table_one">2</a> and <a href="#tbl:sars_neighbor_table_two">3</a>).</p>
 <p>Out of all change points, we observed 200 tokens with at least one change point in each corpus.
 Only 25 of the 200 terms were detected to have simultaneous changes between the preprint and PMCOA corpora.
@@ -577,16 +587,16 @@ This visualization has a comparison function that allows users to examine differ
 All functionalities are fully supported across the PMCOA and preprint corpora, and users can toggle between the two.</p>
 <h1 id="discussion-and-conclusion">Discussion and Conclusion</h1>
 <p>Language is rapidly evolving, and the usage of words changes over time with words assimilating new meanings or associations <span class="citation" data-cites="16LaV5jTS">[<a href="#ref-16LaV5jTS" role="doc-biblioref">1</a>]</span>.
-Some efforts have been made to study semantic change using biomedical text <span class="citation" data-cites="wXphJ7n3 ynODVhC7 K1SZY72U">[<a href="#ref-wXphJ7n3" role="doc-biblioref">18</a>,<a href="#ref-ynODVhC7" role="doc-biblioref">19</a>,<a href="#ref-K1SZY72U" role="doc-biblioref">20</a>]</span>; however, no such work has examined the changes evident in both pre-publication peer-reviewed and preprinted biomedical text.
+Some efforts have been made to study semantic change using biomedical text <span class="citation" data-cites="wXphJ7n3 ynODVhC7 K1SZY72U">[<a href="#ref-wXphJ7n3" role="doc-biblioref">25</a>,<a href="#ref-ynODVhC7" role="doc-biblioref">26</a>,<a href="#ref-K1SZY72U" role="doc-biblioref">27</a>]</span>; however, no such work has examined the changes evident in both pre-publication peer-reviewed and preprinted biomedical text.
 We examined semantic change in both open-access biomedical corpora from Pubmed (PMCOA) and bioRxiv/MedRxiv for the 2000-2021 interval.
 Studies like this one have only become feasible recently with the rapid uptake of open access publishing.
 To be able to span two decades with very different data availability, we developed a novel statistic that incorporated multiple models using both inter- and intra-year distances.
-Without the correction, comparing between stable and unstable models is challenging as previously reported <span class="citation" data-cites="ImhJ75vq M1LzK6yf">[<a href="#ref-ImhJ75vq" role="doc-biblioref">32</a>,<a href="#ref-M1LzK6yf" role="doc-biblioref">43</a>]</span>.
+Without the correction, comparing between stable and unstable models is challenging as previously reported <span class="citation" data-cites="ImhJ75vq M1LzK6yf">[<a href="#ref-ImhJ75vq" role="doc-biblioref">39</a>,<a href="#ref-M1LzK6yf" role="doc-biblioref">49</a>]</span>.
 Our analysis revealed more than 41,000 different change points, including tokens such as ‘cas9’, ‘pandemic’, and ‘sars’.
 Many change points overlapping between PMCOA and preprints were related to COVID-19, indicating that the COVID-19 pandemic has been strong and immediate enough to induce rapid semantic change across both publishing paradigms.</p>
 <p>As the amount of preprinted text grows, future work may be able to determine the consistency and time-lag of semantic change between preprint and pre-publication peer-reviewed text - potentially predicting future change in pre-publication peer-reviewed text.
 We developed a web application to enable users to investigate individual tokens - automatic approaches that use orthogonal metrics to estimate change point validity would make analysis at scale more straightforward.
-Furthermore, including corpora such as the arXiv <span class="citation" data-cites="ZTyQYlDz">[<a href="#ref-ZTyQYlDz" role="doc-biblioref">44</a>]</span> or psyArXiv <span class="citation" data-cites="1D4Cz1GNr">[<a href="#ref-1D4Cz1GNr" role="doc-biblioref">45</a>]</span> repositories may reveal consistencies across a broader swath of fields or within-field analyses may reveal the earliest starting points of semantic changes that ultimately sweep through biomedicine.</p>
+Furthermore, including corpora such as the arXiv <span class="citation" data-cites="ZTyQYlDz">[<a href="#ref-ZTyQYlDz" role="doc-biblioref">50</a>]</span> or psyArXiv <span class="citation" data-cites="1D4Cz1GNr">[<a href="#ref-1D4Cz1GNr" role="doc-biblioref">51</a>]</span> repositories may reveal consistencies across a broader swath of fields or within-field analyses may reveal the earliest starting points of semantic changes that ultimately sweep through biomedicine.</p>
 <h1 id="availability-of-data-and-materials">Availability of Data and Materials</h1>
 <p>An online version of this manuscript is available under a Creative Commons Attribution License at <a href="https://greenelab.github.io/word_lapse_manuscript/">https://greenelab.github.io/word_lapse_manuscript/</a>.
 The source for the research portions of this project is licensed under the BSD-2-Clause Plus Patent at <a href="https://github.com/greenelab/biovectors">https://github.com/greenelab/biovectors</a>.
@@ -618,125 +628,143 @@ The funders had no role in the study design, data collection, and analysis, deci
 <div id="ref-1BL18WAmW" class="csl-entry" role="doc-biblioentry">
 <div class="csl-left-margin">6. </div><div class="csl-right-inline"><strong>Medical preprint server debuts</strong> <div class="csl-block">Jocelyn Kaiser</div> <em>Science</em> (2019-06-05) <a href="https://doi.org/gpxkkf">https://doi.org/gpxkkf</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1126/science.aay2933">10.1126/science.aay2933</a></div></div>
 </div>
-<div id="ref-j6Vt5Hlm" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">7. </div><div class="csl-right-inline"><strong>Diachronic Word Embeddings Reveal Statistical Laws of Semantic Change</strong> <div class="csl-block">William L Hamilton, Jure Leskovec, Dan Jurafsky</div> <em>arXiv</em> (2018-10-26) <a href="https://arxiv.org/abs/1605.09096">https://arxiv.org/abs/1605.09096</a></div>
+<div id="ref-1G7ISzN0y" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">7. </div><div class="csl-right-inline"><strong>Diachronic word embeddings and semantic shifts: a survey</strong> <div class="csl-block">Andrey Kutuzov, Lilja Øvrelid, Terrence Szymanski, Erik Velldal</div> <em>arXiv</em> (2018-06-14) <a href="https://arxiv.org/abs/1806.03537">https://arxiv.org/abs/1806.03537</a></div>
 </div>
-<div id="ref-HFrLqOEz" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">8. </div><div class="csl-right-inline"><strong>Multi-Label Zero-Shot Learning via Concept Embedding</strong> <div class="csl-block">Ubai Sandouk, Ke Chen</div> <em>arXiv</em> <a href="https://arxiv.org/abs/1606.00282">https://arxiv.org/abs/1606.00282</a></div>
+<div id="ref-21OOkxjt" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">8. </div><div class="csl-right-inline"><strong>Bayesian Online Changepoint Detection</strong> <div class="csl-block">Ryan Prescott Adams, David JC MacKay</div> <em>arXiv</em> (2007-10-22) <a href="https://arxiv.org/abs/0710.3742">https://arxiv.org/abs/0710.3742</a></div>
+</div>
+<div id="ref-pAmipxbM" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">9. </div><div class="csl-right-inline"><strong>Adaptive filtering and change detection</strong> <div class="csl-block">Fredrik Gustafsson, Fredrik Gustafsson</div> <em>Citeseer</em> (2000)</div>
+</div>
+<div id="ref-TB6Pquc2" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">10. </div><div class="csl-right-inline"><strong>Statistically Significant Detection of Linguistic Change</strong> <div class="csl-block">Vivek Kulkarni, Rami Al-Rfou, Bryan Perozzi, Steven Skiena</div> <em>Proceedings of the 24th International Conference on World Wide Web</em> (2015-05-18) <a href="https://doi.org/ghcv6k">https://doi.org/ghcv6k</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1145/2736277.2741627">10.1145/2736277.2741627</a></div></div>
+</div>
+<div id="ref-1HbV3SM8b" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">11. </div><div class="csl-right-inline"><strong>A framework for analyzing semantic change of words across time</strong> <div class="csl-block">Adam Jatowt, Kevin Duh</div> <em>IEEE/ACM Joint Conference on Digital Libraries</em> (2014-09) <a href="https://doi.org/gp8zpm">https://doi.org/gp8zpm</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1109/jcdl.2014.6970173">10.1109/jcdl.2014.6970173</a></div></div>
+</div>
+<div id="ref-AvZu64aY" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">12. </div><div class="csl-right-inline"><strong>Understanding semantic change of words over centuries</strong> <div class="csl-block">Derry Tanti Wijaya, Reyyan Yeniterzi</div> <em>Proceedings of the 2011 international workshop on DETecting and Exploiting Cultural diversiTy on the social web</em> (2011-10-24) <a href="https://doi.org/cmxz2v">https://doi.org/cmxz2v</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1145/2064448.2064475">10.1145/2064448.2064475</a></div></div>
 </div>
 <div id="ref-18czzWopC" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">9. </div><div class="csl-right-inline"><strong>Deep Neural Models of Semantic Shift</strong> <div class="csl-block">Alex Rosenfeld, Katrin Erk</div> <em>Proceedings of the 2018 Conference of the North American Chapter of
+<div class="csl-left-margin">13. </div><div class="csl-right-inline"><strong>Deep Neural Models of Semantic Shift</strong> <div class="csl-block">Alex Rosenfeld, Katrin Erk</div> <em>Proceedings of the 2018 Conference of the North American Chapter of
 the Association for Computational Linguistics: Human Language
 Technologies, Volume 1 (Long Papers)</em> (2018) <a href="https://doi.org/gp574f">https://doi.org/gp574f</a> <div class="csl-block">DOI: <a href="https://doi.org/10.18653/v1/n18-1044">10.18653/v1/n18-1044</a></div></div>
 </div>
-<div id="ref-21OOkxjt" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">10. </div><div class="csl-right-inline"><strong>Bayesian Online Changepoint Detection</strong> <div class="csl-block">Ryan Prescott Adams, David JC MacKay</div> <em>arXiv</em> (2007-10-22) <a href="https://arxiv.org/abs/0710.3742">https://arxiv.org/abs/0710.3742</a></div>
+<div id="ref-NzrjegSD" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">14. </div><div class="csl-right-inline"><strong>A state-of-the-art of semantic change computation</strong> <div class="csl-block">XURI TANG</div> <em>Natural Language Engineering</em> (2018-06-18) <a href="https://doi.org/gkkswt">https://doi.org/gkkswt</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1017/s1351324918000220">10.1017/s1351324918000220</a></div></div>
 </div>
-<div id="ref-pAmipxbM" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">11. </div><div class="csl-right-inline"><strong>Adaptive filtering and change detection</strong> <div class="csl-block">Fredrik Gustafsson, Fredrik Gustafsson</div> <em>Citeseer</em> (2000)</div>
+<div id="ref-j6Vt5Hlm" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">15. </div><div class="csl-right-inline"><strong>Diachronic Word Embeddings Reveal Statistical Laws of Semantic Change</strong> <div class="csl-block">William L Hamilton, Jure Leskovec, Dan Jurafsky</div> <em>arXiv</em> (2018-10-26) <a href="https://arxiv.org/abs/1605.09096">https://arxiv.org/abs/1605.09096</a></div>
+</div>
+<div id="ref-NMvzsQHy" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">16. </div><div class="csl-right-inline"><strong>A computational evaluation of two laws of semantic change.</strong> <div class="csl-block">Yang Xu, Charles Kemp</div> <em>CogSci</em> (2015)</div>
+</div>
+<div id="ref-TreSyhQr" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">17. </div><div class="csl-right-inline"><strong>Tracking word semantic change in biomedical literature</strong> <div class="csl-block">Erjia Yan, Yongjun Zhu</div> <em>International Journal of Medical Informatics</em> (2018-01) <a href="https://doi.org/grwsdh">https://doi.org/grwsdh</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1016/j.ijmedinf.2017.11.006">10.1016/j.ijmedinf.2017.11.006</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/29195709">29195709</a></div></div>
+</div>
+<div id="ref-1HSjSLkBG" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">18. </div><div class="csl-right-inline"><strong>Exploring Diachronic Changes of Biomedical Knowledge using Distributed Concept Representations</strong> <div class="csl-block">Gaurav Vashisth, Jan-Niklas Voigt-Antons, Michael Mikhailov, Roland Roller</div> <em>Proceedings of the 18th BioNLP Workshop and Shared Task</em> (2019) <a href="https://doi.org/grwsdj">https://doi.org/grwsdj</a> <div class="csl-block">DOI: <a href="https://doi.org/10.18653/v1/w19-5037">10.18653/v1/w19-5037</a></div></div>
 </div>
 <div id="ref-lVEHA3Zy" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">12. </div><div class="csl-right-inline"><strong>Tracing armed conflicts with diachronic word embedding models</strong> <div class="csl-block">Andrey Kutuzov, Erik Velldal, Lilja Øvrelid</div> <em>Proceedings of the Events and Stories in the News Workshop</em> (2017) <a href="https://doi.org/ghx5gj">https://doi.org/ghx5gj</a> <div class="csl-block">DOI: <a href="https://doi.org/10.18653/v1/w17-2705">10.18653/v1/w17-2705</a></div></div>
+<div class="csl-left-margin">19. </div><div class="csl-right-inline"><strong>Tracing armed conflicts with diachronic word embedding models</strong> <div class="csl-block">Andrey Kutuzov, Erik Velldal, Lilja Øvrelid</div> <em>Proceedings of the Events and Stories in the News Workshop</em> (2017) <a href="https://doi.org/ghx5gj">https://doi.org/ghx5gj</a> <div class="csl-block">DOI: <a href="https://doi.org/10.18653/v1/w17-2705">10.18653/v1/w17-2705</a></div></div>
 </div>
 <div id="ref-KSkyAPSb" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">13. </div><div class="csl-right-inline"><strong>Words are Malleable: Computing Semantic Shifts in Political and Media Discourse</strong> <div class="csl-block">Hosein Azarbonyad, Mostafa Dehghani, Kaspar Beelen, Alexandra Arkut, Maarten Marx, Jaap Kamps</div> <em>arXiv</em> (2017-11-16) <a href="https://arxiv.org/abs/1711.05603">https://arxiv.org/abs/1711.05603</a></div>
+<div class="csl-left-margin">20. </div><div class="csl-right-inline"><strong>Words are Malleable: Computing Semantic Shifts in Political and Media Discourse</strong> <div class="csl-block">Hosein Azarbonyad, Mostafa Dehghani, Kaspar Beelen, Alexandra Arkut, Maarten Marx, Jaap Kamps</div> <em>arXiv</em> (2017-11-16) <a href="https://arxiv.org/abs/1711.05603">https://arxiv.org/abs/1711.05603</a></div>
 </div>
 <div id="ref-qEhBr3RQ" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">14. </div><div class="csl-right-inline"><strong>Reading Between the Lines: Prediction of Political Violence Using Newspaper Text</strong> <div class="csl-block">HANNES MUELLER, CHRISTOPHER RAUH</div> <em>American Political Science Review</em> (2017-12-14) <a href="https://doi.org/gdj77d">https://doi.org/gdj77d</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1017/s0003055417000570">10.1017/s0003055417000570</a></div></div>
+<div class="csl-left-margin">21. </div><div class="csl-right-inline"><strong>Reading Between the Lines: Prediction of Political Violence Using Newspaper Text</strong> <div class="csl-block">HANNES MUELLER, CHRISTOPHER RAUH</div> <em>American Political Science Review</em> (2017-12-14) <a href="https://doi.org/gdj77d">https://doi.org/gdj77d</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1017/s0003055417000570">10.1017/s0003055417000570</a></div></div>
 </div>
 <div id="ref-FQTxXyuO" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">15. </div><div class="csl-right-inline"><strong>Detection of emerging drugs involved in overdose via diachronic word embeddings of substances discussed on social media</strong> <div class="csl-block">Austin P Wright, Christopher M Jones, Duen Horng Chau, R Matthew Gladden, Steven A Sumner</div> <em>Journal of Biomedical Informatics</em> (2021-07) <a href="https://doi.org/gp8zph">https://doi.org/gp8zph</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1016/j.jbi.2021.103824">10.1016/j.jbi.2021.103824</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/34048933">34048933</a></div></div>
+<div class="csl-left-margin">22. </div><div class="csl-right-inline"><strong>Detection of emerging drugs involved in overdose via diachronic word embeddings of substances discussed on social media</strong> <div class="csl-block">Austin P Wright, Christopher M Jones, Duen Horng Chau, R Matthew Gladden, Steven A Sumner</div> <em>Journal of Biomedical Informatics</em> (2021-07) <a href="https://doi.org/gp8zph">https://doi.org/gp8zph</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1016/j.jbi.2021.103824">10.1016/j.jbi.2021.103824</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/34048933">34048933</a></div></div>
 </div>
 <div id="ref-7gkQDvnc" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">16. </div><div class="csl-right-inline"><strong>Statistically Significant Detection of Linguistic Change</strong> <div class="csl-block">Vivek Kulkarni, Rami Al-Rfou, Bryan Perozzi, Steven Skiena</div> <em>arXiv</em> (2014-11-13) <a href="https://arxiv.org/abs/1411.3315">https://arxiv.org/abs/1411.3315</a></div>
+<div class="csl-left-margin">23. </div><div class="csl-right-inline"><strong>Statistically Significant Detection of Linguistic Change</strong> <div class="csl-block">Vivek Kulkarni, Rami Al-Rfou, Bryan Perozzi, Steven Skiena</div> <em>arXiv</em> (2014-11-13) <a href="https://arxiv.org/abs/1411.3315">https://arxiv.org/abs/1411.3315</a></div>
 </div>
 <div id="ref-TEUTroLA" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">17. </div><div class="csl-right-inline"><strong>Semantic word shifts in a scientific domain</strong> <div class="csl-block">Baitong Chen, Ying Ding, Feicheng Ma</div> <em>Scientometrics</em> (2018-07-13) <a href="https://doi.org/gd7bd7">https://doi.org/gd7bd7</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1007/s11192-018-2843-2">10.1007/s11192-018-2843-2</a></div></div>
+<div class="csl-left-margin">24. </div><div class="csl-right-inline"><strong>Semantic word shifts in a scientific domain</strong> <div class="csl-block">Baitong Chen, Ying Ding, Feicheng Ma</div> <em>Scientometrics</em> (2018-07-13) <a href="https://doi.org/gd7bd7">https://doi.org/gd7bd7</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1007/s11192-018-2843-2">10.1007/s11192-018-2843-2</a></div></div>
 </div>
 <div id="ref-wXphJ7n3" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">18. </div><div class="csl-right-inline"><strong>Semantic Changepoint Detection for Finding Potentially Novel Research Publications</strong> <div class="csl-block">Bhavish Dinakar, Mayla R Boguslav, Carsten Görg, Deendayal Dinakarpandian</div> <em>Biocomputing 2021</em> (2020-11) <a href="https://doi.org/gp574d">https://doi.org/gp574d</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1142/9789811232701_0011">10.1142/9789811232701_0011</a></div></div>
+<div class="csl-left-margin">25. </div><div class="csl-right-inline"><strong>Semantic Changepoint Detection for Finding Potentially Novel Research Publications</strong> <div class="csl-block">Bhavish Dinakar, Mayla R Boguslav, Carsten Görg, Deendayal Dinakarpandian</div> <em>Biocomputing 2021</em> (2020-11) <a href="https://doi.org/gp574d">https://doi.org/gp574d</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1142/9789811232701_0011">10.1142/9789811232701_0011</a></div></div>
 </div>
 <div id="ref-ynODVhC7" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">19. </div><div class="csl-right-inline"><strong>How COVID-19 Is Changing Our Language : Detecting Semantic Shift in Twitter Word Embeddings</strong> <div class="csl-block">Yanzhu Guo, Christos Xypolopoulos, Michalis Vazirgiannis</div> <em>arXiv</em> (2021-02-17) <a href="https://arxiv.org/abs/2102.07836">https://arxiv.org/abs/2102.07836</a></div>
+<div class="csl-left-margin">26. </div><div class="csl-right-inline"><strong>How COVID-19 Is Changing Our Language : Detecting Semantic Shift in Twitter Word Embeddings</strong> <div class="csl-block">Yanzhu Guo, Christos Xypolopoulos, Michalis Vazirgiannis</div> <em>arXiv</em> (2021-02-17) <a href="https://arxiv.org/abs/2102.07836">https://arxiv.org/abs/2102.07836</a></div>
 </div>
 <div id="ref-K1SZY72U" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">20. </div><div class="csl-right-inline"><strong>Natural Language Processing Reveals Vulnerable Mental Health Support Groups and Heightened Health Anxiety on Reddit During COVID-19: Observational Study</strong> <div class="csl-block">Daniel M Low, Laurie Rumker, Tanya Talkar, John Torous, Guillermo Cecchi, Satrajit S Ghosh</div> <em>Journal of Medical Internet Research</em> (2020-10-12) <a href="https://doi.org/ghm9v2">https://doi.org/ghm9v2</a> <div class="csl-block">DOI: <a href="https://doi.org/10.2196/22635">10.2196/22635</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/32936777">32936777</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7575341">PMC7575341</a></div></div>
+<div class="csl-left-margin">27. </div><div class="csl-right-inline"><strong>Natural Language Processing Reveals Vulnerable Mental Health Support Groups and Heightened Health Anxiety on Reddit During COVID-19: Observational Study</strong> <div class="csl-block">Daniel M Low, Laurie Rumker, Tanya Talkar, John Torous, Guillermo Cecchi, Satrajit S Ghosh</div> <em>Journal of Medical Internet Research</em> (2020-10-12) <a href="https://doi.org/ghm9v2">https://doi.org/ghm9v2</a> <div class="csl-block">DOI: <a href="https://doi.org/10.2196/22635">10.2196/22635</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/32936777">32936777</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7575341">PMC7575341</a></div></div>
 </div>
 <div id="ref-18ZyyTcTe" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">21. </div><div class="csl-right-inline"><strong>PubTator central: automated concept annotation for biomedical full text articles</strong> <div class="csl-block">Chih-Hsuan Wei, Alexis Allot, Robert Leaman, Zhiyong Lu</div> <em>Nucleic Acids Research</em> (2019-05-22) <a href="https://doi.org/ggzfsc">https://doi.org/ggzfsc</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1093/nar/gkz389">10.1093/nar/gkz389</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/31114887">31114887</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6602571">PMC6602571</a></div></div>
+<div class="csl-left-margin">28. </div><div class="csl-right-inline"><strong>PubTator central: automated concept annotation for biomedical full text articles</strong> <div class="csl-block">Chih-Hsuan Wei, Alexis Allot, Robert Leaman, Zhiyong Lu</div> <em>Nucleic Acids Research</em> (2019-05-22) <a href="https://doi.org/ggzfsc">https://doi.org/ggzfsc</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1093/nar/gkz389">10.1093/nar/gkz389</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/31114887">31114887</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6602571">PMC6602571</a></div></div>
 </div>
 <div id="ref-11YUuHulp" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">22. </div><div class="csl-right-inline"><strong>TaggerOne: joint named entity recognition and normalization with semi-Markov Models</strong> <div class="csl-block">Robert Leaman, Zhiyong Lu</div> <em>Bioinformatics</em> (2016-06-09) <a href="https://doi.org/f855dg">https://doi.org/f855dg</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1093/bioinformatics/btw343">10.1093/bioinformatics/btw343</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/27283952">27283952</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5018376">PMC5018376</a></div></div>
+<div class="csl-left-margin">29. </div><div class="csl-right-inline"><strong>TaggerOne: joint named entity recognition and normalization with semi-Markov Models</strong> <div class="csl-block">Robert Leaman, Zhiyong Lu</div> <em>Bioinformatics</em> (2016-06-09) <a href="https://doi.org/f855dg">https://doi.org/f855dg</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1093/bioinformatics/btw343">10.1093/bioinformatics/btw343</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/27283952">27283952</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5018376">PMC5018376</a></div></div>
 </div>
 <div id="ref-aOPX10e0" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">23. </div><div class="csl-right-inline"><strong>GNormPlus: An Integrative Approach for Tagging Genes, Gene Families, and Protein Domains</strong> <div class="csl-block">Chih-Hsuan Wei, Hung-Yu Kao, Zhiyong Lu</div> <em>BioMed Research International</em> (2015) <a href="https://doi.org/gb85jb">https://doi.org/gb85jb</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1155/2015/918710">10.1155/2015/918710</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/26380306">26380306</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4561873">PMC4561873</a></div></div>
+<div class="csl-left-margin">30. </div><div class="csl-right-inline"><strong>GNormPlus: An Integrative Approach for Tagging Genes, Gene Families, and Protein Domains</strong> <div class="csl-block">Chih-Hsuan Wei, Hung-Yu Kao, Zhiyong Lu</div> <em>BioMed Research International</em> (2015) <a href="https://doi.org/gb85jb">https://doi.org/gb85jb</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1155/2015/918710">10.1155/2015/918710</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/26380306">26380306</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4561873">PMC4561873</a></div></div>
 </div>
 <div id="ref-NXIFrudx" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">24. </div><div class="csl-right-inline"><strong>SR4GN: A Species Recognition Software Tool for Gene Normalization</strong> <div class="csl-block">Chih-Hsuan Wei, Hung-Yu Kao, Zhiyong Lu</div> <em>PLoS ONE</em> (2012-06-05) <a href="https://doi.org/gpq498">https://doi.org/gpq498</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1371/journal.pone.0038460">10.1371/journal.pone.0038460</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/22679507">22679507</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3367953">PMC3367953</a></div></div>
+<div class="csl-left-margin">31. </div><div class="csl-right-inline"><strong>SR4GN: A Species Recognition Software Tool for Gene Normalization</strong> <div class="csl-block">Chih-Hsuan Wei, Hung-Yu Kao, Zhiyong Lu</div> <em>PLoS ONE</em> (2012-06-05) <a href="https://doi.org/gpq498">https://doi.org/gpq498</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1371/journal.pone.0038460">10.1371/journal.pone.0038460</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/22679507">22679507</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3367953">PMC3367953</a></div></div>
 </div>
 <div id="ref-17LQKv7vO" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">25. </div><div class="csl-right-inline"><strong>tmVar 2.0: integrating genomic variant information from literature with dbSNP and ClinVar for precision medicine</strong> <div class="csl-block">Chih-Hsuan Wei, Lon Phan, Juliana Feltz, Rama Maiti, Tim Hefferon, Zhiyong Lu</div> <em>Bioinformatics</em> (2017-09-01) <a href="https://doi.org/gbzsmc">https://doi.org/gbzsmc</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1093/bioinformatics/btx541">10.1093/bioinformatics/btx541</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/28968638">28968638</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5860583">PMC5860583</a></div></div>
+<div class="csl-left-margin">32. </div><div class="csl-right-inline"><strong>tmVar 2.0: integrating genomic variant information from literature with dbSNP and ClinVar for precision medicine</strong> <div class="csl-block">Chih-Hsuan Wei, Lon Phan, Juliana Feltz, Rama Maiti, Tim Hefferon, Zhiyong Lu</div> <em>Bioinformatics</em> (2017-09-01) <a href="https://doi.org/gbzsmc">https://doi.org/gbzsmc</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1093/bioinformatics/btx541">10.1093/bioinformatics/btx541</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/28968638">28968638</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5860583">PMC5860583</a></div></div>
 </div>
 <div id="ref-q2fFAZTG" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">26. </div><div class="csl-right-inline"><strong>&lt;span class="nocase"&gt;spaCy 2&lt;/span&gt;: Natural language understanding with Bloom embeddings, convolutional neural networks and incremental parsing</strong> <div class="csl-block">Matthew Honnibal, Ines Montani</div> (2017)</div>
+<div class="csl-left-margin">33. </div><div class="csl-right-inline"><strong>&lt;span class="nocase"&gt;spaCy 2&lt;/span&gt;: Natural language understanding with Bloom embeddings, convolutional neural networks and incremental parsing</strong> <div class="csl-block">Matthew Honnibal, Ines Montani</div> (2017)</div>
 </div>
 <div id="ref-9gVmEi52" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">27. </div><div class="csl-right-inline"><strong>Machine access and text/data mining resources | bioRxiv</strong> <a href="https://www.biorxiv.org/tdm">https://www.biorxiv.org/tdm</a></div>
+<div class="csl-left-margin">34. </div><div class="csl-right-inline"><strong>Machine access and text/data mining resources | bioRxiv</strong> <a href="https://www.biorxiv.org/tdm">https://www.biorxiv.org/tdm</a></div>
 </div>
 <div id="ref-v3H8juk7" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">28. </div><div class="csl-right-inline"><strong>Machine access and text/data mining resources | medRxiv</strong> <a href="https://www.medrxiv.org/tdm">https://www.medrxiv.org/tdm</a></div>
+<div class="csl-left-margin">35. </div><div class="csl-right-inline"><strong>Machine access and text/data mining resources | medRxiv</strong> <a href="https://www.medrxiv.org/tdm">https://www.medrxiv.org/tdm</a></div>
 </div>
 <div id="ref-1GhHIDxuW" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">29. </div><div class="csl-right-inline"><strong>Efficient Estimation of Word Representations in Vector Space</strong> <div class="csl-block">Tomas Mikolov, Kai Chen, Greg Corrado, Jeffrey Dean</div> <em>arXiv</em> (2013-09-10) <a href="https://arxiv.org/abs/1301.3781">https://arxiv.org/abs/1301.3781</a></div>
+<div class="csl-left-margin">36. </div><div class="csl-right-inline"><strong>Efficient Estimation of Word Representations in Vector Space</strong> <div class="csl-block">Tomas Mikolov, Kai Chen, Greg Corrado, Jeffrey Dean</div> <em>arXiv</em> (2013-09-10) <a href="https://arxiv.org/abs/1301.3781">https://arxiv.org/abs/1301.3781</a></div>
 </div>
 <div id="ref-18rNo4lJI" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">30. </div><div class="csl-right-inline"><strong>Factors Influencing the Surprising Instability of Word Embeddings</strong> <div class="csl-block">Laura Wendlandt, Jonathan K Kummerfeld, Rada Mihalcea</div> <em>arXiv</em> (2020-06-05) <a href="https://arxiv.org/abs/1804.09692">https://arxiv.org/abs/1804.09692</a> <div class="csl-block">DOI: <a href="https://doi.org/10.18653/v1/N18-1190">10.18653/v1/n18-1190</a></div></div>
+<div class="csl-left-margin">37. </div><div class="csl-right-inline"><strong>Factors Influencing the Surprising Instability of Word Embeddings</strong> <div class="csl-block">Laura Wendlandt, Jonathan K Kummerfeld, Rada Mihalcea</div> <em>arXiv</em> (2020-06-05) <a href="https://arxiv.org/abs/1804.09692">https://arxiv.org/abs/1804.09692</a> <div class="csl-block">DOI: <a href="https://doi.org/10.18653/v1/N18-1190">10.18653/v1/n18-1190</a></div></div>
 </div>
 <div id="ref-8G9bCV2k" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">31. </div><div class="csl-right-inline"><strong>Stability of Word Embeddings Using Word2Vec</strong> <div class="csl-block">Mansi Chugh, Peter A Whigham, Grant Dick</div> <em>AI 2018: Advances in Artificial Intelligence</em> (2018) <a href="https://doi.org/gpxkkc">https://doi.org/gpxkkc</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1007/978-3-030-03991-2_73">10.1007/978-3-030-03991-2_73</a></div></div>
+<div class="csl-left-margin">38. </div><div class="csl-right-inline"><strong>Stability of Word Embeddings Using Word2Vec</strong> <div class="csl-block">Mansi Chugh, Peter A Whigham, Grant Dick</div> <em>AI 2018: Advances in Artificial Intelligence</em> (2018) <a href="https://doi.org/gpxkkc">https://doi.org/gpxkkc</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1007/978-3-030-03991-2_73">10.1007/978-3-030-03991-2_73</a></div></div>
 </div>
 <div id="ref-ImhJ75vq" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">32. </div><div class="csl-right-inline"><strong>Evaluating the Stability of Embedding-based Word Similarities</strong> <div class="csl-block">Maria Antoniak, David Mimno</div> <em>Transactions of the Association for Computational Linguistics</em> (2018-12) <a href="https://doi.org/gf39k8">https://doi.org/gf39k8</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1162/tacl_a_00008">10.1162/tacl_a_00008</a></div></div>
+<div class="csl-left-margin">39. </div><div class="csl-right-inline"><strong>Evaluating the Stability of Embedding-based Word Similarities</strong> <div class="csl-block">Maria Antoniak, David Mimno</div> <em>Transactions of the Association for Computational Linguistics</em> (2018-12) <a href="https://doi.org/gf39k8">https://doi.org/gf39k8</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1162/tacl_a_00008">10.1162/tacl_a_00008</a></div></div>
 </div>
 <div id="ref-bXXIQj3W" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">33. </div><div class="csl-right-inline"><strong>Predicting Word Embeddings Variability</strong> <div class="csl-block">Benedicte Pierrejean, Ludovic Tanguy</div> <em>Proceedings of the Seventh Joint Conference on Lexical and
+<div class="csl-left-margin">40. </div><div class="csl-right-inline"><strong>Predicting Word Embeddings Variability</strong> <div class="csl-block">Benedicte Pierrejean, Ludovic Tanguy</div> <em>Proceedings of the Seventh Joint Conference on Lexical and
 Computational Semantics</em> (2018) <a href="https://doi.org/gh6qpc">https://doi.org/gh6qpc</a> <div class="csl-block">DOI: <a href="https://doi.org/10.18653/v1/s18-2019">10.18653/v1/s18-2019</a></div></div>
 </div>
 <div id="ref-NjbU71da" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">34. </div><div class="csl-right-inline"><strong>A generalized solution of the orthogonal procrustes problem</strong> <div class="csl-block">Peter H Schönemann</div> <em>Psychometrika</em> (1966-03) <a href="https://doi.org/dx77sz">https://doi.org/dx77sz</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1007/bf02289451">10.1007/bf02289451</a></div></div>
+<div class="csl-left-margin">41. </div><div class="csl-right-inline"><strong>A generalized solution of the orthogonal procrustes problem</strong> <div class="csl-block">Peter H Schönemann</div> <em>Psychometrika</em> (1966-03) <a href="https://doi.org/dx77sz">https://doi.org/dx77sz</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1007/bf02289451">10.1007/bf02289451</a></div></div>
 </div>
 <div id="ref-157h5hA34" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">35. </div><div class="csl-right-inline"><strong>UMAP: Uniform Manifold Approximation and Projection for Dimension Reduction</strong> <div class="csl-block">Leland McInnes, John Healy, James Melville</div> <em>arXiv</em> (2020-09-21) <a href="https://arxiv.org/abs/1802.03426">https://arxiv.org/abs/1802.03426</a></div>
-</div>
-<div id="ref-TB6Pquc2" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">36. </div><div class="csl-right-inline"><strong>Statistically Significant Detection of Linguistic Change</strong> <div class="csl-block">Vivek Kulkarni, Rami Al-Rfou, Bryan Perozzi, Steven Skiena</div> <em>Proceedings of the 24th International Conference on World Wide Web</em> (2015-05-18) <a href="https://doi.org/ghcv6k">https://doi.org/ghcv6k</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1145/2736277.2741627">10.1145/2736277.2741627</a></div></div>
+<div class="csl-left-margin">42. </div><div class="csl-right-inline"><strong>UMAP: Uniform Manifold Approximation and Projection for Dimension Reduction</strong> <div class="csl-block">Leland McInnes, John Healy, James Melville</div> <em>arXiv</em> (2020-09-21) <a href="https://arxiv.org/abs/1802.03426">https://arxiv.org/abs/1802.03426</a></div>
 </div>
 <div id="ref-1BaA3rWCK" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">37. </div><div class="csl-right-inline"><strong>Improving semantic change analysis by combining word embeddings and word frequencies</strong> <div class="csl-block">Adrian Englhardt, Jens Willkomm, Martin Schäler, Klemens Böhm</div> <em>International Journal on Digital Libraries</em> (2019-05-20) <a href="https://doi.org/gpxkkd">https://doi.org/gpxkkd</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1007/s00799-019-00271-6">10.1007/s00799-019-00271-6</a></div></div>
+<div class="csl-left-margin">43. </div><div class="csl-right-inline"><strong>Improving semantic change analysis by combining word embeddings and word frequencies</strong> <div class="csl-block">Adrian Englhardt, Jens Willkomm, Martin Schäler, Klemens Böhm</div> <em>International Journal on Digital Libraries</em> (2019-05-20) <a href="https://doi.org/gpxkkd">https://doi.org/gpxkkd</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1007/s00799-019-00271-6">10.1007/s00799-019-00271-6</a></div></div>
 </div>
 <div id="ref-xQaNPZgV" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">38. </div><div class="csl-right-inline"><strong>Diachronic Word Embeddings Reveal Statistical Laws of Semantic Change</strong> <div class="csl-block">William L Hamilton, Jure Leskovec, Dan Jurafsky</div> <em>arXiv</em> (2016) <a href="https://doi.org/gp8zpp">https://doi.org/gp8zpp</a> <div class="csl-block">DOI: <a href="https://doi.org/10.48550/arxiv.1605.09096">10.48550/arxiv.1605.09096</a></div></div>
+<div class="csl-left-margin">44. </div><div class="csl-right-inline"><strong>Diachronic Word Embeddings Reveal Statistical Laws of Semantic Change</strong> <div class="csl-block">William L Hamilton, Jure Leskovec, Dan Jurafsky</div> <em>arXiv</em> (2016) <a href="https://doi.org/gp8zpp">https://doi.org/gp8zpp</a> <div class="csl-block">DOI: <a href="https://doi.org/10.48550/arxiv.1605.09096">10.48550/arxiv.1605.09096</a></div></div>
 </div>
 <div id="ref-1346YOPVE" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">39. </div><div class="csl-right-inline"><strong>DUKweb, diachronic word representations from the UK Web Archive corpus</strong> <div class="csl-block">Adam Tsakalidis, Pierpaolo Basile, Marya Bazzi, Mihai Cucuringu, Barbara McGillivray</div> <em>Scientific Data</em> (2021-10-15) <a href="https://doi.org/gqbkx4">https://doi.org/gqbkx4</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1038/s41597-021-01047-x">10.1038/s41597-021-01047-x</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/34654827">34654827</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8520005">PMC8520005</a></div></div>
+<div class="csl-left-margin">45. </div><div class="csl-right-inline"><strong>DUKweb, diachronic word representations from the UK Web Archive corpus</strong> <div class="csl-block">Adam Tsakalidis, Pierpaolo Basile, Marya Bazzi, Mihai Cucuringu, Barbara McGillivray</div> <em>Scientific Data</em> (2021-10-15) <a href="https://doi.org/gqbkx4">https://doi.org/gqbkx4</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1038/s41597-021-01047-x">10.1038/s41597-021-01047-x</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/34654827">34654827</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8520005">PMC8520005</a></div></div>
 </div>
 <div id="ref-YuxGez24" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">40. </div><div class="csl-right-inline"><strong>SARS: clinical virology and pathogenesis</strong> <div class="csl-block">John NICHOLLS, Xiao-Ping DONG, Gu JIANG, Malik PEIRIS</div> <em>Respirology</em> (2003-11) <a href="https://doi.org/cxjwrc">https://doi.org/cxjwrc</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1046/j.1440-1843.2003.00517.x">10.1046/j.1440-1843.2003.00517.x</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/15018126">15018126</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7169081">PMC7169081</a></div></div>
+<div class="csl-left-margin">46. </div><div class="csl-right-inline"><strong>SARS: clinical virology and pathogenesis</strong> <div class="csl-block">John NICHOLLS, Xiao-Ping DONG, Gu JIANG, Malik PEIRIS</div> <em>Respirology</em> (2003-11) <a href="https://doi.org/cxjwrc">https://doi.org/cxjwrc</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1046/j.1440-1843.2003.00517.x">10.1046/j.1440-1843.2003.00517.x</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/15018126">15018126</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7169081">PMC7169081</a></div></div>
 </div>
 <div id="ref-1ExALQ5eN" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">41. </div><div class="csl-right-inline"><strong>Severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) and coronavirus disease-2019 (COVID-19): The epidemic and the challenges</strong> <div class="csl-block">Chih-Cheng Lai, Tzu-Ping Shih, Wen-Chien Ko, Hung-Jen Tang, Po-Ren Hsueh</div> <em>International Journal of Antimicrobial Agents</em> (2020-03) <a href="https://doi.org/ggpj9d">https://doi.org/ggpj9d</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1016/j.ijantimicag.2020.105924">10.1016/j.ijantimicag.2020.105924</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/32081636">32081636</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7127800">PMC7127800</a></div></div>
+<div class="csl-left-margin">47. </div><div class="csl-right-inline"><strong>Severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) and coronavirus disease-2019 (COVID-19): The epidemic and the challenges</strong> <div class="csl-block">Chih-Cheng Lai, Tzu-Ping Shih, Wen-Chien Ko, Hung-Jen Tang, Po-Ren Hsueh</div> <em>International Journal of Antimicrobial Agents</em> (2020-03) <a href="https://doi.org/ggpj9d">https://doi.org/ggpj9d</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1016/j.ijantimicag.2020.105924">10.1016/j.ijantimicag.2020.105924</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/32081636">32081636</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7127800">PMC7127800</a></div></div>
 </div>
 <div id="ref-vvMItrwz" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">42. </div><div class="csl-right-inline"><strong>The species Severe acute respiratory syndrome-related coronavirus: classifying 2019-nCoV and naming it SARS-CoV-2</strong><div class="csl-block">, Alexander E Gorbalenya, Susan C Baker, Ralph S Baric, Raoul J de Groot, Christian Drosten, Anastasia A Gulyaeva, Bart L Haagmans, Chris Lauber, Andrey M Leontovich, … John Ziebuhr</div> <em>Nature Microbiology</em> (2020-03-02) <a href="https://doi.org/ggqj7m">https://doi.org/ggqj7m</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1038/s41564-020-0695-z">10.1038/s41564-020-0695-z</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/32123347">32123347</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7095448">PMC7095448</a></div></div>
+<div class="csl-left-margin">48. </div><div class="csl-right-inline"><strong>The species Severe acute respiratory syndrome-related coronavirus: classifying 2019-nCoV and naming it SARS-CoV-2</strong><div class="csl-block">, Alexander E Gorbalenya, Susan C Baker, Ralph S Baric, Raoul J de Groot, Christian Drosten, Anastasia A Gulyaeva, Bart L Haagmans, Chris Lauber, Andrey M Leontovich, … John Ziebuhr</div> <em>Nature Microbiology</em> (2020-03-02) <a href="https://doi.org/ggqj7m">https://doi.org/ggqj7m</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1038/s41564-020-0695-z">10.1038/s41564-020-0695-z</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/32123347">32123347</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7095448">PMC7095448</a></div></div>
 </div>
 <div id="ref-M1LzK6yf" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">43. </div><div class="csl-right-inline"><strong>Factors Influencing the Surprising Instability of Word Embeddings</strong> <div class="csl-block">Laura Wendlandt, Jonathan K Kummerfeld, Rada Mihalcea</div> <em>arXiv</em> (2018) <a href="https://doi.org/gqcn9m">https://doi.org/gqcn9m</a> <div class="csl-block">DOI: <a href="https://doi.org/10.48550/arxiv.1804.09692">10.48550/arxiv.1804.09692</a></div></div>
+<div class="csl-left-margin">49. </div><div class="csl-right-inline"><strong>Factors Influencing the Surprising Instability of Word Embeddings</strong> <div class="csl-block">Laura Wendlandt, Jonathan K Kummerfeld, Rada Mihalcea</div> <em>arXiv</em> (2018) <a href="https://doi.org/gqcn9m">https://doi.org/gqcn9m</a> <div class="csl-block">DOI: <a href="https://doi.org/10.48550/arxiv.1804.09692">10.48550/arxiv.1804.09692</a></div></div>
 </div>
 <div id="ref-ZTyQYlDz" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">44. </div><div class="csl-right-inline"><strong>arXiv.org: the Los Alamos National Laboratory e‐print server</strong> <div class="csl-block">Gerry McKiernan</div> <em>International Journal on Grey Literature</em> (2000-09-01) <a href="https://doi.org/fg8pw7">https://doi.org/fg8pw7</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1108/14666180010345564">10.1108/14666180010345564</a></div></div>
+<div class="csl-left-margin">50. </div><div class="csl-right-inline"><strong>arXiv.org: the Los Alamos National Laboratory e‐print server</strong> <div class="csl-block">Gerry McKiernan</div> <em>International Journal on Grey Literature</em> (2000-09-01) <a href="https://doi.org/fg8pw7">https://doi.org/fg8pw7</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1108/14666180010345564">10.1108/14666180010345564</a></div></div>
 </div>
 <div id="ref-1D4Cz1GNr" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">45. </div><div class="csl-right-inline"><strong>PsyArXiv</strong> <div class="csl-block">Margie Ruppel</div> <em>The Charleston Advisor</em> (2021-10-01) <a href="https://doi.org/gqbk4k">https://doi.org/gqbk4k</a> <div class="csl-block">DOI: <a href="https://doi.org/10.5260/chara.23.2.38">10.5260/chara.23.2.38</a></div></div>
+<div class="csl-left-margin">51. </div><div class="csl-right-inline"><strong>PsyArXiv</strong> <div class="csl-block">Margie Ruppel</div> <em>The Charleston Advisor</em> (2021-10-01) <a href="https://doi.org/gqbk4k">https://doi.org/gqbk4k</a> <div class="csl-block">DOI: <a href="https://doi.org/10.5260/chara.23.2.38">10.5260/chara.23.2.38</a></div></div>
 </div>
 </div>
 <h2 id="supplemental-tables">Supplemental Tables</h2>
