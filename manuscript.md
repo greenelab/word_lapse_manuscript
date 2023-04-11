@@ -28,8 +28,8 @@ header-includes: |
   <meta name="dc.date" content="2023-04-11" />
   <meta name="citation_publication_date" content="2023-04-11" />
   <meta property="article:published_time" content="2023-04-11" />
-  <meta name="dc.modified" content="2023-04-11T14:31:45+00:00" />
-  <meta property="article:modified_time" content="2023-04-11T14:31:45+00:00" />
+  <meta name="dc.modified" content="2023-04-11T14:48:30+00:00" />
+  <meta property="article:modified_time" content="2023-04-11T14:48:30+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -58,9 +58,9 @@ header-includes: |
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/word_lapse_manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/word_lapse_manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/word_lapse_manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/word_lapse_manuscript/v/8732bd688529c61c7c8929e5bc624baf694a58f8/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/word_lapse_manuscript/v/8732bd688529c61c7c8929e5bc624baf694a58f8/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/word_lapse_manuscript/v/8732bd688529c61c7c8929e5bc624baf694a58f8/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/word_lapse_manuscript/v/ae5cf3fd3b8a06823d355ef766734f92239c9304/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/word_lapse_manuscript/v/ae5cf3fd3b8a06823d355ef766734f92239c9304/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/word_lapse_manuscript/v/ae5cf3fd3b8a06823d355ef766734f92239c9304/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -82,9 +82,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/word_lapse_manuscript/v/8732bd688529c61c7c8929e5bc624baf694a58f8/))
+([permalink](https://greenelab.github.io/word_lapse_manuscript/v/ae5cf3fd3b8a06823d355ef766734f92239c9304/))
 was automatically generated
-from [greenelab/word_lapse_manuscript@8732bd6](https://github.com/greenelab/word_lapse_manuscript/tree/8732bd688529c61c7c8929e5bc624baf694a58f8)
+from [greenelab/word_lapse_manuscript@ae5cf3f](https://github.com/greenelab/word_lapse_manuscript/tree/ae5cf3fd3b8a06823d355ef766734f92239c9304)
 on April 11, 2023.
 </em></small>
 
@@ -282,16 +282,17 @@ We used the 99th percentile on every generated timepoint as the threshold, and r
 
 ## Models can be aligned and compared within and between years
 
-We examined how the usage of tokens in biomedical text changes over time.
-Our evaluation was derived from machine learning models designed to predict the actual token given a portion of its surrounding tokens.
-Each token was represented as a vector in a coordinate space constructed by these models.
-However, training these models is stochastic, which results in arbitrary coordinate spaces.
+We examined how the usage of tokens in biomedical text changes over time using machine learning models.
+We trained the models to predict the actual token given a portion of its surrounding tokens, and each token was represented as a vector in a coordinate space constructed by the models.
+
+However, training these models is stochastic, resulting in arbitrary coordinate spaces.
+Each model has its own unique coordinate space (Figure {@fig:word2vec_alignment}A), and each word is represented within that space (Figure {@fig:word2vec_alignment}B).
 Model alignment is essential in allowing word2vec models to be compared [@doi:10.48550/arXiv.1605.09096; @doi:10.1038/s41597-021-01047-x].
-Before alignment, each model has its own unique coordinate space (Figure {@fig:word2vec_alignment}A), and each word is represented within that space (Figure {@fig:word2vec_alignment}B).
 Alignment projects every model onto a shared coordinate space (Figure {@fig:word2vec_alignment}C), enabling direct token comparison.
+To enable comparison of the models, we aligned them onto a shared coordinate space.
 We randomly selected 100 tokens to confirm that alignment worked as expected.
-In aligned models, tokens in the global space were more similar to themselves within the year than between years, while identical tokens in unaligned models were completely distinct (Figure {@fig:word2vec_alignment}D).
-Local distances were unaffected by alignment (Figure {@fig:word2vec_alignment}D), as token-neighbor distances were unaffected by the alignment procedure.
+We found that tokens in the global space were more similar to themselves within the year than between years, while identical tokens in unaligned models were completely distinct (Figure {@fig:word2vec_alignment}D).
+Local distances were unaffected by alignment, as token-neighbor distances remained unchanged (Figure {@fig:word2vec_alignment}D).
 
 ![
 A. Without alignment, each word2vec model has its own coordinate space.
@@ -312,8 +313,7 @@ The texts for our analysis were open-access manuscripts available through PubMed
 The growth in the amount of available text and the uneven adoption of open-access publishing during the interval studied was expected to induce changes in the underlying machine learning models, making comparisons more difficult.
 We found that the number of tokens available for model building, i.e., those in PMC OA, increased dramatically during this time (Figure {@fig:novel_distance_validation}A).
 This was expected to create a pattern where models trained in earlier years were more variable than those from later years simply due to the limited sample size in early years.
-We aimed to correct for this change in the underlying models by developing a statistic that, instead of using pairwise comparisons of token distances between individual models, integrated multiple models for each year by comparing tokens' intra- and inter-year variabilities.
-We defined the statistic as the ratio of the average distance between two years over the sum of the average distance within each year respectively.
+To correct for this change in the underlying models, we developed a statistic that compared tokens' intra- and inter-year variabilities.
 
 ![
 A. The number of tokens our models have trained on increases over time.
@@ -330,10 +330,10 @@ The x-axis shows a given year, and the y-axis shows the distance metric.
 We expected most tokens to undergo minor changes from year to year, while substantial changes likely suggested model drift instead of true linguistic change.
 We measured the extent to which tokens differed from themselves using the standard single-model approach and our integrated statistic.
 We filtered the token list to only contain tokens present in every year and compared their distance to the midpoint year, 2010, using the single-model and integrated-models strategies.
-We found that distances tended to be markedly larger in the earliest years, where we expected models to be least stable, using the traditional approach (Figure {@fig:novel_distance_validation}B).
-The integrated model approach did not display the same pattern in the earliest years (Figure {@fig:novel_distance_validation}C).
-Both trends reinforce that training on smaller corpora will lead to high variation and that an integrated model strategy is needed [@doi:10.1162/tacl_a_00008].
-Based on these results, we used the integrated-model strategy to calculate inter-year token distances for the remainder of this work.
+The single-model approach showed that distances were larger in the earliest years than in later years (Figure {@fig:novel_distance_validation}B).
+The integrated model approach did not display the same pattern (Figure {@fig:novel_distance_validation}C).
+This suggests that training on smaller corpora leads to high variation and that an integrated model strategy is needed [@doi:10.1162/tacl_a_00008].
+Therefore, we used the integrated-model strategy for the remainder of this work.
 
 ## Terms exhibit detectable changes in usage
 
@@ -349,18 +349,18 @@ The x-axis shows the time period since the first appearance of the token, and th
 ](https://raw.githubusercontent.com/danich1/biovectors/48913404aa889a381213ed44bd52e5927c66c51a/figure_generation/output/Figure_3.png){#fig:preprint_published_changepoints width="100%"}
 
 We next sought to identify tokens that changed during the 2000-2021 interval for the text from PubMed Central's Open Access Corpus (PMCOA) and the 2015-2022 interval for our preprint corpus.
-We performed change point detection using the CUSUM algorithm with distances calculated with the integrated-model approach to correct for systematic differences in the underlying corpora.
-We found 41281 terms with a detected change point from PMCOA and 2266 terms from preprints (Figures {@fig:preprint_published_changepoints}A and {@fig:preprint_published_changepoints}B), and the vast majority (38019 for PMCOA and 2260 for preprints) had just a single change-point.
+We applied the CUSUM algorithm with integrated-model distance to correct for systematic differences in the underlying corpora.
+We found 41281 terms with a detected changepoint from PMCOA and 2266 terms from preprints (Figures {@fig:preprint_published_changepoints}A and {@fig:preprint_published_changepoints}B).
+Most of our detected changepoints (38019 for PMCOA and 2260 for preprints) only had a single event.
 
-We explored individual change points.
-We detected one in PMCOA for 'cas9' from 2012 to 2013 (Figure {@fig:preprint_published_changepoints}C).
-Before the change point, its closest neighbors were related genetic elements (e.g., 'cas'1-3).
-After the change point, its closest neighbors became terms related to targeting, sgRNA, and gRNA, as well as other genome editing strategies, 'talen' and 'zfns' (Table {@tbl:cas9_neighbor_table}).
-For some terms, we detected multiple change points within the studied interval.
+We detected a changepoint in PMCOA for 'cas9' from 2012 to 2013 (Figure {@fig:preprint_published_changepoints}C).
+Before the changepoint, its closest neighbors were related to genetic elements (e.g., 'cas'1-3).
+After the changepoint, its closest neighbors became terms related to targeting, sgRNA, gRNA, and other genome editing strategies, such as 'talen' and 'zfns' (Table {@tbl:cas9_neighbor_table}).
 We detected change points for 'SARS' from 2002 to 2003 and 2019 to 2020 (Figure {@fig:preprint_published_changepoints}D), consistent with the emergences of SARS-CoV [@doi:10.1046/j.1440-1843.2003.00517.x] and SARS-CoV-2 [@doi:10.1016/j.ijantimicag.2020.105924; @doi:10.1038/s41564-020-0695-z] as observed human pathogens.
-We found miscellaneous neighbors before each change point, with use consistent with the acronym for Severe Acute Respiratory Syndrome after each (Tables {@tbl:sars_neighbor_table_one} and {@tbl:sars_neighbor_table_two}).
+Before each changepoint, the closest neighbors for 'SARS' were difficult to synthesize and summarize.
+After changepoints, the neighbors for 'SARS' were consistent with the acronym for Severe Acute Respiratory Syndrome (Tables {@tbl:sars_neighbor_table_one} and {@tbl:sars_neighbor_table_two}).
 
-Out of all change points, we observed 200 tokens with at least one change point in each corpus.
+We detected 200 tokens with at least one changepoint in each corpus.
 Only 25 of the 200 terms were detected to have simultaneous changes between the preprint and PMCOA corpora.
 We examined the overlap of detected change points between preprints and published articles.
 Many of these 25 were related to the COVID-19 pandemic (Supplementary Table {@tbl:published_preprint_change_table}).
@@ -439,16 +439,16 @@ This visualization highlights each neighbor from a particular year and allows fo
 Tokens in purple are shared within both years, while tokens in red or blue are unique to their respective year.
 ](images/Figure_4.png){#fig:website_walkthrough width="100%"}
 
-We constructed an online application that allows users to examine how tokens change through time.
-The application supports token input as text strings or as MeSH IDs, Entrez Gene IDs, and Taxonomy IDs.
-Users might elect to explore the term 'pandemic', for which we detected a change point between 2019 and 2020.
-Users can examine the token's nearest neighbors through time (Figure {@fig:website_walkthrough}A).
-Using the token 'pandemic' as an example, users can observe that 'epidemic' remains similar through time, but taxid:114727 (the H1N1 subtype of influenza) only entered the nearest neighbors with the swine flu pandemic in 2009 and that MeSH:C000657245 (COVID-19) appeared in 2020.
-The application also shows a frequency chart depicting how often the particular token is used each year (Figure {@fig:website_walkthrough}B), which can be displayed as a raw count or adjusted by the total size of the corpus.
-When change points are detected, they are indicated on this panel (Figure {@fig:website_walkthrough}B).
-The final visualization shows the union of the nearest 25 neighbors from each year ordered by the number of years that neighbor was present (Figure {@fig:website_walkthrough}C).
-This visualization has a comparison function allowing users to examine years' differences.
-All functionalities are fully supported across the PMCOA and preprint corpora, and users can toggle between the two.
+Our online application allows users to explore how token meanings change over time.
+Users can input tokens as text strings, MeSH IDs, Entrez Gene IDs, or Taxonomy IDs.
+For example, users might elect to explore the term 'pandemic', for which we detected a changepoint between 2019 and 2020.
+The application also shows users the token's nearest neighbors through time (Figure {@fig:website_walkthrough}A).
+When using 'pandemic' as an example, users can observe that 'epidemic' remains similar through time, but taxid:114727 (the H1N1 subtype of influenza) only entered the nearest neighbors with the swine flu pandemic in 2009 and MeSH:C000657245 (COVID-19) appeared in 2020.
+Additionally, users can view a frequency chart displaying the token's usage each year (Figure {@fig:website_walkthrough}B), which can be displayed as a raw count or adjusted by the total size of the corpus.
+Previously detected changepoints are indicated on this chart.
+The final visualization shows the union of the nearest 25 neighbors from each year, ordered by the number of years it was present (Figure {@fig:website_walkthrough}C).
+This visualization includes a comparison function.
+All functionalities are supported across PMCOA and preprint corpora, and users can toggle between them.
 
 
 # Discussion
@@ -456,27 +456,29 @@ All functionalities are fully supported across the PMCOA and preprint corpora, a
 Language is rapidly evolving, and the usage of words changes over time, with words assimilating new meanings or associations [@doi:10.1093/acrefore/9780199384655.013.323].
 Some efforts have been made to study semantic change using biomedical text [@doi:10.1142/9789811232701_0011;@arxiv:2102.07836; @doi:10.2196/22635]; however, no such work has examined the changes evident in both pre-publication peer-reviewed and preprinted biomedical text.
 
-We examined semantic changes within open-access biomedical corpora, Pubmed (PMCOA), and bioRxiv/MedRxiv, for the 2000-2022 interval.
-We developed a novel statistic incorporating multiple Word2Vec models to examine semantic changes over two decades.
-Before calculating our novel statistic, we used orthogonal processes that align each model (Figure {@fig:word2vec_alignment}).
-We found that word vectors are closer together after alignment; however, the best approach to align models still remains open for future investigation [@doi:10.1007/978-3-030-32233-5_58].
-As previously reported [@doi:10.1162/tacl_a_00008; @doi:10.48550/arXiv.1804.09692], we did find that without a correction step for the variability within and across years, comparing stable and unstable models is challenging.
-Our correction approach showed that the average distances in the earlier years have less variability using multiple models than a single model (Figure {@fig:novel_distance_validation}).
+We examined semantic changes in two open-access biomedical corpora, PubMed (PMCOA) and bioRxiv/MedRxiv, over a two-decade period from 2000 to 2022.
+We developed a novel statistic that incorporated multiple Word2Vec models to examine semantic change over time.
+We used orthogonal procrustes to align each model, and we found that the word vectors were closer together after alignment (Figure {@fig:word2vec_alignment}).
+However, the best approach to align these models still remains to be determined [@doi:10.1007/978-3-030-32233-5_58].
+As has been reported in previous studies [@doi:10.1162/tacl_a_00008; @doi:10.48550/arXiv.1804.09692], we found that without a correction step for the variability within and across years, it is difficult to compare stable and unstable models.
+Our correction approach revealed that the average distances in the earlier years had less variability when using multiple models than when using a single model (Figure {@fig:novel_distance_validation}).
 
-After correcting year variability, our analysis revealed more than 41,000 changepoints, including tokens such as 'cas9', 'pandemic', and 'sars' (Figure {@fig:preprint_published_changepoints}).
-Many changepoints overlapping between PMCOA and preprints were related to COVID-19 (Table {@tbl:published_preprint_change_table}), indicating that the COVID-19 pandemic has been strong and immediate enough to induce rapid semantic change across both publishing paradigms [@doi:10.1371/journal.pbio.3000959; @doi:10.1371/journal.pone.0240123].
-We developed a web application that allows users to manually examine individual tokens, making examining other examples within our 41,000 changepoints easier.
-However, approaches that can automatically validate these changepoints is an essential area that remains open for future investigation.
+After correcting for year variability, our analysis revealed more than 41,000 change points, including tokens such as 'cas9', 'pandemic', and 'sars' (Figure {@fig:preprint_published_changepoints}).
+Many of these change points overlapped between PMCOA and preprints, and were related to COVID-19 (Table {@tbl:published_preprint_change_table}).
+This indicates that the COVID-19 pandemic has had a sufficiently strong impact on the biomedical literature to cause rapid semantic change across both publishing paradigms [@doi:10.1371/journal.pbio.3000959; @doi:10.1371/journal.pone.0240123].
+To further investigate these change points, we have developed a web application that allows users to manually examine individual tokens.
+However, approaches that can automatically validate these change points remain an essential area for future research.
 
 
 # Conclusion
 
-We uncovered semantic changes within biomedical literature using a novel approach that accounts for inter- and intra-year variability.
-Our approach found 41,000 changepoints that include well-known examples such as 'cas9', 'pandemic', and 'sars'.
-We constructed a web application that allows users to manually examine these individual changepoints.
-As an extension to this project, future work may be able to determine the consistency and time-lag of semantic change between preprint and pre-publication peer-reviewed text - potentially predicting future change in pre-publication peer-reviewed text.
-Furthermore, including other preprint repositories may reveal consistencies across a broader swath of fields, or within-field analyses may reveal the earliest starting points of semantic changes that ultimately sweep through biomedicine.
-Overall, this work is one starting point regarding semantic change within biomedical literature, and we are excited to see how this landscape will change as time progresses.
+We uncovered changes in the meanings of words used in biomedical literature using a new approach that took variations between and within years into account.
+Our approach identified 41,000 changepoints, including well-known terms such as 'cas9', 'pandemic' and 'sars'.
+We created a web application that allows users to investigate these individual changepoints.
+As a next step, it would be interesting to see if it is possible to detect the consistency and time-lag of semantic changes between preprints and published peer-reviewed texts.
+This discovery could potentially be used to predict future changes within published texts.
+Additionally, including other preprint databases may help to uncover consistencies across a wider range of disciplines, or within-field analyses may show the initial stages of semantic changes that will eventually spread throughout biomedicine.
+Overall, this research is a starting point for understanding semantic changes in biomedical literature, and we are looking forward to seeing how this area develops over time.
 
 
 # Availability of Data and Materials

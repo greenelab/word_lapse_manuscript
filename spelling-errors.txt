@@ -7,9 +7,9 @@ autodetect
 azorean
 bcl
 biomedicine
-BioRxiv
+bioRxiv
 boxplot
-Cas
+cas
 catecholase
 CBOW
 cgreene
@@ -23,7 +23,7 @@ coronaviruse
 CoV
 COVID
 covs
-CRISPR
+crispr
 crispri
 crrna
 cse
@@ -36,7 +36,7 @@ dcas
 dnicholson
 d’orbigny
 drosten
-Embeddings
+embeddings
 emergences
 Entrez
 falquaddoomi
@@ -82,7 +82,7 @@ PMCOA
 pre
 preprint
 preprinted
-Preprints
+preprints
 preprocess
 preprocessed
 preprocessing
@@ -100,7 +100,7 @@ sar
 sarr
 sarscov
 seir
-sgRNA
+sgrna
 sgrnas
 skipgram
 spacy
