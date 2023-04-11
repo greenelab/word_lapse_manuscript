@@ -119,8 +119,8 @@
   <meta name="dc.date" content="2023-04-11" />
   <meta name="citation_publication_date" content="2023-04-11" />
   <meta property="article:published_time" content="2023-04-11" />
-  <meta name="dc.modified" content="2023-04-11T15:07:10+00:00" />
-  <meta property="article:modified_time" content="2023-04-11T15:07:10+00:00" />
+  <meta name="dc.modified" content="2023-04-11T15:13:46+00:00" />
+  <meta property="article:modified_time" content="2023-04-11T15:13:46+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -149,9 +149,9 @@
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/word_lapse_manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/word_lapse_manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/word_lapse_manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/word_lapse_manuscript/v/4033f68a14ff7417ca4a25b7009c43f8ad35ea2b/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/word_lapse_manuscript/v/4033f68a14ff7417ca4a25b7009c43f8ad35ea2b/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/word_lapse_manuscript/v/4033f68a14ff7417ca4a25b7009c43f8ad35ea2b/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/word_lapse_manuscript/v/96d2b98fd59ebcef7499a0a8f0826617389588ce/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/word_lapse_manuscript/v/96d2b98fd59ebcef7499a0a8f0826617389588ce/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/word_lapse_manuscript/v/96d2b98fd59ebcef7499a0a8f0826617389588ce/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -168,9 +168,9 @@
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://greenelab.github.io/word_lapse_manuscript/v/4033f68a14ff7417ca4a25b7009c43f8ad35ea2b/">permalink</a>)
+(<a href="https://greenelab.github.io/word_lapse_manuscript/v/96d2b98fd59ebcef7499a0a8f0826617389588ce/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/greenelab/word_lapse_manuscript/tree/4033f68a14ff7417ca4a25b7009c43f8ad35ea2b">greenelab/word_lapse_manuscript@4033f68</a>
+from <a href="https://github.com/greenelab/word_lapse_manuscript/tree/96d2b98fd59ebcef7499a0a8f0826617389588ce">greenelab/word_lapse_manuscript@96d2b98</a>
 on April 11, 2023.
 </em></small></p>
 <h2 id="authors">Authors</h2>
@@ -698,239 +698,6 @@ The funders had no role in the study design, data collection, and analysis, deci
 <h1 id="acknowledgements">Acknowledgements</h1>
 <p>We used manubot-ai-editor <span class="citation" data-cites="8tobuGjc">[<a href="#ref-8tobuGjc" role="doc-biblioref">53</a>]</span> to suggest revisions for this manuscript.
 The version before any AI-based assistance is available at <a href="https://greenelab.github.io/word_lapse_manuscript/v/e13e82b6d54d095a940a6238d60bc9cb38dc42d1/">this permanent link</a>.</p>
-<h1 id="response-to-reviewers">Response to Reviewers</h1>
-<h2 id="reviewer-1">Reviewer 1</h2>
-<blockquote>
-<p>In this paper, the authors presented a method to examine the semantic shift in biomedical preprints and pre-publication by machine learning method. This work is very impressive and could have a great impact on the domain. However, the following questions should be addressed before publication.</p>
-</blockquote>
-<blockquote>
-<p>Q1: In this work, the author applied word2vec model to train the word embeddings. The main issue is that word2vec has a limited capability to capture contextual information. I would suggest the authors try other more advanced language model, like BERT to train embeddings.</p>
-</blockquote>
-<p><strong>At the time of this work, we found that Word2Vec was easier to interpret than BERT.
-Given that true changepoints are unknown and the lack of a consensus gold standard, we decided to move forward with Word2Vec to benefit from the model’s interpretability.
-However, we agree that using BERT or related language models is an important area for future work.</strong></p>
-<blockquote>
-<p>Q2: How does the method take care of the new word issue? basically, if there’s a word created in this domain for only a few years and there are very few publications talking about it, then how the performance of this method would be?</p>
-</blockquote>
-<p><strong>In the most technical sense, a new word could be detected as having a changepoint for any potential string of subsequent years in which the word appeared in both corpora.
-However, we think that most new words are unlikely to be detected as they settle into initial use because most new words will occur relatively few times in the literature.
-This would lead to high intra-year variability, reducing the likelihood of a discovered changepoint (this is the intent of our correction for intra-year variability between models).
-The case where a new word would have detectable changepoints would be limited to those where the use is sufficiently common that its positioning can be estimated reliably and where its positioning changes between subsequent years.
-</strong></p>
-<blockquote>
-<p>Q3: When detecting semantic changes, the cosine distance was used for comparing similarities between words. This method seems too easy and not that robust. Are there any other good ways for detecting?</p>
-</blockquote>
-<p><strong>New ways of detecting semantic change remain open for investigation.
-However, most work that detects semantic changes uses cosine similarity (1-cosine distance).
-We added the intra- and inter-year comparisons in part to improve the robustness of this metric, which is widely used within the field.
-Due to this work being the first within biomedical literature, we adapted the commonly used metric, but we agree with the reviewer that future work should explore additional metrics.
-</strong></p>
-<h2 id="reviewer-2">Reviewer 2</h2>
-<blockquote>
-<p>This paper develops a method to evaluate semantic shifts by calculating annual and interannual changes using multiple integrated models. This method achieves good results, but there are some shortcomings in the paper. There are some suggestions for revision.
-1. The motivation is not clear. Please specify the importance of this paper.</p>
-</blockquote>
-<p><strong>We have updated our introduction to make our motivation for this work more clear.
-While we attempted to briefly paste the changes here, the introduction has changed so significantly that we recommend examining the new version.</strong></p>
-<blockquote>
-<ol start="2" type="1">
-<li><pre><code> Please highlight the contributions of this paper.</code></pre></li>
-</ol>
-</blockquote>
-<p><strong>We have updated our introduction to make our contributions for this work more clear.
-As above, the introduction has changed so substantially that it was less efficient to convey this by pasting specific paragraphs here than it is to refer to the new introduction itself.</strong></p>
-<blockquote>
-<ol start="3" type="1">
-<li><pre><code> Most of references are out of date. Please discuss more recently published solutions, especially the solutions published in 2022.</code></pre></li>
-</ol>
-</blockquote>
-<p><strong>We have updated our introduction to include more recent publications that pertain to this work.
-</strong></p>
-<blockquote>
-<ol start="4" type="1">
-<li><pre><code> In the method part, the authors’ description is not easy to understand. Have the authors considered using drawings to explain the method?</code></pre></li>
-</ol>
-</blockquote>
-<p><strong>We agree with the reviewer that this was a significant opportunity for improvement.
-We have updated our methods section to include a graphical depiction of our data pipeline, which is now Figure 1.</strong></p>
-<blockquote>
-<ol start="5" type="1">
-<li><pre><code> When detecting semantic changes across time, the authors mention the use of Cartesian products in calculating interannual changes. What are the advantages of using Cartesian products for the task of this paper?</code></pre></li>
-</ol>
-</blockquote>
-<p><strong>The main advantage here is that the cartesian product lets us directly compute the inter-year distances.
-Since we compute all possible combinations of model pairings, our sample size is sufficiently large enough to obtain reliable inter-year distance estimates for the years studied (noting that we removed pre-2000 literature due to the limited size of PubMed in these years).</strong></p>
-<blockquote>
-<ol start="6" type="1">
-<li><pre><code> There is something unclear about Figure 1. There are five black dots in the second picture of Figure 1. What is the specific meaning of these five black dots? Please explain it to the author.</code></pre></li>
-</ol>
-</blockquote>
-<p><strong>
-We added a new figure (now referred to as Figure 1) to our manuscript that shows our entire data processing pipeline, and this step here refers to part B in our new figure.
-To allow for direct comparison between word vectors, we need to have word2vec models aligned (part B in our new figure 1).
-The black dots in the figure mentioned by the reviewer are the individual word vectors obtained from their corresponding word2vec model.
-We greyed out all tokens except for the word vector: ‘probiotics’ to provide an individual example of what occurs when word2vec models aren’t aligned.
-</strong></p>
-<blockquote>
-<ol start="7" type="1">
-<li><pre><code> Figure 2 has some ambiguities. The authors use single model and multiple model to carry out experiments, and the experimental results are different. Other than using different models, what could be the reason for the difference?</code></pre></li>
-</ol>
-</blockquote>
-<p><strong>One reason for the differences is that our correction metric allows for different scales of differences.
-Since we are taking a ratio of the inter-year distances over the intra-year distances, we encounter values that are greater than 0.
-Ultimately, the point for figure 2 is to show that the confidence intervals are a lot smaller when variability is accounted for than not.
-</strong></p>
-<blockquote>
-<ol start="8" type="1">
-<li><pre><code> For the proposed method, has the author considered applying it to the same type of task and achieving similar results as in this paper? Please explain it to the readers.</code></pre></li>
-</ol>
-</blockquote>
-<p><strong>We have thought of using this approach outside of biomedical literature.
-However, we determined that this direction would be outside our paper’s scope.
-We mention this point as a future direction within our manuscript.</strong></p>
-<blockquote>
-<ol start="9" type="1">
-<li><pre><code> More discussions of technical details should be given.</code></pre></li>
-</ol>
-</blockquote>
-<p><strong>We have updated our manuscript to provide additional discussion of the underlying technical details.</strong></p>
-<h2 id="reviewer-3">Reviewer 3</h2>
-<blockquote>
-<p>• The introduction is not clear and very less literature is used. Follow this instruction: The introduction should briefly place the study in a broad context and highlight why it is important. It should define the purpose of the work and its significance, including specific hypotheses being tested. The current state of the research field should be reviewed carefully, and key publications cited. Please highlight controversial and diverging hypotheses when necessary. Finally, briefly mention the main aim of the work and highlight the main conclusions. Keep the introduction comprehensible to scientists working outside the topic of the paper.
-• In the introduction, what key theoretical perspectives and empirical findings in the main literature have already informed the problem formulation? What major, unaddressed puzzle, controversy, or paradox does this research address?</p>
-</blockquote>
-<p><strong>We have updated our introduction to include more recent publications and discussion in relation to this work.
-</strong></p>
-<blockquote>
-<p>• Authors should further clarify and elaborate novelty in their contribution.</p>
-</blockquote>
-<p><strong>We have updated our introduction to make our contributions for this work more clear.
-We attempted to provide a concise example of changes, but the changes were so extensive that it is more effective to simply point the reviewer to the new introduction.</strong></p>
-<blockquote>
-<p>• What are the limitations of the present work?</p>
-</blockquote>
-<p><strong>One limitation of this work is that changepoint validation can be challenging.
-Due to this being the first time this work has been performed, there isn’t an available widely-agreed upon gold standard set.
-Our solution to circumvent this problem is that we provide a website that allows users to investigate our changepoint list further.
-</strong></p>
-<h2 id="reviewer-4">Reviewer 4</h2>
-<blockquote>
-<p>This is a well-written manuscript to examine semantic shift in open access biomedical preprints and pre-publication peer-reviewed text. The methods are novel and are clearly described. The results are clearly presented. It is a pleasure and very easy for audience to follow the paper. It adds to scientific value of the relative research field. I suggest acceptance.</p>
-</blockquote>
-<p><strong>We appreciate the positive feedback from the reviewer.</strong></p>
-<h2 id="reviewer-5">Reviewer 5</h2>
-<blockquote>
-<p>Dear authors,
-It is a pleasure to review your manuscript.</p>
-</blockquote>
-<p><strong>We appreciate the positive feedback from the reviewer.</strong></p>
-<blockquote>
-<p>My suggestion:
-1. Thoroughly revise the manuscript.</p>
-</blockquote>
-<p><strong>We have thoroughly revised our manuscript based on the feedback that was given by the other reviewers and based on an additional proof-read of our work.</strong></p>
-<blockquote>
-<ol start="2" type="1">
-<li>Visit the Submission Guidelines and place your manuscript according to the journal’s guidelines.
-Preparing main manuscript text
-Preparing illustrations and figures
-Preparing tables
-Preparing additional files</li>
-</ol>
-</blockquote>
-<p><strong>We have examined the journal guidelines and updated formatting.</strong></p>
-<blockquote>
-<ol start="3" type="1">
-<li>The figures must be well displayed, the text of the figures must be legible.</li>
-</ol>
-</blockquote>
-<p><strong>We updated our figures to meet the journal’s requirements.</strong></p>
-<blockquote>
-<ol start="4" type="1">
-<li>The introduction has few quotes, it is very short.</li>
-</ol>
-</blockquote>
-<p><strong>We have extended our introduction to include a more thorough discussion on previous work and highlight our contributions/motivation.
-We now highlight related work both within and outside biomedicine.</strong></p>
-<blockquote>
-<ol start="5" type="1">
-<li>The methodology is not well detailed, there is no figure that represents the pipeline.</li>
-</ol>
-</blockquote>
-<p><strong>We have updated our methods section to include a graphical depiction of our data pipeline.</strong></p>
-<h2 id="reviewer-6">Reviewer 6</h2>
-<blockquote>
-<p>Reviewer Comments
-Manuscript Number: Not Mentioned
-The topic is exciting and shows how the words are changing over time. However, the authors must consider the following comments to improve the manuscript’s quality.</p>
-<ol type="1">
-<li><pre><code> The authors can use a graphical representation of the proposed work.</code></pre></li>
-</ol>
-</blockquote>
-<p><strong>We have updated our methods section to include a graphical depiction of our data pipeline.</strong></p>
-<blockquote>
-<ol start="2" type="1">
-<li><pre><code> The authors must explain how the methodology is unique.</code></pre></li>
-</ol>
-</blockquote>
-<p><strong>Our work is the first example where year variability has been accounted for within a word2vec model.
-The revised figure helps to demonstrate this approach, which previously was somewhat buried in the technical details of the methods section.</strong></p>
-<blockquote>
-<ol start="3" type="1">
-<li><pre><code> The resolution of the Figures can be improved for better visibility.</code></pre></li>
-</ol>
-</blockquote>
-<p><strong>We updated our figures to meet the journal’s requirements.</strong></p>
-<blockquote>
-<ol start="4" type="1">
-<li><pre><code> The authors should discuss the computational complexity of the methods.</code></pre></li>
-</ol>
-</blockquote>
-<p><strong>As with work focused on training machine learning models, it is difficult to estimate this precisely.
-Because we add inter- and intra-year variability, we note that the distance calculations scale with the square of the number of models used per year and the number of years examined (if all combinations are calculated, as they are for our manuscript to examine stability over time); however, more efficiency could be gained in subsequent work by only examining subsequent year pairs now that the statistic has been evaluated.</strong></p>
-<blockquote>
-<ol start="5" type="1">
-<li><pre><code> Provide a separate discussion section that explains the complete details of the evaluation of the word meanings.</code></pre></li>
-</ol>
-</blockquote>
-<p><strong>We updated our discussion per the given feedback.
-The changes are extensive enough that we refer the reviewer to our new Discussion section.</strong></p>
-<blockquote>
-<ol start="6" type="1">
-<li><pre><code> Briefly details the reasons to consider few-year pairs such as (2002-2003), (2012-2013) and (2019-2020).</code></pre></li>
-</ol>
-</blockquote>
-<p><strong>These year pairs in particular, are the time points where a semantic change has occurred.
-Within our paper, we mention the tokens associated with these time points.
-For example, 2012-2013 is associated with the ‘cas9’ token, which signifies cas9 obtaining an association with genome editing.</strong></p>
-<blockquote>
-<ol start="7" type="1">
-<li><pre><code> Verify the caption (title) for Table 3. (maybe &#39;The fifteen most similar neighbors to the token &#39;sars&#39; for the years 2019 and 2020)</code></pre></li>
-</ol>
-</blockquote>
-<p><strong>We have updated our caption for this table.</strong></p>
-<div class="sourceCode" id="cb16"><pre class="sourceCode diff"><code class="sourceCode diff"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="st">-Table: The fifteen most similar neighbors to the token &#39;sars&#39; for the years 2002 and 2003. </span></span>
-<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="va">+Table: The fifteen most similar neighbors to the token &#39;sars&#39; for the years 2019 and 2020. </span></span></code></pre></div>
-<blockquote>
-<ol start="8" type="1">
-<li><pre><code> The authors should remove the citations from the Conclusion section.</code></pre></li>
-</ol>
-</blockquote>
-<p><strong>We have removed the citation from our conclusion section.
-We also condensed the section with updates to the Discussion section. The conclusions section now reads:
-&gt; We uncovered semantic changes within biomedical literature using a novel approach that accounts for inter- and intra-year variability.
-&gt; Our approach found 41,000 changepoints that include well-known examples such as ‘cas9’, ‘pandemic’, and ‘sars’.
-&gt; We constructed a web application that allows users to manually examine these individual changepoints.
-&gt; As an extension to this project, future work may be able to determine the consistency and time-lag of semantic change between preprint and pre-publication peer-reviewed text - potentially predicting future change in pre-publication peer-reviewed text.
-&gt; Furthermore, including other preprint repositories may reveal consistencies across a broader swath of fields, or within-field analyses may reveal the earliest starting points of semantic changes that ultimately sweep through biomedicine.
-&gt; Overall, this work is one starting point regarding semantic change within biomedical literature, and we are excited to see how this landscape will change as time progresses.
-</strong></p>
-<blockquote>
-<ol start="9" type="1">
-<li><pre><code> Grammatical and spelling mistakes must be corrected.</code></pre></li>
-</ol>
-</blockquote>
-<p><strong>We have revised our manuscript overall to correct for errors and grammar mistakes.</strong></p>
 <h2 class="page_break_before" id="references">References</h2>
 <!-- Explicitly insert bibliography here -->
 <div id="refs" class="references csl-bib-body" role="doc-bibliography">
@@ -1211,6 +978,230 @@ Computational Semantics</em> (2018) <a href="https://doi.org/gh6qpc">https://doi
 </tbody>
 </table>
 </div>
+<h1 id="response-to-reviewers">Response to Reviewers</h1>
+<h2 id="reviewer-1">Reviewer 1</h2>
+<blockquote>
+<p>In this paper, the authors presented a method to examine the semantic shift in biomedical preprints and pre-publication by machine learning method. This work is very impressive and could have a great impact on the domain. However, the following questions should be addressed before publication.</p>
+</blockquote>
+<blockquote>
+<p>Q1: In this work, the author applied word2vec model to train the word embeddings. The main issue is that word2vec has a limited capability to capture contextual information. I would suggest the authors try other more advanced language model, like BERT to train embeddings.</p>
+</blockquote>
+<p><strong>At the time of this work, we found that Word2Vec was easier to interpret than BERT.
+Given that true changepoints are unknown and the lack of a consensus gold standard, we decided to move forward with Word2Vec to benefit from the model’s interpretability.
+However, we agree that using BERT or related language models is an important area for future work.</strong></p>
+<blockquote>
+<p>Q2: How does the method take care of the new word issue? basically, if there’s a word created in this domain for only a few years and there are very few publications talking about it, then how the performance of this method would be?</p>
+</blockquote>
+<p><strong>In the most technical sense, a new word could be detected as having a changepoint for any potential string of subsequent years in which the word appeared in both corpora.
+However, we think that most new words are unlikely to be detected as they settle into initial use because most new words will occur relatively few times in the literature.
+This would lead to high intra-year variability, reducing the likelihood of a discovered changepoint (this is the intent of our correction for intra-year variability between models).
+The case where a new word would have detectable changepoints would be limited to those where the use is sufficiently common that its positioning can be estimated reliably and where its positioning changes between subsequent years. </strong></p>
+<blockquote>
+<p>Q3: When detecting semantic changes, the cosine distance was used for comparing similarities between words. This method seems too easy and not that robust. Are there any other good ways for detecting?</p>
+</blockquote>
+<p><strong>New ways of detecting semantic change remain open for investigation.
+However, most work that detects semantic changes uses cosine similarity (1-cosine distance).
+We added the intra- and inter-year comparisons in part to improve the robustness of this metric, which is widely used within the field.
+Due to this work being the first within biomedical literature, we adapted the commonly used metric, but we agree with the reviewer that future work should explore additional metrics.</strong></p>
+<h2 id="reviewer-2">Reviewer 2</h2>
+<blockquote>
+<p>This paper develops a method to evaluate semantic shifts by calculating annual and interannual changes using multiple integrated models. This method achieves good results, but there are some shortcomings in the paper. There are some suggestions for revision.
+1. The motivation is not clear. Please specify the importance of this paper.</p>
+</blockquote>
+<p><strong>We have updated our introduction to make our motivation for this work more clear.
+While we attempted to briefly paste the changes here, the introduction has changed so significantly that we recommend examining the new version.</strong></p>
+<blockquote>
+<ol start="2" type="1">
+<li><pre><code> Please highlight the contributions of this paper.</code></pre></li>
+</ol>
+</blockquote>
+<p><strong>We have updated our introduction to make our contributions for this work more clear.
+As above, the introduction has changed so substantially that it was less efficient to convey this by pasting specific paragraphs here than it is to refer to the new introduction itself.</strong></p>
+<blockquote>
+<ol start="3" type="1">
+<li><pre><code> Most of references are out of date. Please discuss more recently published solutions, especially the solutions published in 2022.</code></pre></li>
+</ol>
+</blockquote>
+<p><strong>We have updated our introduction to include more recent publications that pertain to this work.</strong></p>
+<blockquote>
+<ol start="4" type="1">
+<li><pre><code> In the method part, the authors’ description is not easy to understand. Have the authors considered using drawings to explain the method?</code></pre></li>
+</ol>
+</blockquote>
+<p><strong>We agree with the reviewer that this was a significant opportunity for improvement.
+We have updated our methods section to include a graphical depiction of our data pipeline, which is now Figure 1.</strong></p>
+<blockquote>
+<ol start="5" type="1">
+<li><pre><code> When detecting semantic changes across time, the authors mention the use of Cartesian products in calculating interannual changes. What are the advantages of using Cartesian products for the task of this paper?</code></pre></li>
+</ol>
+</blockquote>
+<p><strong>The main advantage here is that the cartesian product lets us directly compute the inter-year distances.
+Since we compute all possible combinations of model pairings, our sample size is sufficiently large enough to obtain reliable inter-year distance estimates for the years studied (noting that we removed pre-2000 literature due to the limited size of PubMed in these years).</strong></p>
+<blockquote>
+<ol start="6" type="1">
+<li><pre><code> There is something unclear about Figure 1. There are five black dots in the second picture of Figure 1. What is the specific meaning of these five black dots? Please explain it to the author.</code></pre></li>
+</ol>
+</blockquote>
+<p><strong>We added a new figure (now referred to as Figure 1) to our manuscript that shows our entire data processing pipeline, and this step here refers to part B in our new figure.
+To allow for direct comparison between word vectors, we need to have word2vec models aligned (part B in our new figure 1).
+The black dots in the figure mentioned by the reviewer are the individual word vectors obtained from their corresponding word2vec model.
+We greyed out all tokens except for the word vector: ‘probiotics’ to provide an individual example of what occurs when word2vec models aren’t aligned.</strong></p>
+<blockquote>
+<ol start="7" type="1">
+<li><pre><code> Figure 2 has some ambiguities. The authors use single model and multiple model to carry out experiments, and the experimental results are different. Other than using different models, what could be the reason for the difference?</code></pre></li>
+</ol>
+</blockquote>
+<p><strong>One reason for the differences is that our correction metric allows for different scales of differences.
+Since we are taking a ratio of the inter-year distances over the intra-year distances, we encounter values that are greater than 0.
+Ultimately, the point for figure 2 is to show that the confidence intervals are a lot smaller when variability is accounted for than not.</strong></p>
+<blockquote>
+<ol start="8" type="1">
+<li><pre><code> For the proposed method, has the author considered applying it to the same type of task and achieving similar results as in this paper? Please explain it to the readers.</code></pre></li>
+</ol>
+</blockquote>
+<p><strong>We have thought of using this approach outside of biomedical literature.
+However, we determined that this direction would be outside our paper’s scope.
+We mention this point as a future direction within our manuscript.</strong></p>
+<blockquote>
+<ol start="9" type="1">
+<li><pre><code> More discussions of technical details should be given.</code></pre></li>
+</ol>
+</blockquote>
+<p><strong>We have updated our manuscript to provide additional discussion of the underlying technical details.</strong></p>
+<h2 id="reviewer-3">Reviewer 3</h2>
+<blockquote>
+<p>• The introduction is not clear and very less literature is used. Follow this instruction: The introduction should briefly place the study in a broad context and highlight why it is important. It should define the purpose of the work and its significance, including specific hypotheses being tested. The current state of the research field should be reviewed carefully, and key publications cited. Please highlight controversial and diverging hypotheses when necessary. Finally, briefly mention the main aim of the work and highlight the main conclusions. Keep the introduction comprehensible to scientists working outside the topic of the paper.
+• In the introduction, what key theoretical perspectives and empirical findings in the main literature have already informed the problem formulation? What major, unaddressed puzzle, controversy, or paradox does this research address?</p>
+</blockquote>
+<p><strong>We have updated our introduction to include more recent publications and discussion in relation to this work.</strong></p>
+<blockquote>
+<p>• Authors should further clarify and elaborate novelty in their contribution.</p>
+</blockquote>
+<p><strong>We have updated our introduction to make our contributions for this work more clear.
+We attempted to provide a concise example of changes, but the changes were so extensive that it is more effective to simply point the reviewer to the new introduction.</strong></p>
+<blockquote>
+<p>• What are the limitations of the present work?</p>
+</blockquote>
+<p><strong>One limitation of this work is that changepoint validation can be challenging.
+Due to this being the first time this work has been performed, there isn’t an available widely-agreed upon gold standard set.
+Our solution to circumvent this problem is that we provide a website that allows users to investigate our changepoint list further.</strong></p>
+<h2 id="reviewer-4">Reviewer 4</h2>
+<blockquote>
+<p>This is a well-written manuscript to examine semantic shift in open access biomedical preprints and pre-publication peer-reviewed text. The methods are novel and are clearly described. The results are clearly presented. It is a pleasure and very easy for audience to follow the paper. It adds to scientific value of the relative research field. I suggest acceptance.</p>
+</blockquote>
+<p><strong>We appreciate the positive feedback from the reviewer.</strong></p>
+<h2 id="reviewer-5">Reviewer 5</h2>
+<blockquote>
+<p>Dear authors,
+It is a pleasure to review your manuscript.</p>
+</blockquote>
+<p><strong>We appreciate the positive feedback from the reviewer.</strong></p>
+<blockquote>
+<p>My suggestion:
+1. Thoroughly revise the manuscript.</p>
+</blockquote>
+<p><strong>We have thoroughly revised our manuscript based on the feedback that was given by the other reviewers and based on an additional proof-read of our work.</strong></p>
+<blockquote>
+<ol start="2" type="1">
+<li>Visit the Submission Guidelines and place your manuscript according to the journal’s guidelines.
+Preparing main manuscript text
+Preparing illustrations and figures
+Preparing tables
+Preparing additional files</li>
+</ol>
+</blockquote>
+<p><strong>We have examined the journal guidelines and updated formatting.</strong></p>
+<blockquote>
+<ol start="3" type="1">
+<li>The figures must be well displayed, the text of the figures must be legible.</li>
+</ol>
+</blockquote>
+<p><strong>We updated our figures to meet the journal’s requirements.</strong></p>
+<blockquote>
+<ol start="4" type="1">
+<li>The introduction has few quotes, it is very short.</li>
+</ol>
+</blockquote>
+<p><strong>We have extended our introduction to include a more thorough discussion on previous work and highlight our contributions/motivation.
+We now highlight related work both within and outside biomedicine.</strong></p>
+<blockquote>
+<ol start="5" type="1">
+<li>The methodology is not well detailed, there is no figure that represents the pipeline.</li>
+</ol>
+</blockquote>
+<p><strong>We have updated our methods section to include a graphical depiction of our data pipeline.</strong></p>
+<h2 id="reviewer-6">Reviewer 6</h2>
+<blockquote>
+<p>Reviewer Comments
+Manuscript Number: Not Mentioned
+The topic is exciting and shows how the words are changing over time. However, the authors must consider the following comments to improve the manuscript’s quality.</p>
+<ol type="1">
+<li><pre><code> The authors can use a graphical representation of the proposed work.</code></pre></li>
+</ol>
+</blockquote>
+<p><strong>We have updated our methods section to include a graphical depiction of our data pipeline.</strong></p>
+<blockquote>
+<ol start="2" type="1">
+<li><pre><code> The authors must explain how the methodology is unique.</code></pre></li>
+</ol>
+</blockquote>
+<p><strong>Our work is the first example where year variability has been accounted for within a word2vec model.
+The revised figure helps to demonstrate this approach, which previously was somewhat buried in the technical details of the methods section.</strong></p>
+<blockquote>
+<ol start="3" type="1">
+<li><pre><code> The resolution of the Figures can be improved for better visibility.</code></pre></li>
+</ol>
+</blockquote>
+<p><strong>We updated our figures to meet the journal’s requirements.</strong></p>
+<blockquote>
+<ol start="4" type="1">
+<li><pre><code> The authors should discuss the computational complexity of the methods.</code></pre></li>
+</ol>
+</blockquote>
+<p><strong>As with work focused on training machine learning models, it is difficult to estimate this precisely.
+Because we add inter- and intra-year variability, we note that the distance calculations scale with the square of the number of models used per year and the number of years examined (if all combinations are calculated, as they are for our manuscript to examine stability over time); however, more efficiency could be gained in subsequent work by only examining subsequent year pairs now that the statistic has been evaluated.</strong></p>
+<blockquote>
+<ol start="5" type="1">
+<li><pre><code> Provide a separate discussion section that explains the complete details of the evaluation of the word meanings.</code></pre></li>
+</ol>
+</blockquote>
+<p><strong>We updated our discussion per the given feedback.
+The changes are extensive enough that we refer the reviewer to our new Discussion section.</strong></p>
+<blockquote>
+<ol start="6" type="1">
+<li><pre><code> Briefly details the reasons to consider few-year pairs such as (2002-2003), (2012-2013) and (2019-2020).</code></pre></li>
+</ol>
+</blockquote>
+<p><strong>These year pairs in particular, are the time points where a semantic change has occurred.
+Within our paper, we mention the tokens associated with these time points.
+For example, 2012-2013 is associated with the ‘cas9’ token, which signifies cas9 obtaining an association with genome editing.</strong></p>
+<blockquote>
+<ol start="7" type="1">
+<li><pre><code> Verify the caption (title) for Table 3. (maybe &#39;The fifteen most similar neighbors to the token &#39;sars&#39; for the years 2019 and 2020)</code></pre></li>
+</ol>
+</blockquote>
+<p><strong>We have updated our caption for this table.</strong></p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode diff"><code class="sourceCode diff"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="st">-Table: The fifteen most similar neighbors to the token &#39;sars&#39; for the years 2002 and 2003. </span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="va">+Table: The fifteen most similar neighbors to the token &#39;sars&#39; for the years 2019 and 2020. </span></span></code></pre></div>
+<blockquote>
+<ol start="8" type="1">
+<li><pre><code> The authors should remove the citations from the Conclusion section.</code></pre></li>
+</ol>
+</blockquote>
+<p><strong>We have removed the citation from our conclusion section.
+We also condensed the section with updates to the Discussion section. The conclusions section now reads:
+&gt; We uncovered semantic changes within biomedical literature using a novel approach that accounts for inter- and intra-year variability.
+&gt; Our approach found 41,000 changepoints that include well-known examples such as ‘cas9’, ‘pandemic’, and ‘sars’.
+&gt; We constructed a web application that allows users to manually examine these individual changepoints.
+&gt; As an extension to this project, future work may be able to determine the consistency and time-lag of semantic change between preprint and pre-publication peer-reviewed text - potentially predicting future change in pre-publication peer-reviewed text.
+&gt; Furthermore, including other preprint repositories may reveal consistencies across a broader swath of fields, or within-field analyses may reveal the earliest starting points of semantic changes that ultimately sweep through biomedicine.
+&gt; Overall, this work is one starting point regarding semantic change within biomedical literature, and we are excited to see how this landscape will change as time progresses.</strong></p>
+<blockquote>
+<ol start="9" type="1">
+<li><pre><code> Grammatical and spelling mistakes must be corrected.</code></pre></li>
+</ol>
+</blockquote>
+<p><strong>We have revised our manuscript overall to correct for errors and grammar mistakes.</strong></p>
 <!-- default theme -->
 
 <style>

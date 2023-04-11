@@ -14,7 +14,7 @@ catecholase
 CBOW
 cgreene
 CHAI
-Changepoint
+changepoint
 changepoints
 cholinephosphotransferase
 cobl
@@ -43,9 +43,9 @@ falquaddoomi
 funders
 GBMF
 GN
-GNormplus
+GNormPlus
 greenescientist
-gRNA
+grna
 gustafsson
 hirondelle
 indolo
@@ -99,7 +99,7 @@ sar
 sarr
 sarscov
 seir
-sgRNA
+sgrna
 sgrnas
 skipgram
 spacy
