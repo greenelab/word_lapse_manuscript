@@ -9,7 +9,7 @@ bcl
 biomedicine
 BioRxiv
 boxplot
-cas
+Cas
 catecholase
 CBOW
 cgreene
@@ -23,7 +23,7 @@ coronaviruse
 cov
 COVID
 covs
-crispr
+CRISPR
 crispri
 crrna
 cse
@@ -36,7 +36,7 @@ dcas
 dnicholson
 d’orbigny
 drosten
-embeddings
+Embeddings
 emergences
 Entrez
 falquaddoomi
@@ -45,7 +45,7 @@ GBMF
 GN
 GNormPlus
 greenescientist
-grna
+gRNA
 gustafsson
 hirondelle
 indolo
