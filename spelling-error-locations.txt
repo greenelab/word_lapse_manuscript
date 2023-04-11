@@ -102,7 +102,7 @@ content/03.methods.md:68:timepoint
 content/04.results.md:10:arXiv
 content/04.results.md:19:UMAP
 content/04.results.md:21:probiotics
-content/04.results.md:22:probiotic
+content/04.results.md:22:probiotics
 content/04.results.md:25:boxplot
 content/04.results.md:26:intra
 content/04.results.md:31:dataset

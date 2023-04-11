@@ -28,8 +28,8 @@ header-includes: |
   <meta name="dc.date" content="2023-04-11" />
   <meta name="citation_publication_date" content="2023-04-11" />
   <meta property="article:published_time" content="2023-04-11" />
-  <meta name="dc.modified" content="2023-04-11T14:59:30+00:00" />
-  <meta property="article:modified_time" content="2023-04-11T14:59:30+00:00" />
+  <meta name="dc.modified" content="2023-04-11T15:02:17+00:00" />
+  <meta property="article:modified_time" content="2023-04-11T15:02:17+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -58,9 +58,9 @@ header-includes: |
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/word_lapse_manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/word_lapse_manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/word_lapse_manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/word_lapse_manuscript/v/7e566645cf4ac751ab698640c9acd9a2fd3c76d8/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/word_lapse_manuscript/v/7e566645cf4ac751ab698640c9acd9a2fd3c76d8/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/word_lapse_manuscript/v/7e566645cf4ac751ab698640c9acd9a2fd3c76d8/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/word_lapse_manuscript/v/eed0e2ce93663ed2b227baeb47b8f7f067f8da5b/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/word_lapse_manuscript/v/eed0e2ce93663ed2b227baeb47b8f7f067f8da5b/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/word_lapse_manuscript/v/eed0e2ce93663ed2b227baeb47b8f7f067f8da5b/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -82,9 +82,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/word_lapse_manuscript/v/7e566645cf4ac751ab698640c9acd9a2fd3c76d8/))
+([permalink](https://greenelab.github.io/word_lapse_manuscript/v/eed0e2ce93663ed2b227baeb47b8f7f067f8da5b/))
 was automatically generated
-from [greenelab/word_lapse_manuscript@7e56664](https://github.com/greenelab/word_lapse_manuscript/tree/7e566645cf4ac751ab698640c9acd9a2fd3c76d8)
+from [greenelab/word_lapse_manuscript@eed0e2c](https://github.com/greenelab/word_lapse_manuscript/tree/eed0e2ce93663ed2b227baeb47b8f7f067f8da5b)
 on April 11, 2023.
 </em></small>
 
@@ -299,7 +299,7 @@ A. Without alignment, each word2vec model has its own coordinate space.
 This is a UMAP visualization of 5000 randomly sampled tokens from 5 distinct Word2Vec models trained on the text published in 2010.
 Each data point represents a token, and the color represents the respective Word2Vec model.
 B. We greyed out all tokens except for the token 'probiotics' to highlight that each token appears in its own respective cluster without alignment.
-C. After the alignment step, the token 'probiotic' is closer in vector space signifying that tokens can be easily compared.
+C. After the alignment step, the token 'probiotics' is closer in vector space signifying that tokens can be easily compared.
 D. In the global coordinate space, token distances appear to be vastly different when alignment is not applied.
 After alignment, token distances become closer; tokens maintain similar distances with their neighbors regardless of alignment.
 This boxplot shows the average distance of 100 randomly sampled tokens shared in every year from 2000 to 2021.
