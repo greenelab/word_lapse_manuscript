@@ -7,7 +7,7 @@ autodetect
 azorean
 bcl
 biomedicine
-bioRxiv
+BioRxiv
 boxplot
 cas
 catecholase
@@ -36,16 +36,16 @@ dcas
 dnicholson
 d’orbigny
 drosten
-Embeddings
+embeddings
 emergences
 Entrez
 falquaddoomi
 funders
 GBMF
 GN
-GNormPlus
+GNormplus
 greenescientist
-grna
+gRNA
 gustafsson
 hirondelle
 indolo
@@ -61,7 +61,7 @@ lissodendoryx
 lockdown
 longicauda
 lutken
-MedRxiv
+medRxiv
 meganuclease
 mers
 metonymy
@@ -99,7 +99,7 @@ sar
 sarr
 sarscov
 seir
-sgrna
+sgRNA
 sgrnas
 skipgram
 spacy

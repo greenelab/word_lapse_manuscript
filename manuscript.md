@@ -28,8 +28,8 @@ header-includes: |
   <meta name="dc.date" content="2023-04-11" />
   <meta name="citation_publication_date" content="2023-04-11" />
   <meta property="article:published_time" content="2023-04-11" />
-  <meta name="dc.modified" content="2023-04-11T15:02:17+00:00" />
-  <meta property="article:modified_time" content="2023-04-11T15:02:17+00:00" />
+  <meta name="dc.modified" content="2023-04-11T15:07:10+00:00" />
+  <meta property="article:modified_time" content="2023-04-11T15:07:10+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -58,9 +58,9 @@ header-includes: |
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/word_lapse_manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/word_lapse_manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/word_lapse_manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/word_lapse_manuscript/v/eed0e2ce93663ed2b227baeb47b8f7f067f8da5b/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/word_lapse_manuscript/v/eed0e2ce93663ed2b227baeb47b8f7f067f8da5b/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/word_lapse_manuscript/v/eed0e2ce93663ed2b227baeb47b8f7f067f8da5b/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/word_lapse_manuscript/v/4033f68a14ff7417ca4a25b7009c43f8ad35ea2b/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/word_lapse_manuscript/v/4033f68a14ff7417ca4a25b7009c43f8ad35ea2b/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/word_lapse_manuscript/v/4033f68a14ff7417ca4a25b7009c43f8ad35ea2b/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -82,9 +82,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/word_lapse_manuscript/v/eed0e2ce93663ed2b227baeb47b8f7f067f8da5b/))
+([permalink](https://greenelab.github.io/word_lapse_manuscript/v/4033f68a14ff7417ca4a25b7009c43f8ad35ea2b/))
 was automatically generated
-from [greenelab/word_lapse_manuscript@eed0e2c](https://github.com/greenelab/word_lapse_manuscript/tree/eed0e2ce93663ed2b227baeb47b8f7f067f8da5b)
+from [greenelab/word_lapse_manuscript@4033f68](https://github.com/greenelab/word_lapse_manuscript/tree/4033f68a14ff7417ca4a25b7009c43f8ad35ea2b)
 on April 11, 2023.
 </em></small>
 
@@ -497,6 +497,11 @@ Access to Pubtator Central's Open Access subset is available on NCBI's FTP serve
 
 This work was supported by the Gordon and Betty Moore Foundation under award GBMF4552 and the National Institutes of Health's National Human Genome Research Institute under award R01 HG010067 to CSG.
 The funders had no role in the study design, data collection, and analysis, decision to publish, or preparation of the manuscript.
+
+# Acknowledgements
+
+We used manubot-ai-editor [@doi:10.1101/2023.01.21.525030] to suggest revisions for this manuscript.
+The version before any AI-based assistance is available at [this permanent link](https://greenelab.github.io/word_lapse_manuscript/v/e13e82b6d54d095a940a6238d60bc9cb38dc42d1/).
 
 
 # Response to Reviewers
