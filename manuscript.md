@@ -8,7 +8,7 @@ keywords:
 - time series
 - change point detection
 lang: en-US
-date-meta: '2023-04-10'
+date-meta: '2023-04-11'
 author-meta:
 - David N. Nicholson
 - Faisal Alquaddoomi
@@ -25,11 +25,11 @@ header-includes: |
   <meta name="citation_title" content="Changing word meanings in biomedical literature reveal pandemics and new technologies" />
   <meta property="og:title" content="Changing word meanings in biomedical literature reveal pandemics and new technologies" />
   <meta property="twitter:title" content="Changing word meanings in biomedical literature reveal pandemics and new technologies" />
-  <meta name="dc.date" content="2023-04-10" />
-  <meta name="citation_publication_date" content="2023-04-10" />
-  <meta property="article:published_time" content="2023-04-10" />
-  <meta name="dc.modified" content="2023-04-10T14:33:30+00:00" />
-  <meta property="article:modified_time" content="2023-04-10T14:33:30+00:00" />
+  <meta name="dc.date" content="2023-04-11" />
+  <meta name="citation_publication_date" content="2023-04-11" />
+  <meta property="article:published_time" content="2023-04-11" />
+  <meta name="dc.modified" content="2023-04-11T14:31:45+00:00" />
+  <meta property="article:modified_time" content="2023-04-11T14:31:45+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -58,9 +58,9 @@ header-includes: |
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/word_lapse_manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/word_lapse_manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/word_lapse_manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/word_lapse_manuscript/v/e13e82b6d54d095a940a6238d60bc9cb38dc42d1/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/word_lapse_manuscript/v/e13e82b6d54d095a940a6238d60bc9cb38dc42d1/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/word_lapse_manuscript/v/e13e82b6d54d095a940a6238d60bc9cb38dc42d1/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/word_lapse_manuscript/v/8732bd688529c61c7c8929e5bc624baf694a58f8/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/word_lapse_manuscript/v/8732bd688529c61c7c8929e5bc624baf694a58f8/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/word_lapse_manuscript/v/8732bd688529c61c7c8929e5bc624baf694a58f8/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -82,10 +82,10 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/word_lapse_manuscript/v/e13e82b6d54d095a940a6238d60bc9cb38dc42d1/))
+([permalink](https://greenelab.github.io/word_lapse_manuscript/v/8732bd688529c61c7c8929e5bc624baf694a58f8/))
 was automatically generated
-from [greenelab/word_lapse_manuscript@e13e82b](https://github.com/greenelab/word_lapse_manuscript/tree/e13e82b6d54d095a940a6238d60bc9cb38dc42d1)
-on April 10, 2023.
+from [greenelab/word_lapse_manuscript@8732bd6](https://github.com/greenelab/word_lapse_manuscript/tree/8732bd688529c61c7c8929e5bc624baf694a58f8)
+on April 11, 2023.
 </em></small>
 
 
@@ -161,56 +161,51 @@ Scientific research can also be remarkably fast-moving, with new concepts or app
 We examined scientific writing, both preprint and pre-publication peer-reviewed text, to identify terms that have changed and examine their use.
 One particular challenge that we faced was that the shift from closed to open access publishing meant that the size of available corpora changed by over an order of magnitude in the last two decades.
 We developed an approach to evaluate semantic shift by accounting for both intra- and inter-year variability using multiple integrated models.
-Using this strategy and examining year-by-year changes revealed thousands of change points in both corpora.
-We found change points for tokens including 'cas9', 'pandemic', and 'sars' among many others.
-The consistent change-points between pre-publication peer-reviewed and preprinted text were largely related to the COVID-19 pandemic.
-We developed a web app for exploration (https://greenelab.github.io/word-lapse/) that enables users to investigate individual terms.
-To our knowledge, this analysis is the first to examine semantic shift in biomedical preprints and pre-publication peer-reviewed text, and it lays the foundation for future work to examine how terms acquire new meaning and the extent to which that process is encouraged or discouraged by peer review.
+This analysis revealed thousands of change points in both corpora, including for terms such as 'cas9', 'pandemic', and 'sars'.
+We found that the consistent change-points between pre-publication peer-reviewed and preprinted text are largely related to the COVID-19 pandemic.
+We also created a web app for exploration that allows users to investigate individual terms (https://greenelab.github.io/word-lapse/).
+To our knowledge, our research is the first to examine semantic shift in biomedical preprints and pre-publication peer-reviewed text, and provides a foundation for future work to understand how terms acquire new meanings and how peer review affects this process.
 
 **Keywords**: Linguistic shift, pandemic, software, novelty
 
 
 # Introduction
 
-Language constantly evolves, and the meaning we ascribe to words changes over time.
-The word "nice" was used to mean foolish or innocent back in the 15th-17th century; then, it underwent a positive shift to its current meaning of "pleasant or delightful"[@doi:10.1093/acrefore/9780199384655.013.323].
-These shifts occur for many reasons.
-For example, writers may use new metaphors or substitute words for others with similar meanings in a process known as metonymy [@doi:10.1093/acrefore/9780199384655.013.323].
-Studying these shifts can provide a nuanced understanding of how language adapts to describe our world.
+The meaning of words is constantly evolving.
+For instance, the word "nice" used to mean foolish or innocent in the 15th-17th centuries, before it underwent a shift to its modern meaning of "pleasant or delightful" [@doi:10.1093/acrefore/9780199384655.013.323].
+This change can be attributed to writers using new metaphors or substituting words with similar meanings, a process known as metonymy [@doi:10.1093/acrefore/9780199384655.013.323].
+By studying these shifts, we can gain a more nuanced understanding of how language adapts to describe our world.
 
-Scientific fields of inquiry also change, sometimes rapidly, as researchers devise and test new hypotheses and applications.
-For example, repurposing the CRISPR-Cas9 system to a pervasive tool for genome editing has altered how we discuss molecular entities.
-Microbes use this as an immune system to defend against viruses.
-Scientists repurposed this system for genome editing [@doi:10.1126/science.1225829], leading to changes in the use of the term.
-Science is a field with substantial written communication [@doi:10.1021/ci00050a001], both via published papers [@doi:10.1073/pnas.98.2.381] and preprints [@doi:10.1101/833400; @doi:10.1126/science.aay2933].
-Examining scientific manuscripts with computational linguistics can reveal longitudinal trends in scientific research.
+Scientific fields of inquiry are constantly evolving as researchers develop and test new hypotheses and applications.
+For example, in the interval studied the CRISPR-Cas9 system has been repurposed as a tool for genome editing.
+Microbes use this system as a defense against viruses, and scientists have adapted it for genome editing [@doi:10.1126/science.1225829], resulting in changes in the use of the term.
+Written communication is an important part of science [@doi:10.1021/ci00050a001], both through published papers [@doi:10.1073/pnas.98.2.381] and preprints [@doi:10.1101/833400; @doi:10.1126/science.aay2933].
+By using computational linguistics to analyze scientific manuscripts, we can identify longitudinal trends in scientific research.
 
-The task of examining if words change their meanings is called semantic shift detection.
-This process involves capturing word usage patterns such as frequency and structure over a set period of time [@arxiv:1806.03537].
-Once these patterns have been captured, the last step is generating a time series showing possible shift events, commonly called changepoints [@arxiv:1806.03537;@arxiv:0710.3742,@gustafsson].
-Scientists have used this approach to discover many changepoints within publically available English corpora [@doi:10.1145/2736277.2741627; @doi:10.1109/JCDL.2014.6970173; @doi:10.1145/2064448.2064475; @doi:10.18653/v1/N18-1044; @doi:10.1017/S1351324918000220].
+The task of detecting changes in the meaning of words is known as semantic shift detection.
+This process involves capturing word usage patterns, such as frequency and structure, over a set period of time [@arxiv:1806.03537].
+Once captured, the final step is generating a time series to show potential shift events, commonly called changepoints [@arxiv:1806.03537; @arxiv:0710.3742; @gustafsson].
+By using this approach, researchers have identified many changepoints within publicly available English corpora [@doi:10.1145/2736277.2741627; @doi:10.1109/JCDL.2014.6970173; @doi:10.1145/2064448.2064475; @doi:10.18653/v1/N18-1044; @doi:10.1017/S1351324918000220].
 These discoveries included semantic changes like the meaning of awful shifting from majestic to horrible [@arxiv:1605.09096].
-Along with individual discoveries, scientists have identified global patterns that semantic shifts can follow [@arxiv:1605.09096; @xu2015computational].
-One pattern discovered is that words with similar meanings, i.e., synonyms, tend to change over time and undergo similar changes [@xu2015computational].
-The other patterns are that words undergo semantic shifts inversely proportional to their frequency, and words with multiple meanings will have higher rates of change [@arxiv:1605.09096].
-The majority of these discoveries have been within regular English text.
-There has been an effort to investigate if any of these patterns are upheld within biomedical literature [@doi:10.1016/j.ijmedinf.2017.11.006].
-The researchers only found strong evidence of words that change meaning inversely scales to their usage frequency [@doi:10.18653/v1/W19-5037].
-Despite the conflicting evidence for these change patterns, biomedical words and concepts change over time.
+In addition to individual discoveries, scientists have identified global patterns that semantic shifts follow [@arxiv:1605.09096; @xu2015computational].
+For instance, words with similar meanings, i.e., synonyms, tend to change over time and undergo similar changes [@xu2015computational].
+Other patterns include that words change meaning inversely proportional to their frequency, and words with multiple meanings have higher rates of change [@arxiv:1605.09096].
+Most of these discoveries have been made in regular English text.
+However, researchers have also attempted to investigate whether these patterns are also found in biomedical literature [@doi:10.1016/j.ijmedinf.2017.11.006].
+The only strong evidence they found is that words that change meaning do so inversely proportional to their usage frequency [@doi:10.18653/v1/W19-5037].
+Despite conflicting evidence, it is clear that biomedical words and concepts change over time.
 
-Most recent work to detect semantic shifts has been outside of biomedical corpora.
-Common mediums include newspapers [@doi:10.18653/v1/W17-2705; @arxiv:1711.05603; @doi:10.1017/S0003055417000570], books [@arxiv:1605.09096], reddit [@doi:10.1016/j.jbi.2021.103824], and Twitter [@arxiv:1411.3315].
-Researchers have examined topics in information retrieval [@doi:10.1007/s11192-018-2843-2], and in biomedicine COVID-19 has been examined multiple times [@doi:10.1142/9789811232701_0011;@arxiv:2102.07836; @doi:10.2196/22635].
-Also, researchers have examined how drugs and disease pairs changed in their usage over time [@doi:10.18653/v1/W19-5037].
-Despite these discoveries, the amount of open-access biomedical literature has dramatically increased in the last two decades, laying the groundwork for the large-scale analysis of semantic shifts in biomedicine.
-There remains a gap in uncovering semantic change on a global scale within published and preprint works
-and this work takes a deeper dive.
+Recent studies have investigated semantic shifts in various non-biomedical corpora, such as newspapers [@doi:10.18653/v1/W17-2705; @arxiv:1711.05603; @doi:10.1017/S0003055417000570], books [@arxiv:1605.09096], Reddit [@doi:10.1016/j.jbi.2021.103824], and Twitter [@arxiv:1411.3315].
+Other research has focused on semantic shifts in topics related to information retrieval [@doi:10.1007/s11192-018-2843-2], and the COVID-19 pandemic has been studied multiple times [@doi:10.1142/9789811232701_0011;@arxiv:2102.07836; @doi:10.2196/22635].
+Additionally, researchers have examined how term usage related to drugs and diseases changes over time [@doi:10.18653/v1/W19-5037].
+However, with the dramatic increase in open-access biomedical literature over the last two decades, there is an opportunity to analyze semantic shifts in biomedicine on a whole-literature scale.
+This paper takes a deeper dive into this area by exploring semantic shifts in published and preprint works using natural language-processing and machine learning techniques.
 
-To fill this gap, we sought to uncover instances of semantic shifts within the rapidly growing body of open-access texts, published papers, and preprints.
-We took a novel approach that integrates multiple models to account for the challenge of instability in the machine learning models trained across various years.
-Using this approach, we identified semantic changepoints for each token and examine key changepoint cases.
-We provided the full set of research products, including changepoints and machine learning models, as openly licensed tools for the community.
-Lastly, we created a web server that allows users to analyze tokens of interest on the fly with respect to the most similar terms within a year and temporal trends.
+We sought to identify semantic shifts in the rapidly growing body of open-access texts, published papers, and preprints.
+To do this, we used a novel approach that integrates multiple models to account for the instability of machine learning models trained across various years.
+This approach allowed us to identify changepoints for each token and to examine key cases.
+We have made our research products, including changepoints and machine learning models, freely available as open licensed tools for the community.
+In addition, we have created a web server that allows users to analyze tokens of interest and to observe the most similar terms within a year and temporal trends.
 
 
 # Methods
@@ -219,29 +214,25 @@ Lastly, we created a web server that allows users to analyze tokens of interest 
 
 ### Pubtator Central
 
-Pubtator Central is an open-access resource containing annotated abstracts and full-text annotated with entity recognition systems for biomedical concepts [@doi:10.1093/nar/gkz389].
-The methods used are TaggerOne [@doi:10.1093/bioinformatics/btw343] to tag diseases, chemicals, and cell line entities, GNormPlus [@doi:10.1155/2015/918710] to tag 
-genes, SR4GN [@doi:10.1371/journal.pone.0038460] to tag species, and tmVar [@doi:10.1093/bioinformatics/btx541] to tag genetic mutations.
-We initially downloaded this resource on December 07th, 2021, and processed over 30 million documents.
+Pubtator Central is an open-access resource containing annotated abstracts and full-texts with entity recognition systems for biomedical concepts [@doi:10.1093/nar/gkz389].
+The systens used were TaggerOne [@doi:10.1093/bioinformatics/btw343] to tag diseases, chemicals, and cell line entities, GNormPlus [@doi:10.1155/2015/918710] to tag genes, SR4GN [@doi:10.1371/journal.pone.0038460] to tag species, and tmVar [@doi:10.1093/bioinformatics/btx541] to tag genetic mutations.
+We initially downloaded this resource on December 07th, 2021 and processed over 30 million documents.
 This resource contains documents from the pre-1800s to 2021; however, due to the low sample size in the early years, we only used documents published from 2000 to 2021.
-The resource was subsequently updated with documents from 2021. 
-We also downloaded a later version on March 09th, 2022, and merged both versions using each document's doc_id field to produce the corpus used in this analysis.
+The resource was subsequently updated with documents from 2021.
+We also downloaded a later version on March 09th, 2022 and merged both versions using each document's doc_id field to produce the corpus used in this analysis.
 We divided documents by publication year and then preprocessed each using spacy's en_core_web_sm model [@spacy2].
-We replaced each tagged word or phrase with its corresponding entity type and entity id for every sentence that contained an annotation.
+We replaced each tagged word or phrase with its corresponding entity type and entity ID for every sentence that contained an annotation.
 Then, we used spacy to break sentences into individual tokens and normalized each token to its root form via lemmatization.
-After preprocessing, we used every sentence to train multiple natural language models designed to represent words based on their context.
+After preprocessing, we used every sentence to train multiple Natural Language Processing (NLP) models designed to represent words based on their context.
 
 ### Biomedical Preprints
 
-BioRxiv [@doi:10.1101/833400] and MedRxiv [@doi:10.1126/science.aay2933] are repositories that contain preprints for the life science community.
-MedRxiv mainly focuses on preprints that mention patient research, while bioRxiv focuses on general biology.
-We downloaded a snapshot of both resources on March 4th, 2022, using their respective Amazon S3 bucket [@https://www.biorxiv.org/tdm; @https://www.medrxiv.org/tdm].
-This snapshot contained 172,868 BioRxiv preprints and 37,517 MedRxiv preprints.
-These resources allow authors to post multiple versions of a single preprint.
-We filtered every preprint to its most recent version to prevent duplication bias and sorted each preprint into its respective posted year.
-Unlike Pubtator Central, these filtered preprints do not contain any annotations.
-Therefore, we used TaggerOne [@doi:10.1093/bioinformatics/btw343] to tag every chemical and disease entity and GNormplus [@doi:10.1155/2015/918710] to tag every gene and species entity for our preprint set.
-Once tagged, we used spacy to preprocess every preprint as described in our Pubtator Central section.
+We downloaded a snapshot of BioRxiv [@doi:10.1101/833400] and MedRxiv [@doi:10.1126/science.aay2933] on March 4th, 2022, using their respective Amazon S3 buckets [@https://www.biorxiv.org/tdm; @https://www.medrxiv.org/tdm].
+This snapshot contained 172,868 BioRxiv and 37,517 MedRxiv preprints.
+We filtered each preprint to its most recent version to prevent duplication bias and sorted them into their respective posted year.
+Unlike Pubtator Central, these filtered preprints did not contain any annotations.
+Therefore, we used TaggerOne [@doi:10.1093/bioinformatics/btw343] to tag chemical and disease entities, and GNormplus [@doi:10.1155/2015/918710] to tag gene and species entities for our preprint set.
+We then used spacy to preprocess every preprint as described in the Pubtator Central section.
 
 ## Constructing Word Embeddings for Semantic Change Detection
 
@@ -255,42 +246,36 @@ D. The last step combines the above calculations into a single metric to allow f
 Once constructed, we use a statistical technique to autodetect the presence of a changepoint.
 ](images/methods-pipeline/word-lapse-pipeline.png){#fig:pipeline_overview width="100%}
 
-Word2vec [@arxiv:1301.3781] is a natural language processing model designed to model words based on their respective neighbors in the form of dense vectors.
-This suite of models comes in two forms, a skipgram model and a continuous bags of words (CBOW) model.
+We used the Word2vec model [@arxiv:1301.3781] to construct word vectors for each year.
+This model is a natural language processing model designed to represent words based on their respective neighbors  as dense vectors.
 The skipgram model generates these vectors by having a shallow neural network predict a word's neighbors given the word, while the CBOW model predicts the word given its neighbors.
 We used the CBOW model to construct word vectors for each year.
 Despite the power of these word2vec models, these models are known to differ due to randomization within a year and year-to-year variability across years [@arxiv:1804.09692; @doi:10.1007/978-3-030-03991-2_73; @doi:10.1162/tacl_a_00008; @doi:10.18653/v1/S18-2019].
 To control for run-to-run variability, we examined both intra-year and inter-year relationships.
-Each year, we trained ten different CBOW models using the following parameters: vector size of 300, 10 epochs, minimum frequency cutoff of 5, and a window size of 16 for abstracts (Figure {@fig:pipeline_overview}A).
+We trained ten different CBOW models for each year using the following parameters: vector size of 300, 10 epochs, minimum frequency cutoff of 5, and a window size of 16 for abstracts (Figure {@fig:pipeline_overview}A).
 Every model has its own unique vector space following training, making it difficult to compare two models without a correction step.
-We used orthogonal Procrustes [@doi:10.1007/BF02289451] to align models (Figure {@fig:pipeline_overview}B).
-We aligned all trained CBOW models for the Pubtator Central dataset to the first model trained in 2021.
-Likewise, we aligned all CBOW models for the BioRxiv/MedRxiv dataset to the first model trained in 2021.
-We used UMAP [@arxiv:1802.03426] to visually examine the aligned models.
-We trained this model using the following parameters: cosine distance metric, random_state of 100, 25 for n_neighbors, a minimum distance of 0.99, and 50 n_epochs.
+We then used orthogonal Procrustes [@doi:10.1007/BF02289451] to align all trained CBOW models for the Pubtator Central dataset to the first model trained in 2021, and all CBOW models for the BioRxiv/MedRxiv dataset to the first model trained in 2021 (Figure {@fig:pipeline_overview}B).
+To visualize the aligned models, we used UMAP [@arxiv:1802.03426] with the cosine distance metric, a random_state of 100, 25 for n_neighbors, a minimum distance of 0.99, and 50 n_epochs.
+
 
 ## Detecting semantic changes across time
 
-Once word2vec models are aligned, the next step is to detect semantic change.  
-Semantic change events are often detected through time series analysis  [@doi:10.1145/2736277.2741627].
-We constructed a time series sequence for every token by calculating its distance within a given year (intra-year) and across each year (inter-year) (Figure {@fig:pipeline_overview}C).
-We used the model pairs constructed from the same year to calculate an intra-year distance.
-Then, we calculated the cosine distance between each token and its corresponding counterpart for every generated pair. 
-Cosine distance is a metric bounded between zero and two, where a score of zero means two vectors are the same, and a score of two means both vectors are different.
-For the inter-year distance, we used the Cartesian product of every model between two years and calculated the distance between tokens in the same way as the intra-year distance.
-Following both calculations, we combined both metrics by taking the ratio of the average inter-year distance over the average intra-year distance.
-This approach will penalize tokens with high intra-year instability and vice-versa for more stable tokens.
-Along with token distance calculations, it has been shown that including token frequency improves results compared to using distance alone [@doi:10.1007/s00799-019-00271-6].
-We calculated token frequency as the ratio of token frequency in the more recent year over the frequency of the previous year. 
-Then, we combined the frequency with distance ratios to make the final metric (Figure {@fig:pipeline_overview}D).
+Once the word2vec models were aligned, the next step was to detect semantic change.
+Semantic change events were detected through time series analysis [@doi:10.1145/2736277.2741627].
+We constructed a time series sequence for each token by calculating its distance within a given year (intra-year) and across each year (inter-year) (Figure {@fig:pipeline_overview}C).
+We used the model pairs constructed from the same year to calculate an intra-year distance, which was the cosine distance between each token and its corresponding counterpart.
+The cosine distance is a metric bounded between 0 and 2, where a score of 0 indicates that two vectors are the same, and a score of 2 indicates that the two vectors are different.
+For the inter-year distance, we used the Cartesian product of every model between two years and calculated the distance between tokens in the same way as the the intra-year distance.
+We then combined both metrics by taking the ratio of the average inter-year distance over the average intra-year distance.
+This approach penalizes tokens with high intra-year instability and rewards more stable tokens.
+Additionally, it has been shown that including token frequency improves results compared to using distance alone [@doi:10.1007/s00799-019-00271-6].
+We calculated token frequency as the ratio of token frequency in the more recent year over the frequency of the previous year.
+Finally, we combined the frequency with the distance ratios to make the final metric (Figure {@fig:pipeline_overview}D).
 
-Following time series construction, we performed changepoint detection, which is a process that uses statistical techniques to detect abnormalities within a given time series (Figure {@fig:pipeline_overview}D).
-We used the CUSUM algorithm [@gustafsson] to detect these abnormalities.
-This algorithm uses a rolling sum of the differences between two timepoints and checks whether the sum is greater than a threshold.
-A changepoint is considered to have occurred if the sum exceeds a threshold.
-We used the 99th percentile on every generated timepoint as the threshold.
-Then, we ran the CUSUM algorithm using a drift of 0 and default settings for all other parameters.
-
+Following time series construction, we performed change point detection, which uses statistical techniques to detect abnormalities within a given time series (Figure {@fig:pipeline_overview}D).
+We used the CUSUM algorithm [@gustafsson], which uses a rolling sum of the differences between two timepoints and checks whether the sum is greater than a threshold.
+A change point is considered to have occurred if the sum exceeds a threshold.
+We used the 99th percentile on every generated timepoint as the threshold, and ran the CUSUM algorithm with a drift of 0 and default settings for all other parameters.
 
 
 # Results
