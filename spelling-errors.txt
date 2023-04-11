@@ -7,14 +7,14 @@ autodetect
 azorean
 bcl
 biomedicine
-bioRxiv
+BioRxiv
 boxplot
 cas
 catecholase
 CBOW
 cgreene
 CHAI
-changepoint
+Changepoint
 changepoints
 cholinephosphotransferase
 cobl
@@ -23,7 +23,7 @@ coronaviruse
 CoV
 COVID
 covs
-crispr
+CRISPR
 crispri
 crrna
 cse
@@ -43,9 +43,9 @@ falquaddoomi
 funders
 GBMF
 GN
-GNormPlus
+GNormplus
 greenescientist
-grna
+gRNA
 gustafsson
 hirondelle
 indolo
@@ -61,7 +61,7 @@ lissodendoryx
 lockdown
 longicauda
 lutken
-MedRxiv
+medRxiv
 meganuclease
 mers
 metonymy

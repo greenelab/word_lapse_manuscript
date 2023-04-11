@@ -28,8 +28,8 @@ header-includes: |
   <meta name="dc.date" content="2023-04-11" />
   <meta name="citation_publication_date" content="2023-04-11" />
   <meta property="article:published_time" content="2023-04-11" />
-  <meta name="dc.modified" content="2023-04-11T14:48:30+00:00" />
-  <meta property="article:modified_time" content="2023-04-11T14:48:30+00:00" />
+  <meta name="dc.modified" content="2023-04-11T14:59:30+00:00" />
+  <meta property="article:modified_time" content="2023-04-11T14:59:30+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -58,9 +58,9 @@ header-includes: |
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/word_lapse_manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/word_lapse_manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/word_lapse_manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/word_lapse_manuscript/v/ae5cf3fd3b8a06823d355ef766734f92239c9304/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/word_lapse_manuscript/v/ae5cf3fd3b8a06823d355ef766734f92239c9304/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/word_lapse_manuscript/v/ae5cf3fd3b8a06823d355ef766734f92239c9304/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/word_lapse_manuscript/v/7e566645cf4ac751ab698640c9acd9a2fd3c76d8/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/word_lapse_manuscript/v/7e566645cf4ac751ab698640c9acd9a2fd3c76d8/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/word_lapse_manuscript/v/7e566645cf4ac751ab698640c9acd9a2fd3c76d8/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -82,9 +82,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/word_lapse_manuscript/v/ae5cf3fd3b8a06823d355ef766734f92239c9304/))
+([permalink](https://greenelab.github.io/word_lapse_manuscript/v/7e566645cf4ac751ab698640c9acd9a2fd3c76d8/))
 was automatically generated
-from [greenelab/word_lapse_manuscript@ae5cf3f](https://github.com/greenelab/word_lapse_manuscript/tree/ae5cf3fd3b8a06823d355ef766734f92239c9304)
+from [greenelab/word_lapse_manuscript@7e56664](https://github.com/greenelab/word_lapse_manuscript/tree/7e566645cf4ac751ab698640c9acd9a2fd3c76d8)
 on April 11, 2023.
 </em></small>
 
@@ -533,19 +533,18 @@ Due to this work being the first within biomedical literature, we adapted the co
 >This paper develops a method to evaluate semantic shifts by calculating annual and interannual changes using multiple integrated models. This method achieves good results, but there are some shortcomings in the paper. There are some suggestions for revision.
 >1.      The motivation is not clear. Please specify the importance of this paper.
 
-**We have updated our introduction to make our motivation for this work more clear.**
-```diff
-```
+**We have updated our introduction to make our motivation for this work more clear.
+While we attempted to briefly paste the changes here, the introduction has changed so significantly that we recommend examining the new version.**
 
 >2.      Please highlight the contributions of this paper.
 
-**We have updated our introduction to make our contributions for this work more clear.**
-```diff
-```
+**We have updated our introduction to make our contributions for this work more clear.
+As above, the introduction has changed so substantially that it was less efficient to convey this by pasting specific paragraphs here than it is to refer to the new introduction itself.**
 
 >3.      Most of references are out of date. Please discuss more recently published solutions, especially the solutions published in 2022.
 
-**We have updated our introduction to include more recent publications that pertain to this work.**
+**We have updated our introduction to include more recent publications that pertain to this work.
+**
 
 >4.      In the method part, the authors’ description is not easy to understand. Have the authors considered using drawings to explain the method?
 
@@ -589,11 +588,13 @@ We mention this point as a future direction within our manuscript.**
 >•       The introduction is not clear and very less literature is used. Follow this instruction: The introduction should briefly place the study in a broad context and highlight why it is important. It should define the purpose of the work and its significance, including specific hypotheses being tested. The current state of the research field should be reviewed carefully, and key publications cited. Please highlight controversial and diverging hypotheses when necessary. Finally, briefly mention the main aim of the work and highlight the main conclusions. Keep the introduction comprehensible to scientists working outside the topic of the paper.
 >•       In the introduction, what key theoretical perspectives and empirical findings in the main literature have already informed the problem formulation? What major, unaddressed puzzle, controversy, or paradox does this research address?
 
-**We have updated our introduction to include more recent publications and discussion in relation to this work.**
+**We have updated our introduction to include more recent publications and discussion in relation to this work.
+**
 
 >•       Authors should further clarify and elaborate novelty in their contribution.
 
-**We have updated our introduction to make our contributions for this work more clear.**
+**We have updated our introduction to make our contributions for this work more clear.
+We attempted to provide a concise example of changes, but the changes were so extensive that it is more effective to simply point the reviewer to the new introduction.**
 
 >•       What are the limitations of the present work?
 
@@ -634,7 +635,8 @@ Our solution to circumvent this problem is that we provide a website that allows
 
 >4. The introduction has few quotes, it is very short.
 
-**We have extended our introduction to include a more thorough discussion on previous work and highlight our contributions/motivation.**
+**We have extended our introduction to include a more thorough discussion on previous work and highlight our contributions/motivation.
+We now highlight related work both within and outside biomedicine.**
 
 >5. The methodology is not well detailed, there is no figure that represents the pipeline.
 
@@ -666,7 +668,9 @@ Because we add inter- and intra-year variability, we note that the distance calc
 
 >5.      Provide a separate discussion section that explains the complete details of the evaluation of the word meanings.
 
-**We updated our discussion per the given feedback.**
+**We updated our discussion per the given feedback.
+The changes are extensive enough that we refer the reviewer to our new Discussion section.**
+
 
 >6.      Briefly details the reasons to consider few-year pairs such as (2002-2003), (2012-2013) and (2019-2020).
 
@@ -684,7 +688,16 @@ For example, 2012-2013 is associated with the 'cas9' token, which signifies cas9
 
 >8.      The authors should remove the citations from the Conclusion section.
 
-**We have removed the citation from our conclusion section.**
+**We have removed the citation from our conclusion section.
+We also condensed the section with updates to the Discussion section. The conclusions section now reads:
+> We uncovered semantic changes within biomedical literature using a novel approach that accounts for inter- and intra-year variability.
+> Our approach found 41,000 changepoints that include well-known examples such as 'cas9', 'pandemic', and 'sars'.
+> We constructed a web application that allows users to manually examine these individual changepoints.
+> As an extension to this project, future work may be able to determine the consistency and time-lag of semantic change between preprint and pre-publication peer-reviewed text - potentially predicting future change in pre-publication peer-reviewed text.
+> Furthermore, including other preprint repositories may reveal consistencies across a broader swath of fields, or within-field analyses may reveal the earliest starting points of semantic changes that ultimately sweep through biomedicine.
+> Overall, this work is one starting point regarding semantic change within biomedical literature, and we are excited to see how this landscape will change as time progresses.
+**
+
 
 >9.      Grammatical and spelling mistakes must be corrected.
 
